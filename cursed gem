@@ -1,0 +1,739 @@
+'CursedSpaceGemStart': StoryNode(
+  text: 'The card reads "Cursed Space Gem." Suddenly, a strange, glowing gem materializes in the center of the room, emitting a pulsating light. You, Max, and Shaun feel an immediate sense of unease as the gem begins to hum with energy. Without warning, the floor tilts slightly, and you realize the gravity in the house is shifting. Panic rises as you and your friends struggle to keep your footing, aware that the gem is the source of this terrifying phenomenon.',
+  animation: 'gem_appearance_with_gravity_shift',
+  image: 'gem_glowing_brightly_in_room_with_tilted_floor',
+  choices: [
+    Choice(text: 'Try to grab onto something sturdy.', nextNode: 'GrabOntoSomething'),
+    Choice(text: 'Stay still and hope the gravity stabilizes.', nextNode: 'WaitForStability'),
+    Choice(text: 'Warn Max and Shaun to be careful.', nextNode: 'WarnFriendsAboutGravity'),
+  ],
+),
+
+'GrabOntoSomething': StoryNode(
+  text: 'You quickly reach out and grab the edge of a nearby table as the floor tilts even more. The gravity inside the house continues to fluctuate, making it feel as though the entire room could flip at any moment. Max and Shaun are also trying to steady themselves, their faces reflecting the same fear you feel. The gem pulses with a malevolent energy, and you can sense that it’s responsible for this dangerous situation.',
+  animation: 'grabbing_table',
+  image: 'protagonists_holding_onto_furniture',
+  choices: [
+    Choice(text: 'Hold on tightly and wait for the gravity to stabilize.', nextNode: 'HoldOnTightly'),
+    Choice(text: 'Attempt to move closer to the gem.', nextNode: 'MoveCloserToGem'),
+    Choice(text: 'Shout to Max and Shaun to find something to hold onto.', nextNode: 'TellFriendsToHoldOn'),
+    Choice(text: 'Try to cover the gem with something.', nextNode: 'CoverGem'),
+  ],
+),
+
+'WaitForStability': StoryNode(
+  text: 'You freeze in place, hoping the gravity will stabilize on its own. The gem’s light pulses rhythmically, and for a brief moment, it seems like the floor is leveling out. But then, without warning, the gravity reverses, sending you and your friends crashing toward the ceiling. The sudden shift is disorienting, and you’re left scrambling to find a way to stay safe in this topsy-turvy situation.',
+  animation: 'gravity_reversal',
+  image: 'protagonists_impacting_ceiling',
+  choices: [
+    Choice(text: 'Try to grab onto something on the ceiling.', nextNode: 'GrabOnCeiling'),
+    Choice(text: 'Look for a way to reach the gem.', nextNode: 'ReachForGem'),
+    Choice(text: 'Call out for Max and Shaun to find help.', nextNode: 'CallForHelp'),
+  ],
+),
+
+'WarnFriendsAboutGravity': StoryNode(
+  text: 'You shout a warning to Max and Shaun, telling them to be careful as the gravity continues to fluctuate. They nod, trying to steady themselves as the room tilts and shifts. The gem’s glow intensifies, and you can feel the force of gravity becoming more erratic. The house seems to be at the mercy of the gem’s power.',
+  animation: 'warning_friends_gravity',
+  image: 'friends_struggling_with_gravity',
+  choices: [
+    Choice(text: 'Look for something to use as an anchor.', nextNode: 'FindAnchor'),
+    Choice(text: 'Suggest trying to move the gem.', nextNode: 'MoveGem'),
+    Choice(text: 'Try to block the gem’s light.', nextNode: 'BlockGemLight'),
+  ],
+),
+
+'HoldOnTightly': StoryNode(
+  text: 'You hold onto the table as tightly as you can, your knuckles turning white from the strain. The gravity continues to shift wildly, making it nearly impossible to predict what will happen next. Max and Shaun are doing the same, gripping whatever they can to avoid being thrown around the room. The gem’s power is overwhelming, and you realize that you need to do something before the entire house is torn apart.',
+  animation: 'holding_on_tightly',
+  image: 'holding_on_tightly_to_furniture',
+  choices: [
+    Choice(text: 'Try to inch closer to the gem despite the gravity.', nextNode: 'InchCloserToGem'),
+    Choice(text: 'Stay where you are and hope the gravity stabilizes.', nextNode: 'StayPut'),
+    Choice(text: 'Try to use the table to block the gem’s light.', nextNode: 'BlockGemLight'),
+  ],
+),
+
+'MoveCloserToGem': StoryNode(
+  text: 'Despite the unpredictable gravity, you decide to move closer to the gem. Each step is a struggle as the floor tilts and shifts beneath you. Max and Shaun watch anxiously as you approach the glowing gem. The whispers in your mind grow louder, warning you of the dangers ahead, but you push forward, determined to end this madness.',
+  animation: 'moving_closer_to_gem',
+  image: 'protagonist_moving_closer_to_gem',
+  choices: [
+    Choice(text: 'Reach out and try to touch the gem.', nextNode: 'TouchGem'),
+    Choice(text: 'Stop just short of the gem and observe it.', nextNode: 'ObserveGem'),
+    Choice(text: 'Try to push the gem away.', nextNode: 'PushGemAway'),
+  ],
+),
+
+'TellFriendsToHoldOn': StoryNode(
+  text: 'You yell at Max and Shaun to find something to hold onto. They quickly grab onto whatever they can as the gravity reverses again, sending everything flying toward the ceiling. The room spins wildly, and the gem’s glow pulses with an ominous energy. You can feel the strain in your arms as you hold on for dear life, unsure of how long you can keep this up.',
+  animation: 'telling_friends_to_hold_on',
+  image: 'friends_holding_on_as_gravity_reverses',
+  choices: [
+    Choice(text: 'Try to pull yourself toward the gem.', nextNode: 'PullTowardGem'),
+    Choice(text: 'Suggest to Max and Shaun to try and knock the gem over.', nextNode: 'KnockOverGem'),
+    Choice(text: 'Try to grab anything that might help you reach the gem.', nextNode: 'GrabHelp'),
+  ],
+),
+
+'GrabOnCeiling': StoryNode(
+  text: 'You manage to grab onto a ceiling beam as the gravity shifts again, holding on as tightly as you can. Max and Shaun are struggling to do the same, but the gem’s power is relentless. The room spins around you, and you know you can’t keep this up for long. You need to figure out a way to stop the gem’s influence before it’s too late.',
+  animation: 'grabbing_ceiling_beam',
+  image: 'holding_onto_ceiling_beam',
+  choices: [
+    Choice(text: 'Try to swing toward the gem.', nextNode: 'SwingTowardGem'),
+    Choice(text: 'Call out to Max and Shaun to find a way to neutralize the gem.', nextNode: 'NeutralizeGem'),
+    Choice(text: 'Search for anything to help you with the gem.', nextNode: 'SearchForHelp'),
+  ],
+),
+
+'ReachForGem': StoryNode(
+  text: 'You reach for the gem, but just as your fingers are about to touch it, the gravity shifts again, pulling you back toward the ceiling. The gem seems to be toying with you, using its power to keep you away. You’re left hanging precariously in mid-air, unsure of what to do next.',
+  animation: 'reaching_for_gem',
+  image: 'protagonist_reaching_for_gem',
+  choices: [
+    Choice(text: 'Try again to reach the gem.', nextNode: 'TryAgainReachGem'),
+    Choice(text: 'Look for something to throw at the gem.', nextNode: 'ThrowAtGem'),
+    Choice(text: 'Wait for the gravity to change again before attempting.', nextNode: 'WaitAndTry'),
+  ],
+),
+
+'FindAnchor': StoryNode(
+  text: 'You quickly look around for something to use as an anchor. There’s an old, heavy bookshelf nearby that might be sturdy enough to hold you down. You call out to Max and Shaun, and together you drag the bookshelf toward the center of the room, hoping it will keep you grounded as the gravity continues to shift.',
+  animation: 'finding_anchor',
+  image: 'protagonists_using_bookshelf_as_anchor',
+  choices: [
+    Choice(text: 'Use the bookshelf to stabilize yourselves.', nextNode: 'UseBookshelf'),
+    Choice(text: 'Decide to push the bookshelf toward the gem.', nextNode: 'PushBookshelfToGem'),
+    Choice(text: 'Search for another way to stabilize.', nextNode: 'SearchForStabilizer'),
+  ],
+),
+
+
+  'MoveGem': StoryNode(
+  text: 'You suggest trying to move the gem, thinking it might break its hold on the house. Max and Shaun agree, and the three of you brace yourselves for another gravity shift as you approach the gem. The air crackles with tension, and you can feel the gem’s power resisting your every step.',
+  animation: 'moving_gem',
+  image: 'protagonists_approaching_gem_together',
+  choices: [
+    Choice(text: 'Try to lift the gem together.', nextNode: 'LiftGem'),
+    Choice(text: 'Push the gem to see if it can be moved.', nextNode: 'PushGem'),
+    Choice(text: 'Use a tool to pry the gem from its spot.', nextNode: 'PryGem'),
+  ],
+),
+
+'TouchGem': StoryNode(
+  text: 'You reach out and touch the gem, feeling its cold, pulsating surface. An intense wave of energy surges through you, and the gravity in the room stabilizes momentarily. However, the gem’s power is too great, and it begins to pull you in different directions again. The struggle to maintain your grip on the gem is becoming increasingly difficult.',
+  animation: 'touching_gem',
+  image: 'protagonist_touching_gem',
+  choices: [
+    Choice(text: 'Try to hold onto the gem’s surface and focus on stabilizing it.', nextNode: 'StabilizeGem'),
+    Choice(text: 'Pull away and regroup with Max and Shaun.', nextNode: 'RegroupWithFriends'),
+  ],
+),
+
+'ObserveGem': StoryNode(
+  text: 'You stop just short of the gem and observe its glow more closely. The gem’s light seems to flicker in a rhythmic pattern. As you watch, you notice a faint inscription on its surface. The inscription might provide a clue on how to neutralize its power. The gravity shifts again, making it harder to concentrate.',
+  animation: 'observing_gem',
+  image: 'protagonist_observing_gem',
+  choices: [
+    Choice(text: 'Attempt to decipher the inscription.', nextNode: 'DecipherInscription'),
+    Choice(text: 'Return to your friends and share your findings.', nextNode: 'ShareFindings'),
+  ],
+),
+
+'PushGemAway': StoryNode(
+  text: 'You push against the gem with all your strength, but its gravitational pull makes it incredibly difficult. The gem seems to resist your efforts, and the shifting gravity makes it hard to maintain your balance. Despite your best efforts, you realize you need a different strategy to deal with the gem.',
+  animation: 'pushing_gem_away',
+  image: 'protagonist_pushing_gem',
+  choices: [
+    Choice(text: 'Try to use a makeshift tool to pry the gem free.', nextNode: 'UseToolToPryGem'),
+    Choice(text: 'Rejoin Max and Shaun to brainstorm a new approach.', nextNode: 'BrainstormNewPlan'),
+  ],
+),
+
+'LiftGem': StoryNode(
+  text: 'With Max and Shaun’s help, you manage to lift the gem off its pedestal. The gravity shifts violently as you struggle to maintain control. The gem’s power is immense, and it begins to pulse faster and stronger. You need to act quickly to neutralize it before the house is torn apart.',
+  animation: 'lifting_gem',
+  image: 'protagonists_lifting_gem',
+  choices: [
+    Choice(text: 'Attempt to throw the gem out of the house.', nextNode: 'ThrowGem'),
+    Choice(text: 'Look for a way to destroy the gem.', nextNode: 'DestroyGem'),
+  ],
+),
+
+'PushGem': StoryNode(
+  text: 'You and your friends push the gem as hard as you can. The gem wobbles but doesn’t move. The gravity continues to shift, making your task even harder. Just when it seems like the gem won’t budge, you notice a crack forming in its surface. It might be the key to stopping its power.',
+  animation: 'pushing_gem',
+  image: 'protagonists_pushing_gem',
+  choices: [
+    Choice(text: 'Try to widen the crack to destabilize the gem.', nextNode: 'WidenCrack'),
+    Choice(text: 'Search for something to smash the gem.', nextNode: 'FindSledgehammer'),
+  ],
+),
+
+'PryGem': StoryNode(
+  text: 'Using a sturdy tool, you manage to pry the gem from its spot. As you lift it, the gravity becomes even more erratic, causing the room to spin uncontrollably. The gem’s power seems to be diminishing, but you need to be quick to fully neutralize it.',
+  animation: 'prying_gem',
+  image: 'prying_gem_from_spot',
+  choices: [
+    Choice(text: 'Throw the gem outside the house.', nextNode: 'ThrowGem'),
+    Choice(text: 'Smash the gem with a heavy object.', nextNode: 'SmashGem'),
+  ],
+),
+
+'BlockGemLight': StoryNode(
+  text: 'You try to block the gem’s light using a nearby object. The room stabilizes slightly, but the gem’s power still fluctuates. The gravity shifts less violently, but you realize you need a more permanent solution to stop the gem.',
+  animation: 'blocking_gem_light',
+  image: 'object_blocking_gem_light',
+  choices: [
+    Choice(text: 'Move closer to the gem to try and disable it directly.', nextNode: 'DisableGemDirectly'),
+    Choice(text: 'Consult with Max and Shaun for a new plan.', nextNode: 'ConsultFriends'),
+  ],
+),
+
+'TryAgainReachGem': StoryNode(
+  text: 'You make another attempt to reach the gem. This time, you manage to touch its surface. An intense burst of energy surrounds you, causing the gravity to stabilize briefly. The gem seems to be reacting to your touch, but you need to find a way to control its power.',
+  animation: 'reaching_again_for_gem',
+  image: 'protagonist_reaching_gem_again',
+  choices: [
+    Choice(text: 'Try to hold the gem still.', nextNode: 'HoldGemStill'),
+    Choice(text: 'Seek assistance from Max and Shaun to manage the gem.', nextNode: 'SeekAssistance'),
+  ],
+),
+
+'ThrowGem': StoryNode(
+  text: 'With a final, mighty effort, you throw the gem outside the house. As it leaves, the gravity shifts dramatically one last time before everything settles. The house is silent, and the oppressive energy of the gem is gone. You and your friends breathe a sigh of relief, knowing you’ve neutralized the threat.',
+  animation: 'throwing_gem',
+  image: 'gem_being_thrown_outside',
+  choices: [
+    Choice(text: 'Check for any residual effects or damage.', nextNode: 'CheckDamage'),
+    Choice(text: 'Celebrate your success and regroup.', nextNode: 'CelebrateSuccess'),
+  ],
+),
+
+'DestroyGem': StoryNode(
+  text: 'You find a heavy object and smash it into the gem. As it shatters, the gravity stabilizes, and the house slowly returns to normal. The gem’s power is completely neutralized, and you and your friends can finally relax. The crisis is over, and you’ve managed to save the house from being torn apart.',
+  animation: 'destroying_gem',
+  image: 'gem_being_destroyed',
+  choices: [
+    Choice(text: 'Inspect the room for any further issues.', nextNode: 'InspectRoom'),
+    Choice(text: 'Rejoin Max and Shaun to discuss what just happened.', nextNode: 'DiscussWithFriends'),
+  ],
+),
+
+'WidenCrack': StoryNode(
+  text: 'You work to widen the crack in the gem, hoping to destabilize its power. As the crack grows larger, the gem’s light flickers erratically. The gravity becomes less erratic, and the gem’s control over the room weakens. You’re getting closer to neutralizing the threat.',
+  animation: 'widening_crack',
+  image: 'gem_with_large_crack',
+  choices: [
+    Choice(text: 'Continue widening the crack.', nextNode: 'ContinueWidening'),
+    Choice(text: 'Attempt to destroy the gem while it’s weakened.', nextNode: 'DestroyWeakenedGem'),
+  ],
+),
+
+'NeutralizeGem': StoryNode(
+  text: 'Max and Shaun work with you to neutralize the gem’s power. With a combined effort, you manage to weaken the gem’s influence, causing the gravity shifts to lessen. The house stabilizes, and the gem’s dangerous effect begins to fade.',
+  animation: 'neutralizing_gem',
+  image: 'gem_becoming_weaker',
+  choices: [
+    Choice(text: 'Continue neutralizing the gem.', nextNode: 'ContinueNeutralizing'),
+    Choice(text: 'Search for a permanent solution to stop the gem.', nextNode: 'FindPermanentSolution'),
+  ],
+),
+
+
+
+  'EndChallenge': StoryNode(
+  text: 'With the gem’s power neutralized, the gravity in the house stabilizes completely. The room returns to normal, and the oppressive aura of the gem is gone. You, Max, and Shaun stand together, exhausted but relieved. You’ve successfully overcome the challenge posed by the Cursed Space Gem and can now focus on your next adventure.',
+  animation: 'challenge_end',
+  image: 'room_stabilized_after_challenge',
+  choices: [
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareNextChallenge'),
+    Choice(text: 'Take a moment to rest and reflect on the experience.', nextNode: 'RestAndReflect'),
+  ],
+),
+
+'PrepareNextChallenge': StoryNode(
+  text: 'You and your friends gather your strength and prepare yourselves for the next challenge. With the Cursed Space Gem behind you, you feel a renewed sense of determination. The house remains stable, and you set your sights on what lies ahead, ready for whatever comes next.',
+  animation: 'preparing_for_next_challenge',
+  image: 'protagonists_ready_for_next_adventure',
+  choices: [
+    Choice(text: 'Continue exploring the house.', nextNode: 'ExploreHouse'),
+    Choice(text: 'Review your items and strategy.', nextNode: 'ReviewStrategy'),
+  ],
+),
+
+'RestAndReflect': StoryNode(
+  text: 'You, Max, and Shaun take a moment to rest and reflect on the experience. The house is calm, and the intense energy of the gem has faded. You discuss the events that transpired, share your thoughts and feelings, and appreciate the teamwork that got you through the challenge. It’s a well-deserved break before you continue on your journey.',
+  animation: 'rest_and_reflect',
+  image: 'protagonists_resting_and_reflecting',
+  choices: [
+    Choice(text: 'Plan your next steps.', nextNode: 'PlanNextSteps'),
+    Choice(text: 'Look around the house for any new clues or items.', nextNode: 'SearchForClues'),
+  ],
+),
+
+'ExploreHouse': StoryNode(
+  text: 'You and your friends decide to explore the house further. Now that the gravity issues are resolved, you might discover new areas or hidden secrets that could aid you in your adventure. The house seems to hold many mysteries yet to be uncovered.',
+  animation: 'exploring_house',
+  image: 'protagonists_exploring_the_house',
+  choices: [
+    Choice(text: 'Investigate the attic.', nextNode: 'InvestigateAttic'),
+    Choice(text: 'Check the basement for hidden passages.', nextNode: 'CheckBasement'),
+  ],
+),
+
+'ReviewStrategy': StoryNode(
+  text: 'You review your items and strategy with Max and Shaun, making sure you’re well-prepared for future challenges. This is a crucial step to ensure you don’t encounter the same issues again and are ready for whatever the house throws at you next.',
+  animation: 'reviewing_strategy',
+  image: 'protagonists_reviewing_strategy',
+  choices: [
+    Choice(text: 'Update your inventory list.', nextNode: 'UpdateInventory'),
+    Choice(text: 'Discuss potential strategies for upcoming challenges.', nextNode: 'DiscussStrategies'),
+  ],
+),
+
+'PlanNextSteps': StoryNode(
+  text: 'You plan your next steps carefully, considering what you’ve learned from the Cursed Space Gem challenge. The house remains a place of wonder and danger, and your next move could reveal new adventures or dangers. With renewed focus, you prepare to face whatever comes next.',
+  animation: 'planning_next_steps',
+  image: 'protagonists_planning_next_steps',
+  choices: [
+    Choice(text: 'Advance to the next room.', nextNode: 'NextRoom'),
+    Choice(text: 'Rest and prepare your equipment.', nextNode: 'RestAndPrepare'),
+  ],
+),
+
+'SearchForClues': StoryNode(
+  text: 'You look around the house for any new clues or items that might help with your adventure. The house seems to be full of hidden secrets, and you might find something useful or revealing if you search carefully.',
+  animation: 'searching_for_clues',
+  image: 'protagonists_searching_house',
+  choices: [
+    Choice(text: 'Examine unusual objects in the living room.', nextNode: 'ExamineLivingRoom'),
+    Choice(text: 'Look in the old study for any interesting books or papers.', nextNode: 'LookInStudy'),
+  ],
+),
+
+'InspectRoom': StoryNode(
+  text: 'You inspect the room for any residual effects or damage from the gem’s influence. The room appears to be stable, but you notice a few minor disturbances that need attention. It’s important to ensure everything is in order before moving on.',
+  animation: 'inspecting_room',
+  image: 'room_being_inspected',
+  choices: [
+    Choice(text: 'Fix any damages or disturbances.', nextNode: 'FixDamages'),
+    Choice(text: 'Ensure all equipment is functioning properly.', nextNode: 'CheckEquipment'),
+  ],
+),
+
+'DiscussWithFriends': StoryNode(
+  text: 'You discuss the events with Max and Shaun, sharing your thoughts on what happened and what might come next. It’s a valuable moment of reflection that strengthens your bond and prepares you for the challenges ahead.',
+  animation: 'discussing_experience',
+  image: 'friends_discussing_experience',
+  choices: [
+    Choice(text: 'Plan your next moves together.', nextNode: 'PlanMovesTogether'),
+    Choice(text: 'Review your current objectives.', nextNode: 'ReviewObjectives'),
+  ],
+),
+
+'CheckDamage': StoryNode(
+  text: 'You check the room for any residual effects or damage from the gem’s influence. The room appears to be stable, but you notice a few minor disturbances that need attention. It’s important to ensure everything is in order before moving on.',
+  animation: 'checking_damage',
+  image: 'room_being_checked_for_damage',
+  choices: [
+    Choice(text: 'Fix any visible damages.', nextNode: 'FixVisibleDamages'),
+    Choice(text: 'Perform a thorough inspection of the entire house.', nextNode: 'ThoroughInspection'),
+  ],
+),
+
+'CelebrateSuccess': StoryNode(
+  text: 'You, Max, and Shaun celebrate your success. The challenge was difficult, but you managed to overcome it. With the house now stabilized, you take some time to enjoy the victory and prepare for the adventures that lie ahead.',
+  animation: 'celebrating_success',
+  image: 'protagonists_celebrating',
+  choices: [
+    Choice(text: 'Discuss what you learned from this challenge.', nextNode: 'DiscussLessonsLearned'),
+    Choice(text: 'Take a break and enjoy some downtime.', nextNode: 'EnjoyDowntime'),
+  ],
+),
+
+'PrepareNextChallenge': StoryNode(
+  text: 'You and your friends gather your strength and prepare yourselves for the next challenge. With the Cursed Space Gem behind you, you feel a renewed sense of determination. The house remains stable, and you set your sights on what lies ahead, ready for whatever comes next.',
+  animation: 'preparing_for_next_challenge',
+  image: 'protagonists_ready_for_next_adventure',
+  choices: [
+    Choice(text: 'Continue exploring the house.', nextNode: 'ExploreHouse'),
+    Choice(text: 'Review your items and strategy.', nextNode: 'ReviewStrategy'),
+  ],
+),
+
+'InchCloserToGem': StoryNode(
+  text: 'Despite the unpredictable gravity, you inch closer to the gem. Each step feels like a battle, but your determination pushes you forward. You finally reach the gem, and with a decisive action, you attempt to neutralize its power directly.',
+  animation: 'inching_closer_to_gem',
+  image: 'protagonist_inching_closer_to_gem',
+  choices: [
+    Choice(text: 'Use a special technique to neutralize the gem.', nextNode: 'NeutralizeGemDirectly'),
+    Choice(text: 'Return to Max and Shaun to discuss the next move.', nextNode: 'DiscussNextMove'),
+  ],
+),
+
+'NeutralizeGemDirectly': StoryNode(
+  text: 'You use a special technique to neutralize the gem’s power. As you focus your energy on the gem, its pulsations slow and eventually stop. The gravity stabilizes, and the house returns to normal. You’ve effectively neutralized the gem’s threat.',
+  animation: 'neutralizing_gem_directly',
+  image: 'neutralizing_gem',
+  choices: [
+    Choice(text: 'Check for any remaining issues in the room.', nextNode: 'CheckRemainingIssues'),
+    Choice(text: 'Celebrate your success with your friends.', nextNode: 'CelebrateSuccess'),
+  ],
+),
+
+'ContinueWidening': StoryNode(
+  text: 'You continue widening the crack in the gem. The gem’s light flickers erratically, and the gravity shifts become less violent. The gem’s power is weakening, and you are one step closer to neutralizing its influence.',
+  animation: 'continuing_widening_crack',
+  image: 'gem_with_expanding_crack',
+  choices: [
+    Choice(text: 'Finish widening the crack.', nextNode: 'FinishWideningCrack'),
+    Choice(text: 'Look for additional ways to weaken the gem.', nextNode: 'WeakenGemFurther'),
+  ],
+),
+
+
+  'DestroyWeakenedGem': StoryNode(
+  text: 'With the gem weakened, you manage to destroy it completely. As the gem shatters, the gravity stabilizes and the house returns to normal. The immediate threat is gone, and you’ve successfully dealt with the danger. The air is filled with a sense of relief and victory as you and your friends stand together, grateful for overcoming this perilous challenge.',
+  animation: 'destroying_gem',
+  image: 'gem_shattering_and_gravity_stabilizing',
+  choices: [
+    Choice(text: 'Take a moment to celebrate your victory.', nextNode: 'CelebrateVictory'),
+    Choice(text: 'Start preparing for the next challenge.', nextNode: 'PrepareNextChallenge'),
+  ],
+),
+
+'CelebrateVictory': StoryNode(
+  text: 'You and your friends take a moment to celebrate your hard-earned victory. The sense of accomplishment is palpable as you reflect on the challenge you’ve just overcome. It’s a time to enjoy the victory and recharge for the adventures that lie ahead.',
+  animation: 'celebrating_victory',
+  image: 'protagonists_celebrating_victory',
+  choices: [
+    Choice(text: 'Discuss what you’ve learned from the challenge.', nextNode: 'DiscussLessonsLearned'),
+    Choice(text: 'Enjoy some downtime before moving forward.', nextNode: 'EnjoyDowntime'),
+  ],
+),
+
+'DiscussLessonsLearned': StoryNode(
+  text: 'You gather with Max and Shaun to discuss the lessons learned from the challenge. Reflecting on what worked and what didn’t helps to solidify your strategies and improve your teamwork. This discussion is crucial for ensuring that you’re prepared for future trials.',
+  animation: 'discussing_lessons',
+  image: 'protagonists_discussing_lessons',
+  choices: [
+    Choice(text: 'Plan your next steps based on these lessons.', nextNode: 'PlanNextSteps'),
+    Choice(text: 'Take a break and enjoy some downtime.', nextNode: 'EnjoyDowntime'),
+  ],
+),
+
+'EnjoyDowntime': StoryNode(
+  text: 'You and your friends take a well-deserved break. The intense experience of dealing with the Cursed Space Gem has passed, and now it’s time to relax and enjoy some downtime. This moment of calm helps you recharge and prepare for the challenges ahead.',
+  animation: 'enjoying_downtime',
+  image: 'protagonists_relaxing',
+  choices: [
+    Choice(text: 'Resume exploring the house.', nextNode: 'ExploreHouse'),
+    Choice(text: 'Review your inventory and strategy.', nextNode: 'ReviewStrategy'),
+  ],
+),
+
+'FinishWideningCrack': StoryNode(
+  text: 'You complete the task of widening the crack in the gem. As the gem’s power diminishes, the gravity fluctuations become less severe. The gem’s light fades, signaling that its influence is weakening. With the crack fully widened, the gem’s threat is now manageable.',
+  animation: 'finishing_widening_crack',
+  image: 'gem_with_large_crack',
+  choices: [
+    Choice(text: 'Destroy the gem to neutralize the threat completely.', nextNode: 'DestroyWeakenedGem'),
+    Choice(text: 'Look for other ways to ensure the gem’s influence is gone.', nextNode: 'CheckForOtherWays'),
+  ],
+),
+
+
+'CheckForOtherWays': StoryNode(
+  text: 'You decide to check for other ways to ensure the gem’s influence is fully neutralized. After a thorough inspection, you confirm that the gem’s power has been diminished and that the gravity should stabilize soon. The threat is effectively mitigated, but it’s wise to remain cautious.',
+  animation: 'checking_for_other_ways',
+    image: 'protagonists_inspecting_gem',
+  choices: [
+    Choice(text: 'Destroy the gem to be absolutely sure.', nextNode: 'DestroyWeakenedGem'),
+    Choice(text: 'Celebrate your success and prepare for the next challenge.', nextNode: 'CelebrateVictory'),
+  ],
+),
+
+'ExploreHouse': StoryNode(
+  text: 'You and your friends decide to explore the house further. Now that the gravity issues are resolved, you might discover new areas or hidden secrets that could aid you in your adventure. The house seems to hold many mysteries yet to be uncovered.',
+  animation: 'exploring_house',
+  image: 'protagonists_exploring_the_house',
+  choices: [
+    Choice(text: 'Investigate the attic.', nextNode: 'InvestigateAttic'),
+    Choice(text: 'Check the basement for hidden passages.', nextNode: 'CheckBasement'),
+  ],
+),
+
+'InvestigateAttic': StoryNode(
+  text: 'You head to the attic, a place you haven’t explored before. The dusty, cobweb-filled space reveals old furniture and forgotten relics. Among the clutter, you might find something useful or a clue to the next part of your adventure.',
+  animation: 'investigating_attic',
+  image: 'protagonists_in_attic',
+  choices: [
+    Choice(text: 'Search for hidden compartments.', nextNode: 'SearchHiddenCompartments'),
+    Choice(text: 'Examine old documents and artifacts.', nextNode: 'ExamineDocuments'),
+  ],
+),
+
+'CheckBasement': StoryNode(
+  text: 'You make your way to the basement, a dark and mysterious area that might hold secrets or hidden passages. The basement is filled with old crates and cobwebs, and you need to be cautious as you explore.',
+  animation: 'checking_basement',
+  image: 'protagonists_in_basement',
+  choices: [
+    Choice(text: 'Look for hidden doors or passages.', nextNode: 'LookForPassages'),
+    Choice(text: 'Inspect the crates for interesting items.', nextNode: 'InspectCrates'),
+  ],
+),
+
+'SearchHiddenCompartments': StoryNode(
+  text: 'You search for hidden compartments in the attic and discover an old, dusty chest. Inside, you find a set of mysterious items that might be valuable for your journey. The chest also contains a cryptic note that could provide clues for the next challenge.',
+  animation: 'searching_hidden_compartments',
+  image: 'hidden_chest_in_attic',
+  choices: [
+    Choice(text: 'Examine the items and note closely.', nextNode: 'ExamineItemsAndNote'),
+    Choice(text: 'Take the chest back to review with Max and Shaun.', nextNode: 'ReviewWithFriends'),
+  ],
+),
+
+'ExamineDocuments': StoryNode(
+  text: 'You examine the old documents and artifacts found in the attic. Among the papers, you uncover a map that seems to indicate secret locations within the house. This map could be crucial for your next steps in the adventure.',
+  animation: 'examining_documents',
+  image: 'old_documents_in_attic',
+  choices: [
+    Choice(text: 'Study the map in detail.', nextNode: 'StudyMap'),
+    Choice(text: 'Show the map to Max and Shaun for their input.', nextNode: 'ShowToFriends'),
+  ],
+),
+
+'LookForPassages': StoryNode(
+  text: 'You search the basement for hidden doors or passages. After some careful exploration, you discover a concealed passageway behind a stack of crates. This passage could lead to unknown areas or important discoveries.',
+  animation: 'looking_for_passages',
+  image: 'hidden_passage_in_basement',
+  choices: [
+    Choice(text: 'Enter the passageway and explore.', nextNode: 'ExplorePassageway'),
+    Choice(text: 'Investigate the crates further before entering.', nextNode: 'InvestigateCrates'),
+  ],
+),
+
+'InspectCrates': StoryNode(
+  text: 'You inspect the crates in the basement and find some old, interesting items that might be useful. Among them, you come across an old diary with handwritten notes that might hold valuable information or clues for your adventure.',
+  animation: 'inspecting_crates',
+  image: 'old_items_in_crates',
+  choices: [
+    Choice(text: 'Read the diary for clues.', nextNode: 'ReadDiary'),
+    Choice(text: 'Take the items back to review with Max and Shaun.', nextNode: 'ReviewWithFriends'),
+  ],
+),
+
+'StudyMap': StoryNode(
+  text: 'You study the map closely and notice several marked locations that could be significant. Each mark corresponds to different areas within the house. The map seems to provide a guide to hidden or secret places that might offer more clues or challenges.',
+  animation: 'studying_map',
+  image: 'detailed_map_of_house',
+  choices: [
+    Choice(text: 'Plan a route to investigate these locations.', nextNode: 'PlanInvestigationRoute'),
+    Choice(text: 'Show the map to Max and Shaun for their input.', nextNode: 'ShowToFriends'),
+  ],
+),
+
+'ShowToFriends': StoryNode(
+  text: 'You share the map or items with Max and Shaun, and they offer their insights and suggestions. Working together, you decide on the best course of action based on the new information you’ve gathered.',
+  animation: 'showing_items_to_friends',
+  image: 'protagonists_discussing_discoveries',
+  choices: [
+    Choice(text: 'Proceed with the agreed plan.', nextNode: 'ProceedWithPlan'),
+    Choice(text: 'Take more time to review the items and map.', nextNode: 'TakeMoreTime'),
+  ],
+),
+
+'ProceedWithPlan': StoryNode(
+  text: 'You and your friends follow the plan you’ve devised based on the new discoveries. With renewed purpose, you continue your adventure through the house, ready to tackle the challenges and mysteries that lie ahead.',
+  animation: 'proceeding_with_plan',
+  image: 'protagonists_following_plan',
+  choices: [
+    Choice(text: 'Advance to the next area on the map.', nextNode: 'NextAreaOnMap'),
+    Choice(text: 'Prepare and review your strategies once more.', nextNode: 'PrepareAndReview'),
+  ],
+),
+
+'TakeMoreTime': StoryNode(
+  text: 'You decide to take more time to review the items and map thoroughly. This careful examination allows you to refine your strategy and ensure that you’re well-prepared for the next steps in your adventure.',
+  animation: 'taking_more_time',
+  image: 'protagonists_reviewing_items',
+  choices: [
+    Choice(text: 'Return to your investigation with a clearer plan.', nextNode: 'ReturnToInvestigation'),
+    Choice(text: 'Rest and regroup before proceeding.', nextNode: 'RestAndRegroup'),
+  ],
+),
+
+'NextAreaOnMap': StoryNode(
+  text: 'You advance to the next area on the map, feeling a mix of anticipation and excitement. Each step brings you closer to uncovering new secrets and facing new challenges. The house is full of surprises, and you’re ready for what’s next.',
+  animation: 'advancing_to_next_area',
+  image: 'protagonists_in_next_area',
+  choices: [
+    Choice(text: 'Explore the new area thoroughly.', nextNode: 'ExploreNewArea'),
+    Choice(text: 'Review any new items or clues found in the area.', nextNode: 'ReviewNewItems'),
+  ],
+),
+
+'ExploreNewArea': StoryNode(
+  text: 'You explore the new area thoroughly, uncovering hidden secrets and encountering unexpected challenges. The house continues to reveal its mysteries as you delve deeper into your adventure.',
+  animation: 'exploring_new_area',
+  image: 'protagonists_exploring_new_area',
+  choices: [
+    Choice(text: 'Face the challenge head-on.', nextNode: 'FaceChallenge'),
+    Choice(text: 'Seek additional help or information.', nextNode: 'SeekHelp'),
+  ],
+),
+
+'ReviewNewItems': StoryNode(
+  text: 'You review any new items or clues found in the area, looking for connections or useful information. This analysis helps you to better understand your situation and prepare for future challenges.',
+  animation: 'reviewing_new_items',
+  image: 'protagonists_reviewing_new_clues',
+  choices: [
+    Choice(text: 'Apply the new information to your current strategy.', nextNode: 'ApplyNewInformation'),
+    Choice(text: 'Consult with Max and Shaun about the findings.', nextNode: 'ConsultWithFriends'),
+  ],
+),
+
+'ApplyNewInformation': StoryNode(
+  text: 'You apply the new information to your current strategy, refining your approach based on the recent discoveries. This updated strategy enhances your preparedness for the challenges that lie ahead.',
+  animation: 'applying_new_information',
+  image: 'protagonists_updating_strategy',
+  choices: [
+    Choice(text: 'Advance with the updated strategy.', nextNode: 'AdvanceWithStrategy'),
+    Choice(text: 'Review and adjust your approach further.', nextNode: 'ReviewAndAdjust'),
+  ],
+),
+
+'AdvanceWithStrategy': StoryNode(
+  text: 'With your updated strategy in place, you advance with confidence, ready to tackle the challenges ahead. Your journey through the house continues as you move closer to uncovering its secrets and achieving your goals.',
+  animation: 'advancing_with_strategy',
+  image: 'protagonists_advancing_in_house',
+  choices: [
+    Choice(text: 'Continue exploring new areas.', nextNode: 'ExploreNewAreas'),
+    Choice(text: 'Prepare for upcoming challenges.', nextNode: 'PrepareForChallenges'),
+  ],
+),
+
+'ReviewAndAdjust': StoryNode(
+  text: 'You review and adjust your approach further, ensuring   that you’re as prepared as possible for what lies ahead. The additional time spent refining your strategy increases your chances of success in the face of upcoming challenges.',
+  animation: 'reviewing_and_adjusting_strategy',
+  image: 'protagonists_refining_strategy',
+  choices: [
+    Choice(text: 'Move forward with confidence.', nextNode: 'AdvanceWithStrategy'),
+    Choice(text: 'Discuss final details with Max and Shaun.', nextNode: 'FinalDiscussion'),
+  ],
+),
+
+'FinalDiscussion': StoryNode(
+  text: 'You gather with Max and Shaun for a final discussion before moving forward. This conversation allows you to clarify any remaining uncertainties and solidify your plan. With everything in place, you feel ready to tackle whatever comes next.',
+  animation: 'final_discussion',
+  image: 'protagonists_discussing_plan',
+  choices: [
+    Choice(text: 'Proceed with the final plan.', nextNode: 'ProceedWithPlan'),
+    Choice(text: 'Take one last moment to review everything.', nextNode: 'FinalReview'),
+  ],
+),
+
+'FinalReview': StoryNode(
+  text: 'You take one last moment to review everything—your strategy, your resources, and the information you’ve gathered. This thorough review leaves you feeling prepared and confident as you move forward into the unknown.',
+  animation: 'final_review',
+  image: 'protagonists_final_review',
+  choices: [
+    Choice(text: 'Advance with renewed determination.', nextNode: 'AdvanceWithStrategy'),
+    Choice(text: 'Double-check all preparations.', nextNode: 'DoubleCheckPreparations'),
+  ],
+),
+
+'DoubleCheckPreparations': StoryNode(
+  text: 'You double-check all your preparations, ensuring that nothing has been overlooked. This final check gives you the peace of mind that you’ve done everything possible to prepare for the challenges ahead.',
+  animation: 'double_checking_preparations',
+  image: 'protagonists_double_checking',
+  choices: [
+    Choice(text: 'Move forward confidently.', nextNode: 'AdvanceWithStrategy'),
+    Choice(text: 'Take a deep breath and go.', nextNode: 'ProceedWithPlan'),
+  ],
+),
+
+'FaceChallenge': StoryNode(
+  text: 'You decide to face the challenge head-on, drawing on all your experience and knowledge. The challenge is tough, but you’re determined to overcome it. With careful planning and quick thinking, you push through the obstacles.',
+  animation: 'facing_challenge',
+  image: 'protagonists_facing_challenge',
+  choices: [
+    Choice(text: 'Push forward with determination.', nextNode: 'PushForward'),
+    Choice(text: 'Consider alternative strategies.', nextNode: 'ConsiderAlternatives'),
+  ],
+),
+
+'SeekHelp': StoryNode(
+  text: 'You seek additional help or information to tackle the challenge. By reaching out, you gain new insights and support that make the task more manageable. This collaboration strengthens your resolve and increases your chances of success.',
+  animation: 'seeking_help',
+  image: 'protagonists_getting_help',
+  choices: [
+    Choice(text: 'Apply the new insights to the challenge.', nextNode: 'ApplyNewInsights'),
+    Choice(text: 'Discuss the plan with Max and Shaun.', nextNode: 'ConsultWithFriends'),
+  ],
+),
+
+'PushForward': StoryNode(
+  text: 'You push forward with determination, using all your strength and cunning to overcome the challenge. It’s a difficult journey, but your resolve is unshakable, and you eventually emerge victorious.',
+  animation: 'pushing_forward',
+  image: 'protagonists_pushing_forward',
+  choices: [
+    Choice(text: 'Celebrate your hard-earned victory.', nextNode: 'CelebrateVictory'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareNextChallenge'),
+  ],
+),
+
+'ConsiderAlternatives': StoryNode(
+  text: 'You take a moment to consider alternative strategies, weighing the risks and benefits of different approaches. This careful consideration allows you to choose the best course of action, improving your chances of success.',
+  animation: 'considering_alternatives',
+  image: 'protagonists_considering_options',
+  choices: [
+    Choice(text: 'Choose the best alternative strategy.', nextNode: 'ApplyNewStrategy'),
+    Choice(text: 'Stick to the original plan.', nextNode: 'StickToPlan'),
+  ],
+),
+
+'ApplyNewStrategy': StoryNode(
+  text: 'You decide to apply a new strategy, based on your careful analysis. This approach proves to be effective, helping you to overcome the challenge in a more efficient way.',
+  animation: 'applying_new_strategy',
+  image: 'protagonists_executing_new_strategy',
+  choices: [
+    Choice(text: 'Celebrate your success.', nextNode: 'CelebrateVictory'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareNextChallenge'),
+  ],
+),
+
+'StickToPlan': StoryNode(
+  text: 'You choose to stick to the original plan, confident in your initial strategy. Despite the difficulties, your plan holds strong, and you manage to overcome the challenge.',
+  animation: 'sticking_to_plan',
+  image: 'protagonists_executing_plan',
+  choices: [
+    Choice(text: 'Celebrate your victory.', nextNode: 'CelebrateVictory'),
+    Choice(text: 'Plan for the next challenge.', nextNode: 'PrepareNextChallenge'),
+  ],
+),
+
+'ApplyNewInsights': StoryNode(
+  text: 'You apply the new insights you’ve gained, adjusting your approach accordingly. This new information proves invaluable, allowing you to navigate the challenge more effectively.',
+  animation: 'applying_new_insights',
+  image: 'protagonists_using_new_insights',
+  choices: [
+    Choice(text: 'Proceed with confidence.', nextNode: 'ProceedWithPlan'),
+    Choice(text: 'Celebrate your progress.', nextNode: 'CelebrateVictory'),
+  ],
+),
+
+'RestAndRegroup': StoryNode(
+  text: 'After a moment of rest, you and your friends regroup, ready to continue your adventure. The break has refreshed you, and you feel more prepared to face the challenges ahead.',
+  animation: 'resting_and_regrouping',
+  image: 'protagonists_regrouping',
+  choices: [
+    Choice(text: 'Resume your exploration.', nextNode: 'ExploreHouse'),
+    Choice(text: 'Plan your next move carefully.', nextNode: 'PrepareNextChallenge'),
+  ],
+),
+
+
+
