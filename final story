@@ -1,0 +1,218 @@
+start: StoryNode(
+text: 'Have you ever wondered what lies beyond the night sky? 🤔',
+animation: 'stars_twinkling',
+image: 'night_sky',
+choices: [
+Choice(text: 'Yes', nextNode: 'curiosity'),
+Choice(text: 'No', nextNode: 'curiosity'),
+],
+),
+curiosity: StoryNode(
+text: 'When you gaze at the stars, do you imagine the vast expanse beyond our reach?',
+animation: 'zoom_to_stars',
+image: 'distant_galaxy',
+choices: [
+Choice(text: 'Yes, it's mesmerizing!', nextNode: 'story_start'),
+Choice(text: 'Not really, it's just space.', nextNode: 'story_start'),
+],
+),
+story_start: StoryNode(
+text: 'Well, there's only one way to find out! Let's go on an adventure!',
+animation: 'door_opening',
+image: 'old_house',
+choices: [
+Choice(text: "Let's go!", nextNode: 'intro'),
+],
+),
+intro: StoryNode(
+text: 'You, Max, and Shaun stumble upon a game called "Cosmic Rift" in a dusty attic.',
+animation: 'dust_particles',
+image: 'game_box',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_description'),
+],
+),
+game_description: StoryNode(
+text: '"Cosmic Rift" - a mysterious board game from a forgotten era, hidden in Mistwoods.',
+animation: 'fade_to_past',
+image: 'old_attic',
+choices: [
+Choice(text: 'Continue', nextNode: 'inventor_mystery'),
+],
+),
+inventor_mystery: StoryNode(
+text: 'Rumor has it, its eccentric inventor vanished, leaving behind only this cryptic artifact.',
+animation: 'inventor_silhouette',
+image: 'old_photo',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_board'),
+],
+),
+game_board: StoryNode(
+text: 'The board is polished copper and platinum, inlaid with shimmering constellations.',
+animation: 'constellations_glowing',
+image: 'game_board_close_up',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_pieces'),
+],
+),
+game_pieces: StoryNode(
+text: 'Miniature spaceships serve as game pieces, each unique and intricately detailed.',
+animation: 'spaceship_spinning',
+image: 'game_pieces_detail',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_legend'),
+],
+),
+game_legend: StoryNode(
+text: 'Legend says "Cosmic Rift" was a prototype for a new kind of interactive experience.',
+animation: 'portal_opening',
+image: 'swirling_galaxy',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_start_prompt'),
+],
+),
+game_start_prompt: StoryNode(
+text: 'Ready to uncover the secrets beyond the horizon? Once you start, survival is key.',
+animation: 'game_board_glowing',
+image: 'game_ready',
+choices: [
+Choice(text: 'Start the Game!', nextNode: 'max_turn'),
+],
+),
+max_turn: StoryNode(
+text: 'Max takes the first turn, pushing the button. A random number appears - 2!',
+animation: 'dice_rolling',
+image: 'blue_airplane_moving',
+choices: [
+Choice(text: 'Continue', nextNode: 'card_appears'),
+],
+),
+
+
+
+
+
+
+// Meteor Mayhem
+
+
+card_appears: StoryNode(
+text: 'A card emerges from the game...',
+animation: 'card_rising',
+image: 'card_back',
+choices: [
+Choice(text: 'Continue', nextNode: 'card_reveal'),
+],
+),
+card_reveal: StoryNode(
+text: '"Survive the storm, conquer the chaos—Meteor Mayhem is just the beginning."',
+animation: 'card_flipping',
+image: 'meteor_card',
+choices: [
+Choice(text: 'Continue', nextNode: 'meteor_shower'),
+],
+),
+meteor_shower: StoryNode(
+text: 'The house shakes violently! Stars pierce through the roof. Plan your next move!',
+animation: 'house_shaking',
+image: 'meteors_falling',
+choices: [
+Choice(text: 'Run to the basement!', nextNode: 'basement_cover'),
+Choice(text: 'Head for the attic!', nextNode: 'attic_cover'),
+Choice(text: 'Escape the house!', nextNode: 'escape_attempt'),
+],
+),
+escape_attempt: StoryNode(
+text: 'You try to escape, but the meteors hit too fast! Take cover quickly!',
+animation: 'meteors_hitting_house',
+image: 'house_damage',
+choices: [
+Choice(text: 'Find cover!', nextNode: 'aftermath'),
+],
+),
+basement_cover: StoryNode(
+text: 'You dive into the basement for cover, the house groaning above you.',
+animation: 'running_downstairs',
+image: 'basement_shelter',
+choices: [
+Choice(text: 'Continue', nextNode: 'aftermath'),
+],
+),
+attic_cover: StoryNode(
+text: 'You scramble into the attic, hoping the roof holds. The noise is deafening!',
+animation: 'running_upstairs',
+image: 'attic_hiding',
+choices: [
+Choice(text: 'Continue', nextNode: 'aftermath'),
+],
+),
+aftermath: StoryNode(
+text: 'An eerie calm descends. You assess the damage, trying to grasp what just happened.',
+animation: 'dust_settling',
+image: 'house_after_meteors',
+choices: [
+Choice(text: 'Continue', nextNode: 'space_reveal'),
+],
+),
+
+
+space_reveal: StoryNode(
+text: 'Suddenly, a blinding light floods through the window. You cautiously peek outside...',
+animation: 'light_beam',
+image: 'house_floating_in_space',
+choices: [
+Choice(text: 'Step outside', nextNode: 'space_view'),
+Choice(text: 'Retreat in fear', nextNode: 'fearful_retreat'),
+],
+),
+
+space_view: StoryNode(
+text: 'Your house is floating in space! Stars, asteroids, and planets surround you. What do you do?',
+animation: 'stars_panning',
+image: 'panoramic_space_view',
+choices: [
+Choice(text: 'Rush back inside', nextNode: 'fearful_retreat'),
+Choice(text: 'Take a moment to marvel', nextNode: 'marvel_at_space'),
+],
+),
+fearful_retreat: StoryNode(
+text: 'Terrified, you rush back inside, sharing the news with Max and Shaun. What next?',
+animation: 'door_slamming',
+image: 'inside_house_looking_out',
+choices: [
+Choice(text: 'Search for answers', nextNode: 'search_for_clues'),
+],
+),
+marvel_at_space: StoryNode(
+text: 'You take a moment to appreciate the breathtaking, terrifying beauty of space. But danger lurks...',
+animation: 'slow_zoom_on_planet',
+image: 'planet_close_up',
+choices: [
+Choice(text: 'Head back inside', nextNode: 'search_for_clues'),
+],
+),
+search_for_clues: StoryNode(
+text: 'You search for clues. Max calls out, "There's something written on the game cover!"',
+animation: 'searching_books',
+image: 'game_box_close_up',
+choices: [
+Choice(text: 'Continue', nextNode: 'game_warning'),
+],
+),
+game_warning: StoryNode(
+text: '"This game is for the fearless... Survival is the only choice." You understand now...',
+animation: 'text_appearing',
+image: 'game_cover_text',
+choices: [
+Choice(text: 'Continue', nextNode: 'your_turn'),
+],
+),
+your_turn: StoryNode(
+text: 'You've traveled through space and time! Surviving the game is your only hope. It's your turn.',
+animation: 'your_character_closeup',
+image: 'your_character',
+choices: [
+Choice(text: 'Continue the game', nextNode: 'roll_dice'),
+],
+),
