@@ -564,7 +564,333 @@ Text : 'robot_malfunction': StoryNode(
 
 
 
+//Chapter 4
 
 
+'NebulaFogCard': StoryNode(
+  text: 'Max rolls the dice. A 5. The game reacts instantly, and a card floats up. Max grabs it, eyes narrowing. He reads it aloud, "Nebula Fog." The room dims, shadows lengthen. The card’s warning chills your spine: "Beware the Nebula Fog... it reveals what’s hidden and conceals what’s true. Find the light before the darkness finds you."',
+  animation: 'CardAppearance',
+  image: 'nebula_fog_card.jpg',
+  choices: [
+    Choice(text: 'Get ready for the challenge', nextNode: 'NebulaFogChallenge'),
+    Choice(text: 'Ask Max about the message', nextNode: 'DiscussCardWithMax'),
+  ],
+),
+
+'DiscussCardWithMax': StoryNode(
+  text: 'You turn to Max, questioning him about the cryptic message. Max looks worried, "It seems we need to find a light source before the fog overtakes us. We should be cautious and stay together." The fog starts creeping in as Max finishes speaking.',
+  animation: 'DiscussCard',
+  image: 'max_worried.jpg',
+  choices: [
+    Choice(text: 'Get ready for the challenge', nextNode: 'NebulaFogChallenge'),
+    Choice(text: 'Search for light immediately', nextNode: 'SearchLightNode'),
+  ],
+),
+
+'NebulaFogChallenge': StoryNode(
+  text: 'As soon as Shaun finishes reading the card, the house shudders. A thick, cold fog seeps in, surrounding you. Vision blurs, and the outside world vanishes. The fog pulses, almost alive, wrapping tighter around the three of you. You hear Shaun’s nervous whisper, "What now?" The card’s voice lingers in your mind: "Find the light before the darkness finds you."',
+  animation: 'NebulaFogRising',
+  image: 'nebula_fog_mist.jpg',
+  choices: [
+    Choice(text: 'Search for light', nextNode: 'SearchLightNode'),
+    Choice(text: 'Stay still and watch', nextNode: 'ObserveFogNode'),
+    Choice(text: 'Try to move through the fog', nextNode: 'MoveThroughFogNode'),
+  ],
+),
+
+'SearchLightNode': StoryNode(
+  text: 'You push forward, eyes straining in the dense fog. Suddenly, a faint glow catches your eye. A flicker of hope. You signal to Max and Shaun. Moving closer, you see it—a glowing orb embedded in the wall. But as you reach out, the fog swirls, the light starts to fade...',
+  animation: 'LightFlicker',
+  image: 'glowing_orb.jpg',
+  choices: [
+    Choice(text: 'Touch the orb quickly', nextNode: 'TouchOrbNode'),
+    Choice(text: 'Step back cautiously', nextNode: 'StepBackNode'),
+    Choice(text: 'Call Max and Shaun closer', nextNode: 'CallTeamCloserNode'),
+  ],
+),
+
+'TouchOrbNode': StoryNode(
+  text: 'You leap forward, hand outstretched. The moment your fingers brush the orb, a jolt of warmth spreads through you. The fog recoils, but the light is dimming fast. "What did you do?" Max shouts, panic in his voice.',
+  animation: 'OrbTouch',
+  image: 'orb_touch.jpg',
+  choices: [
+    Choice(text: 'Hold the orb tighter', nextNode: 'HoldOrbNode'),
+    Choice(text: 'Let go immediately', nextNode: 'LetGoOrbNode'),
+    Choice(text: 'Tell Max to grab it too', nextNode: 'MaxGrabOrbNode'),
+  ],
+),
+
+'StepBackNode': StoryNode(
+  text: 'You take a step back, the fog swirling around you. The orb’s light dims further, and the mist seems to thicken. Shaun looks at you with concern, "We need to do something fast!"',
+  animation: 'FogThickens',
+  image: 'fog_thickens.jpg',
+  choices: [
+    Choice(text: 'Move closer to the orb again', nextNode: 'SearchLightNode'),
+    Choice(text: 'Look for another light source', nextNode: 'SearchLightNode'),
+    Choice(text: 'Try to calm Shaun and Max', nextNode: 'CalmTeamNode'),
+  ],
+),
+
+'CallTeamCloserNode': StoryNode(
+  text: 'You call Max and Shaun over. Max approaches cautiously, grabbing the orb just as it begins to fade. The light stabilizes, and the fog recedes slightly. "I think... it’s working," Max says, his voice strained.',
+  animation: 'MaxGrab',
+  image: 'max_holding_orb.jpg',
+  choices: [
+    Choice(text: 'Help Max hold the orb', nextNode: 'HelpMaxNode'),
+    Choice(text: 'Focus on finding an exit', nextNode: 'FocusExitNode'),
+    Choice(text: 'Tell Shaun to search the room', nextNode: 'ShaunSearchNode'),
+  ],
+),
+
+'HelpMaxNode': StoryNode(
+  text: 'You and Max work together, holding the orb firmly. The fog continues to thin out, revealing a faintly illuminated door. "We’re almost there," Max says, determination in his voice.',
+  animation: 'TeamWork',
+  image: 'orb_and_door.jpg',
+  choices: [
+    Choice(text: 'Head towards the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Inspect the area around the door', nextNode: 'InspectDoorAreaNode'),
+  ],
+),
+
+'FocusExitNode': StoryNode(
+  text: 'You focus all your attention on finding a way out. The orb’s light helps to push the fog back just enough. Then you see it—a door, half-hidden in the mist. "There!" you shout, pointing it out. The three of you make a run for it. The door swings open, and you burst through. The fog dissipates behind you.',
+  animation: 'DoorExit',
+  image: 'hidden_door.jpg',
+  choices: [
+    Choice(text: 'Close the door quickly', nextNode: 'CloseDoorNode'),
+    Choice(text: 'Check your surroundings', nextNode: 'CheckSurroundingsNode'),
+  ],
+),
+
+'ShaunSearchNode': StoryNode(
+  text: 'Shaun begins searching the room frantically. Amidst the fog, he finds a switch that illuminates a small lamp. The light pushes back the fog just enough to reveal the exit door. "I found it!" Shaun shouts.',
+  animation: 'ShaunSearch',
+  image: 'shaun_searching.jpg',
+  choices: [
+    Choice(text: 'Head towards the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Inspect the lamp further', nextNode: 'InspectLampNode'),
+  ],
+),
+
+'InspectLampNode': StoryNode(
+  text: 'You examine the lamp Shaun found. It’s an old, dusty piece, but it emits a steady, bright light. The fog seems to shrink away from it. You decide to use it as a guide.',
+  animation: 'LampInspection',
+  image: 'lamp_inspection.jpg',
+  choices: [
+    Choice(text: 'Head towards the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Investigate the room further', nextNode: 'InvestigateRoomNode'),
+  ],
+),
+
+'MoveForwardNode': StoryNode(
+  text: 'You push forward despite the resistance. The fog continues to resist but starts to thin out slightly. You catch sight of a faint glow ahead. "Almost there," you think.',
+  animation: 'FogResistance',
+  image: 'faint_glow.jpg',
+  choices: [
+    Choice(text: 'Continue moving forward', nextNode: 'FindLightNode'),
+    Choice(text: 'Retreat and try a different approach', nextNode: 'RetreatNode'),
+  ],
+),
+
+'RetreatNode': StoryNode(
+  text: 'You decide to retreat, regrouping with Max and Shaun. The fog remains dense, but the path you previously saw is still visible. "We need to be careful this time," Max suggests.',
+  animation: 'Retreat',
+  image: 'retreat.jpg',
+  choices: [
+    Choice(text: 'Follow the path cautiously', nextNode: 'CautiousPathNode'),
+    Choice(text: 'Try another approach', nextNode: 'SearchLightNode'),
+  ],
+),
+
+'FindLightNode': StoryNode(
+  text: 'You continue forward, the fog thinning just enough to reveal a large, glowing crystal embedded in the wall. The light pulses gently, casting eerie shadows on the walls. You feel a sense of relief as the fog begins to dissipate.',
+  animation: 'CrystalGlow',
+  image: 'glowing_crystal.jpg',
+  choices: [
+    Choice(text: 'Take the crystal', nextNode: 'TakeCrystalNode'),
+    Choice(text: 'Continue searching for another way', nextNode: 'SearchLightNode'),
+  ],
+),
+
+'TakeCrystalNode': StoryNode(
+  text: 'You reach out and take the crystal. Its light intensifies, pushing back the fog completely. The room is now clear, and you can see a door at the far end. "We did it!" Max exclaims.',
+  animation: 'CrystalTaken',
+  image: 'crystal_taken.jpg',
+  choices: [
+    Choice(text: 'Head towards the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Examine the crystal further', nextNode: 'ExamineCrystalNode'),
+  ],
+),
+
+'ExamineCrystalNode': StoryNode(
+  text: 'You take a closer look at the crystal. It’s glowing with a soft, reassuring light. As you hold it, you notice strange symbols etched into its surface. The symbols seem to shimmer and pulse in rhythm with the crystal’s glow. The fog has completely vanished.',
+  animation: 'CrystalSymbols',
+  image: 'crystal_symbols.jpg',
+  choices: [
+    Choice(text: 'Keep the crystal', nextNode: 'KeepCrystalNode'),
+    Choice(text: 'Put the crystal down and head to the door', nextNode: 'DoorExitNode'),
+  ],
+),
+
+'KeepCrystalNode': StoryNode(
+  text: 'You decide to keep the crystal as a reminder of the challenge you faced. It continues to emit a soft light as you head towards the door. The light seems to guide you, making your way forward clearer and more reassuring.',
+  animation: 'CrystalGuidance',
+  image: 'crystal_guidance.jpg',
+  choices: [
+    Choice(text: 'Open the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Inspect the room further', nextNode: 'InspectRoomNode'),
+  ],
+),
+
+'InspectRoomNode': StoryNode(
+  text: 'You take a moment to examine the room. The fog is gone, revealing strange artifacts and old furniture. There’s a sense of history here, but the door remains your primary focus. The crystal’s light makes the room feel less ominous.',
+  animation: 'RoomInspection',
+  image: 'room_inspection.jpg',
+  choices: [
+    Choice(text: 'Open the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Search for additional items', nextNode: 'SearchItemsNode'),
+  ],
+),
+
+'SearchItemsNode': StoryNode(
+  text: 'You search through the room, finding old books and relics. Among them, you discover a small chest. Opening it reveals old maps and notes that might be useful later. The door remains your primary goal.',
+  animation: 'ChestOpen',
+  image: 'chest_contents.jpg',
+  choices: [
+    Choice(text: 'Open the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Study the maps and notes', nextNode: 'StudyMapsNode'),
+  ],
+),
+
+'StudyMapsNode': StoryNode(
+  text: 'You take some time to study the maps and notes. They depict various locations and contain cryptic notes. Though interesting, they don’t provide immediate help. The door remains the best way forward.',
+  animation: 'MapsStudy',
+  image: 'maps_study.jpg',
+  choices: [
+    Choice(text: 'Open the door', nextNode: 'DoorExitNode'),
+    Choice(text: 'Continue searching the room', nextNode: 'InspectRoomNode'),
+  ],
+),
+
+'DoorExitNode': StoryNode(
+  text: 'You approach the door, your heart pounding with anticipation. As you push it open, a wave of relief washes over you. The room beyond is calm and well-lit, a stark contrast to the oppressive fog. You and your team step through, leaving the Nebula Fog challenge behind.',
+  animation: 'DoorOpen',
+  image: 'door_open.jpg',
+  choices: [
+    Choice(text: 'Catch your breath and look around', nextNode: 'CatchBreathNode'),
+    Choice(text: 'Check on Max and Shaun', nextNode: 'CheckOnTeamNode'),
+  ],
+),
+
+'InspectRoomNode': StoryNode(
+  text: 'The room you’ve entered is calm and safe. You take a moment to inspect the new environment. The space is spacious and welcoming, a stark contrast to the oppressive fog you just escaped.',
+  animation: 'NewRoomInspection',
+  image: 'new_room.jpg',
+  choices: [
+    Choice(text: 'Take a break and rest', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Look for clues in the room', nextNode: 'LookForCluesNode'),
+  ],
+),
+
+'LookForCluesNode': StoryNode(
+  text: 'You search the new room for any clues or hints. It’s a well-organized space with several pieces of old furniture and artifacts. There’s nothing immediately alarming, but you do find a journal with notes about previous adventurers.',
+  animation: 'JournalFind',
+  image: 'journal_find.jpg',
+  choices: [
+    Choice(text: 'Read the journal', nextNode: 'ReadJournalNode'),
+    Choice(text: 'Move on and explore further', nextNode: 'ExploreFurtherNode'),
+  ],
+),
+
+'ReadJournalNode': StoryNode(
+  text: 'You open the journal and begin reading. It contains accounts of past adventurers who faced similar challenges. The entries provide insights into overcoming trials and navigating through mysterious situations. The journal may come in handy later.',
+  animation: 'JournalReading',
+  image: 'journal_reading.jpg',
+  choices: [
+    Choice(text: 'Take the journal with you', nextNode: 'TakeJournalNode'),
+    Choice(text: 'Leave it and move on', nextNode: 'ExploreFurtherNode'),
+  ],
+),
+
+'TakeJournalNode': StoryNode(
+  text: 'You decide to take the journal with you. It might prove useful in future challenges. With the room’s calm and the challenge of Nebula Fog behind you, you and your team feel a sense of accomplishment.',
+  animation: 'JournalTaken',
+  image: 'journal_taken.jpg',
+  choices: [
+    Choice(text: 'Take a break and rest', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Continue exploring', nextNode: 'ExploreFurtherNode'),
+  ],
+),
+
+'ExploreFurtherNode': StoryNode(
+  text: 'You and your team continue exploring the new room. It’s peaceful, and you feel a sense of relief. The challenge of Nebula Fog has been conquered, and the path ahead seems promising.',
+  animation: 'ExploreRoom',
+  image: 'explore_room.jpg',
+  choices: [
+    Choice(text: 'Take a break and rest', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+  ],
+),
+
+'PrepareNextChallengeNode': StoryNode(
+  text: 'With the Nebula Fog challenge behind you, you take a moment to prepare for whatever comes next. The room is quiet, and the path ahead is uncertain, but you and your team are ready for the adventures that lie ahead.',
+  animation: 'Preparation',
+  image: 'preparation.jpg',
+  choices: [
+    Choice(text: 'Move forward cautiously', nextNode: 'MoveForwardCautiouslyNode'),
+    Choice(text: 'Discuss the next steps with the team', nextNode: 'DiscussNextStepsNode'),
+  ],
+),
+
+'MoveForwardCautiouslyNode': StoryNode(
+  text: 'You decide to move forward cautiously, keeping an eye out for any new challenges or clues. The room ahead seems calm, but you stay vigilant, ready for whatever might come next.',
+  animation: 'MovingForward',
+  image: 'moving_forward.jpg',
+  choices: [
+    Choice(text: 'Continue exploring', nextNode: 'ExploreRoomNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+  ],
+),
+
+'DiscussNextStepsNode': StoryNode(
+  text: 'You and your team discuss the next steps, analyzing what you’ve learned from the Nebula Fog challenge. You feel more prepared for future obstacles, with a clear sense of direction moving forward.',
+  animation: 'TeamDiscussion',
+  image: 'team_discussion.jpg',
+  choices: [
+    Choice(text: 'Continue exploring', nextNode: 'ExploreRoomNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+  ],
+),
+
+'TakeBreakNode': StoryNode(
+  text: 'You decide to take a well-deserved break. The room is calm, and you take the time to rest and regroup. The challenges of Nebula Fog have been overcome, and you feel rejuvenated for whatever comes next.',
+  animation: 'TakingBreak',
+  image: 'taking_break.jpg',
+  choices: [
+    Choice(text: 'Continue exploring', nextNode: 'ExploreRoomNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+  ],
+),
+
+'EndNebulaFogChallenge': StoryNode(
+  text: 'With the Nebula Fog challenge successfully completed, you and your team take a moment to reflect on the experience. The room you’ve entered feels like a new beginning, and you’re ready to face the next adventure with renewed confidence and determination.',
+  animation: 'ChallengeCompleted',
+  image: 'challenge_completed.jpg',
+  choices: [
+    Choice(text: 'Start the next challenge', nextNode: 'NextChallengeNode'),
+    Choice(text: 'Review the journey so far', nextNode: 'ReviewJourneyNode'),
+  ],
+),
+
+'NextChallengeNode': StoryNode(
+  text: 'You and your team brace yourselves for the next challenge. The journey ahead is unknown, but with your recent success, you feel ready to tackle whatever comes next.',
+  animation: 'New
+
+
+
+
+
+
+Chapter 5
 
 
