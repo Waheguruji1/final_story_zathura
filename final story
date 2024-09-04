@@ -216,3 +216,355 @@ choices: [
 Choice(text: 'Continue the game', nextNode: 'roll_dice'),
 ],
 ),
+
+
+Chapter 3 robot Malfunction
+
+
+
+roll_dice: StoryNode(
+text: 'You continue the game. The dial spins, your green spaceship lands on 5. A card appears!',
+animation: 'dice_rolling',
+image: 'green_spaceship_moving',
+choices: [
+Choice(text: 'Continue', nextNode: 'robot_card'),
+],
+),
+robot_card: StoryNode(
+text: 'The card reads, "Robot Malfunction."',
+animation: 'card_flipping',
+image: 'robot_card',
+choices: [
+Choice(text: 'Continue', nextNode: 'robot_appears'),
+],
+),
+robot_appears: StoryNode(
+text: '"What does it mean?" Shaun asks. Suddenly, a toy robot appears. "It's just a little robot..."',
+animation: 'toy_robot_appearing',
+image: 'toy_robot',
+choices: [
+Choice(text: 'Continue', nextNode: 'robot_grows'),
+],
+),
+robot_grows: StoryNode(
+text: 'The robot grows rapidly, transforming into a menacing machine, its eyes glowing red!',
+animation: 'robot_transforming',
+image: 'giant_robot',
+choices: [
+Choice(text: 'Continue', nextNode: 'robot_attacks'),
+],
+),
+robot_attacks: StoryNode(
+text: '"It's malfunctioning!" Shaun yells as the robot charges. What's your next move?',
+animation: 'robot_charging',
+image: 'robot_attacking',
+      choices: [
+        Choice(text: 'Run down the corridor to the left', nextNode: 'narrow_escape'),
+        Choice(text: 'Try to disable the robot using the control panel', nextNode: 'disable_attempt'),
+      ],
+    ),
+
+'narrow_escape': StoryNode(
+      text: 'Max, Alex, and Shaun sprint down the left corridor, hearts pounding as the robot barrels after them. The walls close in as the corridor narrows, leaving them with little room to maneuver. The sound of the robot’s heavy steps grows louder, and the trio realizes they’re running out of time.',
+      animation: 'narrow_corridor_run',
+      image: 'tight_space_escape',
+      choices: [
+        Choice(text: 'Dive into a side room and hide', nextNode: 'hide_from_robot'),
+        Choice(text: 'Keep running and look for an exit', nextNode: 'find_exit'),
+      ],
+    ),
+
+'disable_attempt': StoryNode(
+      text: 'Shaun spots a control panel on the wall. "There! Maybe we can shut it down!" He rushes to the panel and starts frantically tapping on the controls, trying to override the robot’s programming. The robot slows down for a moment, its movements jerky and uncoordinated, but the panel sparks and the system starts to overload.',
+      animation: 'control_panel_hack',
+      image: 'control_panel_sparks',
+      choices: [
+        Choice(text: 'Abort the attempt and run', nextNode: 'narrow_escape'),
+        Choice(text: 'Continue trying to disable the robot', nextNode: 'robot_disabled'),
+      ],
+    ),
+
+'hide_from_robot': StoryNode(
+      text: 'The trio dives into a small side room, slamming the door behind them. They hold their breath as the sound of the robot’s steps thunder past the door. It pauses, seemingly scanning the area, before continuing down the corridor. They’ve bought themselves a few precious moments, but the robot could return at any time.',
+      animation: 'hiding_in_shadows',
+      image: 'robot_outside_door',
+      choices: [
+        Choice(text: 'Sneak out and try to find another way', nextNode: 'find_exit'),
+        Choice(text: 'Stay hidden and hope the robot leaves', nextNode: 'robot_returns'),
+      ],
+    ),
+
+'find_exit': StoryNode(
+      text: 'The trio bursts out of the narrow corridor and into a larger chamber. They spot an exit at the far end, but the robot is hot on their heels, smashing through obstacles as it pursues them. They know this might be their only chance to escape.',
+      animation: 'final_dash_for_exit',
+      image: 'exit_in_sight',
+      choices: [
+        Choice(text: 'Make a final dash for the exit', nextNode: 'escape_attempt'),
+        Choice(text: 'Set a trap for the robot', nextNode: 'set_trap'),
+      ],
+    ),
+
+'robot_disabled': StoryNode(
+      text: 'Shaun’s fingers fly over the controls as sparks fly from the panel. Just as the robot closes in, its movements stutter and then it freezes, powered down by Shaun’s last-second hack. The trio breathes a sigh of relief, but they know the danger isn’t over yet.',
+      animation: 'robot_shutting_down',
+      image: 'robot_frozen',
+      choices: [
+        Choice(text: 'Search the area for more threats', nextNode: 'search_area'),
+        Choice(text: 'Move on before something else happens', nextNode: 'move_on'),
+      ],
+    ),
+
+'set_trap': StoryNode(
+      text: 'Max and Alex quickly grab some materials scattered around the chamber and set up a makeshift trap near the exit. As the robot charges forward, it triggers the trap, causing a series of explosions that momentarily stop it in its tracks.',
+      animation: 'robot_trapped',
+      image: 'robot_trap_explosions',
+      choices: [
+        Choice(text: 'Escape while the robot is stunned', nextNode: 'escape_attempt'),
+        Choice(text: 'Use the distraction to disable the robot', nextNode: 'disarm_robot'),
+      ],
+    ),
+
+'escape_attempt': StoryNode(
+      text: 'The trio sees an opportunity to escape while the robot is temporarily incapacitated. They sprint toward the exit, but just as they reach the door, it slams shut, trapping them inside with the robot.',
+      animation: 'door_slams_shut',
+      image: 'trapped_inside',
+      choices: [
+        Choice(text: 'Look for another exit', nextNode: 'find_secondary_exit'),
+        Choice(text: 'Try to force the door open', nextNode: 'force_door'),
+      ],
+    ),
+
+'search_area': StoryNode(
+      text: 'While the robot remains frozen, the trio quickly scans the area for any other potential threats or useful items. They find a strange device that might help them, but activating it could be risky.',
+      animation: 'scanning_area',
+      image: 'finding_device',
+      choices: [
+        Choice(text: 'Activate the device', nextNode: 'activate_device'),
+        Choice(text: 'Leave the device and move on', nextNode: 'move_on'),
+      ],
+    ),
+
+'find_secondary_exit': StoryNode(
+      text: 'Max, Alex, and Shaun frantically search the room for another way out. They find a small hatch hidden behind a pile of debris. It looks like it could be an escape route, but it’s a tight fit.',
+      animation: 'finding_hatch',
+      image: 'small_hatch',
+      choices: [
+        Choice(text: 'Squeeze through the hatch', nextNode: 'squeeze_through_hatch'),
+        Choice(text: 'Look for another option', nextNode: 'keep_searching'),
+      ],
+    ),
+
+'force_door': StoryNode(
+      text: 'Using all their strength, the trio tries to pry the door open. The robot starts to stir, and they know they only have seconds before it fully reactivates. The door begins to budge, but it’s slow going.',
+      animation: 'forcing_door',
+      image: 'door_creaking_open',
+      choices: [
+        Choice(text: 'Keep forcing the door', nextNode: 'door_opens'),
+        Choice(text: 'Abandon the door and find another way', nextNode: 'find_secondary_exit'),
+      ],
+    ),
+
+'disarm_robot': StoryNode(
+      text: 'With the robot still stunned, Shaun attempts to disarm it completely. He accesses a control panel on its back, but it’s a complex system, and one wrong move could reawaken the machine.',
+      animation: 'disarming_robot',
+      image: 'robot_control_panel',
+      choices: [
+        Choice(text: 'Take the risk and disable the robot', nextNode: 'robot_disabled_final'),
+        Choice(text: 'Abort the attempt and run', nextNode: 'escape_attempt'),
+      ],
+    ),
+
+'activate_device': StoryNode(
+      text: 'The device hums to life, emitting a strange light that envelops the room. Suddenly, time seems to slow down, and the robot’s movements become sluggish. However, the device’s energy is draining fast.',
+      animation: 'device_activated',
+      image: 'time_slowing_down',
+      choices: [
+        Choice(text: 'Use the slowed time to escape', nextNode: 'escape_attempt'),
+        Choice(text: 'Try to use the device to stop the robot', nextNode: 'stop_robot_with_device'),
+      ],
+    ),
+
+'door_opens': StoryNode(
+      text: 'With a final heave, the door bursts open, just as the robot starts to regain full functionality. The trio quickly dives through the opening, slamming the door shut behind them, cutting off the robot’s pursuit.',
+      animation: 'door_bursts_open',
+      image: 'escaping_robot',
+      choices: [
+        Choice(text: 'Barricade the door to buy more time', nextNode: 'barricade_door'),
+        Choice(text: 'Run to the next room', nextNode: 'next_room'),
+      ],
+    ),
+
+'squeeze_through_hatch': StoryNode(
+      text: 'One by one, the trio squeezes through the narrow hatch. It’s a tight fit, but they manage to slip through just as the robot starts smashing its way through the debris. They land in a dark, unfamiliar room.',
+      animation: 'hatch_escape',
+      image: 'dark_room',
+      choices: [
+        Choice(text: 'Explore the new room for exits', nextNode: 'explore_dark_room'),
+        Choice(text: 'Try to block the hatch from the other side', nextNode: 'block_hatch'),
+      ],
+    ),
+
+
+Text : 'robot_malfunction': StoryNode(
+      text: 'As the trio navigates the labyrinthine corridors of the house, a sudden jolt shakes the structure. The lights flicker, and an ominous rumble echoes through the walls. Suddenly, a massive robot emerges from the shadows, its eyes glowing red. It’s a deadly machine, towering over them like a mechanical giant. "It’s malfunctioning!" Shaun yells as the robot locks onto them and starts charging.',
+      animation: 'robot_emergence_and_chase',
+      image: 'deadly_robot_chase',
+      choices: [
+        Choice(text: 'Run down the corridor to the left', nextNode: 'narrow_escape'),
+        Choice(text: 'Try to disable the robot using the control panel', nextNode: 'disable_attempt'),
+        Choice(text: 'Lure the robot into a trap', nextNode: 'lure_into_trap'),
+        Choice(text: 'Distract the robot and split up', nextNode: 'split_up'),
+      ],
+    ),
+
+'narrow_escape': StoryNode(
+      text: 'Max, Alex, and Shaun sprint down the left corridor, hearts pounding as the robot barrels after them. The walls close in as the corridor narrows, leaving them with little room to maneuver. The sound of the robot’s heavy steps grows louder, and the trio realizes they’re running out of time.',
+      animation: 'narrow_corridor_run',
+      image: 'tight_space_escape',
+      choices: [
+        Choice(text: 'Dive into a side room and hide', nextNode: 'hide_from_robot'),
+        Choice(text: 'Keep running and look for an exit', nextNode: 'find_exit'),
+        Choice(text: 'Throw an object to slow it down', nextNode: 'throw_object'),
+      ],
+    ),
+
+'disable_attempt': StoryNode(
+      text: 'Shaun spots a control panel on the wall. "There! Maybe we can shut it down!" He rushes to the panel and starts frantically tapping on the controls, trying to override the robot’s programming. The robot slows down for a moment, its movements jerky and uncoordinated, but the panel sparks and the system starts to overload.',
+      animation: 'control_panel_hack',
+      image: 'control_panel_sparks',
+      choices: [
+        Choice(text: 'Abort the attempt and run', nextNode: 'narrow_escape'),
+        Choice(text: 'Continue trying to disable the robot', nextNode: 'robot_disabled'),
+        Choice(text: 'Hack the robot to turn it against enemies', nextNode: 'robot_turns'),
+      ],
+    ),
+
+'lure_into_trap': StoryNode(
+      text: 'Thinking quickly, Max shouts, "We need to trap it!" The trio rushes through a series of corridors, leading the robot towards an unstable section of the house. As the robot charges in, Shaun triggers a collapse, hoping to trap it beneath the rubble.',
+      animation: 'trap_robot_in_rubble',
+      image: 'robot_trapped',
+      choices: [
+        Choice(text: 'Check if the robot is disabled', nextNode: 'check_robot'),
+        Choice(text: 'Escape before the house collapses further', nextNode: 'escape_collapse'),
+      ],
+    ),
+
+'split_up': StoryNode(
+      text: 'Realizing they need to confuse the robot, Alex shouts, "We should split up!" Max, Alex, and Shaun each take a different corridor, hoping to divide the robot’s attention. The robot hesitates for a moment before selecting a target.',
+      animation: 'split_up_and_run',
+      image: 'split_decision',
+      choices: [
+        Choice(text: 'Max leads the robot away', nextNode: 'max_leads_away'),
+        Choice(text: 'Shaun lures the robot into a trap', nextNode: 'lure_into_trap'),
+        Choice(text: 'Alex tries to double back and help the others', nextNode: 'double_back'),
+      ],
+    ),
+
+'hide_from_robot': StoryNode(
+      text: 'The trio dives into a small side room, slamming the door behind them. They hold their breath as the sound of the robot’s steps thunder past the door. It pauses, seemingly scanning the area, before continuing down the corridor. They’ve bought themselves a few precious moments, but the robot could return at any time.',
+      animation: 'hiding_in_shadows',
+      image: 'robot_outside_door',
+      choices: [
+        Choice(text: 'Sneak out and try to find another way', nextNode: 'find_exit'),
+        Choice(text: 'Stay hidden and hope the robot leaves', nextNode: 'robot_returns'),
+        Choice(text: 'Set a trap in the room', nextNode: 'set_room_trap'),
+      ],
+    ),
+
+'find_exit': StoryNode(
+      text: 'The trio bursts out of the narrow corridor and into a larger chamber. They spot an exit at the far end, but the robot is hot on their heels, smashing through obstacles as it pursues them. They know this might be their only chance to escape.',
+      animation: 'final_dash_for_exit',
+      image: 'exit_in_sight',
+      choices: [
+        Choice(text: 'Make a final dash for the exit', nextNode: 'escape'),
+        Choice(text: 'Set a trap for the robot', nextNode: 'set_trap'),
+        Choice(text: 'Look for another exit', nextNode: 'search_another_exit'),
+      ],
+    ),
+
+'throw_object': StoryNode(
+      text: 'In a desperate attempt to slow the robot down, Max grabs a heavy object and hurls it at the robot. The object strikes the robot’s leg, causing it to stumble, but it quickly regains balance and resumes the chase with renewed aggression.',
+      animation: 'robot_stumbles',
+      image: 'robot_stumbling',
+      choices: [
+        Choice(text: 'Use the brief delay to find an exit', nextNode: 'find_exit'),
+        Choice(text: 'Try to disarm the robot while it’s off balance', nextNode: 'disarm_robot'),
+      ],
+    ),
+
+'robot_disabled': StoryNode(
+      text: 'Shaun’s fingers fly over the controls as sparks fly from the panel. Just as the robot closes in, its movements stutter and then it freezes, powered down by Shaun’s last-second hack. The trio breathes a sigh of relief, but they know the danger isn’t over yet.',
+      animation: 'robot_shutting_down',
+      image: 'robot_frozen',
+      choices: [
+        Choice(text: 'Search the area for more threats', nextNode: 'search_area'),
+        Choice(text: 'Move on before something else happens', nextNode: 'move_on'),
+      ],
+    ),
+
+'robot_turns': StoryNode(
+      text: 'Shaun’s hands move rapidly over the control panel as he attempts to rewrite the robot’s programming. Suddenly, the robot’s eyes flicker from red to blue, and it turns to face the opposite direction, ready to fight on their side.',
+      animation: 'robot_turns_to_ally',
+      image: 'robot_ally',
+      choices: [
+        Choice(text: 'Use the robot to fight off other threats', nextNode: 'robot_ally_fight'),
+        Choice(text: 'Disable the robot permanently to avoid risks', nextNode: 'disable_robot_final'),
+      ],
+    ),
+
+'escape_collapse': StoryNode(
+      text: 'As the walls around them start to crumble, the trio makes a mad dash to escape the collapsing section of the house. The ground shakes beneath their feet, and debris falls from the ceiling as they race against time.',
+      animation: 'escape_collapse',
+      image: 'house_collapse',
+      choices: [
+        Choice(text: 'Find a safe place to hide', nextNode: 'find_safe_place'),
+        Choice(text: 'Keep running towards the main exit', nextNode: 'find_exit'),
+      ],
+    ),
+
+'set_trap': StoryNode(
+      text: 'Max and Alex quickly grab some materials scattered around the chamber and set up a makeshift trap near the exit. As the robot charges forward, it triggers the trap, causing a series of explosions that momentarily stop it in its tracks.',
+      animation: 'robot_trapped',
+      image: 'robot_trap_explosions',
+      choices: [
+        Choice(text: 'Escape while the robot is stunned', nextNode: 'escape'),
+        Choice(text: 'Use the distraction to disable the robot', nextNode: 'disarm_robot'),
+      ],
+    ),
+
+'check_robot': StoryNode(
+      text: 'The trio cautiously approaches the rubble to see if the robot is truly disabled. The silence is eerie, but as they draw near, the robot’s eyes suddenly light up, and it starts to stir, its systems slowly coming back online.',
+      animation: 'robot_reactivating',
+      image: 'robot_rebooting',
+      choices: [
+        Choice(text: 'Run before it fully reactivates', nextNode: 'find_exit'),
+        Choice(text: 'Try to shut it down again', nextNode: 'disable_robot_final'),
+      ],
+    ),
+
+'robot_ally_fight': StoryNode(
+      text: 'With the robot now on their side, the trio directs it to confront other dangers lurking in the house. The robot smashes through obstacles and defeats enemies, clearing a path for them to continue their journey.',
+      animation: 'robot_fights_enemies',
+      image: 'robot_clearing_path',
+      choices: [
+        Choice(text: 'Continue using the robot as an ally', nextNode: 'ally_robot_support'),
+        Choice(text: 'Disable the robot now that the path is clear', nextNode: 'disable_robot_final'),
+      ],
+    ),
+
+'disable_robot_final': StoryNode(
+      text: 'Realizing that the robot poses too much of a risk, even as an ally, Shaun decides to shut it down for good. With a final command at the control panel, the robot powers down completely, its eyes fading to darkness.',
+      animation: 'robot_final_shutdown',
+      image: 'robot_shutdown',
+      choices: [
+        Choice(text: 'Move on and explore the next area', nextNode: 'move_on'),
+        Choice(text: 'Search the area for useful items', nextNode: 'search_area'),
+      ],
+    ),
+
+
+
+
+
+
+
