@@ -1,0 +1,378 @@
+// Gold card challenge
+'GoldCard_ShootingStar': StoryNode(
+  text: 'You draw the gold card, and a shooting star appears next to the house, its brilliance lighting up the darkened room. The trio stands in awe, momentarily mesmerized by the star’s beauty. “Make a wish!” Shaun exclaims with excitement.\n\nWithout thinking, you all make a wish to dismantle the robot you had previously defeated, hoping it will be a safe way to end the threat. Little did you know, the robot, now fully repaired and more formidable than before, is right behind you, its eyes glowing with a menacing light.',
+  animation: 'shooting_star',
+  image: 'shooting_star.png',
+  choices: [
+    Choice(text: 'Prepare for the robot’s attack', nextNode: 'GoldCard_RobotAttack'),
+    Choice(text: 'Try to escape the house', nextNode: 'GoldCard_EscapeHouse'),
+    Choice(text: 'Search for a weapon', nextNode: 'GoldCard_SearchWeapon'),
+  ],
+),
+
+// Robot attack after wish
+'GoldCard_RobotAttack': StoryNode(
+  text: 'The robot, now fully operational, moves swiftly towards you, its heavy metal footsteps echoing through the house. “We made a terrible mistake!” Max shouts as the robot’s weapons power up.\n\nDesperately, you try to find a way to stop the robot, but its advanced systems overpower your efforts. The room fills with tension as the robot closes in, leaving you no choice but to brace for impact.',
+  animation: 'robot_attack',
+  image: 'robot_advanced.png',
+  choices: [
+    Choice(text: 'Fight the robot with whatever you have', nextNode: 'GoldCard_FightRobot'),
+    Choice(text: 'Hide and seek a plan', nextNode: 'GoldCard_HideAndPlan'),
+    Choice(text: 'Attempt to use the house’s systems', nextNode: 'GoldCard_UseSystems'),
+  ],
+),
+
+// Fighting the robot
+'GoldCard_FightRobot': StoryNode(
+  text: 'With nowhere to run, you and your friends take a stand and fight the robot with whatever makeshift weapons you can find. The battle is fierce, and the robot’s advanced systems make it a tough opponent.\n\nJust as you think you’re about to be overwhelmed, the house shakes violently, signaling that the next challenge is about to begin. You’re forced to retreat, realizing that the real danger is yet to come.',
+  animation: 'robot_battle',
+  image: 'robot_fight.png',
+  choices: [
+    Choice(text: 'Find Max for the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Search for a way to finish the game', nextNode: 'GoldCard_SearchFinish'),
+  ],
+),
+
+// Hiding and planning
+'GoldCard_HideAndPlan': StoryNode(
+  text: 'You and your friends quickly hide, trying to devise a plan to deal with the robot. The house trembles as the robot searches for you. You overhear the robot’s mechanical voice as it scans for any signs of movement.\n\nAs the tremors intensify, you realize that the next challenge is approaching rapidly. You need to act quickly if you want to survive.',
+  animation: 'robot_search',
+  image: 'hidden_robot.png',
+  choices: [
+    Choice(text: 'Look for a way to defeat the robot', nextNode: 'GoldCard_LookForDefeat'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Investigate the house for useful items', nextNode: 'GoldCard_InvestigateHouse'),
+  ],
+),
+
+// Looking for defeat
+'GoldCard_LookForDefeat': StoryNode(
+  text: 'You frantically search for a way to defeat the robot. Your efforts are interrupted by a sudden jolt, as the house begins to shake uncontrollably. The robot’s pursuit intensifies, but it’s clear that something else is happening—something much bigger and more dangerous.',
+  animation: 'robot_hunt',
+  image: 'robot_investigate.png',
+  choices: [
+    Choice(text: 'Help Max with the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Find a way to finish the game', nextNode: 'GoldCard_FinishGame'),
+    Choice(text: 'Continue searching for a solution', nextNode: 'GoldCard_SearchSolution'),
+  ],
+),
+
+// Investigating the house
+'GoldCard_InvestigateHouse': StoryNode(
+  text: 'As you investigate the house, you find hidden compartments and old tools. You come across a makeshift weapon and some useful items that might help you in the upcoming challenges. However, the house is still shaking, and time is running out.\n\nYou gather the items and prepare for what’s next.',
+  animation: 'house_investigation',
+  image: 'investigate_house.png',
+  choices: [
+    Choice(text: 'Prepare for the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Use the items to fight the robot', nextNode: 'GoldCard_FightRobot'),
+  ],
+),
+
+// Searching for a solution
+'GoldCard_SearchSolution': StoryNode(
+  text: 'You continue to search for a solution to stop the robot, but the house’s instability makes it difficult. The robot’s presence grows more threatening, and you realize that the house is about to face the next challenge. You need to act quickly.',
+  animation: 'searching_solution',
+  image: 'search_solution.png',
+  choices: [
+    Choice(text: 'Prepare for the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Find Max to strategize', nextNode: 'GoldCard_StrategizeMax'),
+  ],
+),
+
+// Strategizing with Max
+'GoldCard_StrategizeMax': StoryNode(
+  text: 'You find Max and discuss your options. The robot is still a threat, and the house’s instability is getting worse. You need to come up with a plan to face both the robot and the upcoming challenge.\n\nMax suggests focusing on finishing the game quickly to end the threats once and for all.',
+  animation: 'strategize_with_max',
+  image: 'strategize_max.png',
+  choices: [
+    Choice(text: 'Help Max with the next challenge', nextNode: 'Max_CosmicWhirlpool'),
+    Choice(text: 'Search for any remaining solutions', nextNode: 'GoldCard_SearchSolution'),
+  ],
+),
+
+// Max's turn and Cosmic Whirlpool challenge
+'Max_CosmicWhirlpool': StoryNode(
+  text: 'The Cosmic Whirlpool card is drawn, and the house starts to tremble violently as it gets sucked into a swirling vortex of cosmic energy. The walls groan and the air is filled with a high-pitched whine as everything gets pulled towards the center of the whirlpool. You realize that the only hope of survival is to finish the game. It’s now Shaun’s turn, and he has to play the game to save everyone.',
+  animation: 'cosmic_whirlpool',
+  image: 'whirlpool.png',
+  choices: [
+    Choice(text: 'Watch Shaun play the game', nextNode: 'Shaun_PlayGame'),
+    Choice(text: 'Try to hold on and stabilize the house', nextNode: 'Max_HoldOn'),
+    Choice(text: 'Search for any remaining solutions', nextNode: 'Max_SearchSolutions'),
+  ],
+),
+
+// Searching for solutions (during whirlpool)
+'Max_SearchSolutions': StoryNode(
+  text: 'In the midst of the chaos, you search for any remaining solutions or items that could help stabilize the house or stop the whirlpool. The situation is dire, and every second counts. You find some old notes and a malfunctioning device that might be useful, but it’s unclear if it will work in time.',
+  animation: 'searching_during_whirlpool',
+  image: 'search_solutions.png',
+  choices: [
+    Choice(text: 'Help Shaun with the next challenge', nextNode: 'Shaun_PlayGame'),
+    Choice(text: 'Try to fix the malfunctioning device', nextNode: 'Max_FixDevice'),
+  ],
+),
+
+// Fixing the malfunctioning device
+'Max_FixDevice': StoryNode(
+  text: 'You attempt to fix the malfunctioning device, but it’s a complicated process. The whirlpool’s pull is relentless, and it becomes increasingly difficult to concentrate. Just as you finish, the device emits a burst of light, but its effect on the situation is uncertain.',
+  animation: 'device_fixing',
+  image: 'fix_device.png',
+  choices: [
+    Choice(text: 'Help Shaun with the next challenge', nextNode: 'Shaun_PlayGame'),
+    Choice(text: 'Use the device to try and stabilize the house', nextNode: 'Max_UseDevice'),
+  ],
+),
+
+// Using the device
+'Max_UseDevice': StoryNode(
+  text: 'You use the repaired device in an attempt to stabilize the house. The device emits a powerful pulse, but it’s unclear if it’s enough to counteract the whirlpool’s pull. The house shakes violently, and you brace yourself for what’s next.',
+  animation: 'device_use',
+  image: 'device_use.png',
+  choices: [
+    Choice(text: 'Help Shaun with the next challenge', nextNode: 'Shaun_PlayGame'),
+    Choice(text: 'Attempt to stabilize the house manually', nextNode: 'Max_StabilizeManually'),
+  ],
+),
+
+// Stabilizing manually
+'Max_StabilizeManually': StoryNode(
+  text: 'You try to manually stabilize the house by securing loose items and reinforcing weak points. It’s a desperate attempt, and the strain is overwhelming. The house continues to shake, but there’s a glimmer of hope that your efforts might make a difference.',
+  animation: 'manual_stabilization',
+  image: 'manual_stabilization.png',
+  choices: [
+    Choice(text: 'Help Shaun with the next challenge', nextNode: 'Shaun_PlayGame'),
+    Choice(text: 'Continue stabilizing manually', nextNode: 'Max_ContinueStabilizing'),
+  ],
+),
+
+// Shaun playing the game
+'Shaun_PlayGame': StoryNode(
+  text: 'Shaun takes his turn and draws the next card, revealing an unexpected challenge. The house begins to stabilize as the cosmic whirlpool’s power wanes. Shaun’s choices become crucial in determining the final outcome of the game.\n\nShaun’s next move could either save everyone or bring about the final catastrophe.',
+  animation: 'shaun_playing',
+  image: 'shaun_playing.png',
+  choices: [
+    Choice(text: 'Watch Shaun’s move and hope for the best', nextNode: 'Shaun_FinalMove'),
+    Choice(text: 'Try to assist Shaun', nextNode: 'Shaun_Assist'),
+  ],
+),
+
+// Shaun’s final move
+'Shaun_FinalMove': StoryNode(
+  text: 'Shaun makes his move, and the house begins to return to normal. The cosmic whirlpool’s pull fades away, and the house stabilizes. You and your friends are safe, at least for now. The final challenge has been overcome, and you can finally take a breath of relief.',
+  animation: 'final_move',
+  image: 'final_move.png',
+  choices: [
+    Choice(text: 'Celebrate the victory', nextNode: 'CelebrateVictory'),
+    Choice(text: 'Reflect on the adventure', nextNode: 'ReflectAdventure'),
+  ],
+),
+
+// Celebrating victory
+'CelebrateVictory': StoryNode(
+  text: 'You and your friends celebrate your victory, relieved to have survived the cosmic whirlpool and the robot attack. The house returns to its original state, and you realize that the adventure has come to a close. You’ve learned valuable lessons and grown closer as a team.',
+  animation: 'celebrate',
+  image: 'celebrate.png',
+  choices: [
+    Choice(text: 'End the game', nextNode: 'GameEnd'),
+    Choice(text: 'Start a new adventure', nextNode: 'NewAdventure'),
+  ],
+),
+
+// Reflecting on the adventure
+'ReflectAdventure': StoryNode(
+  text: 'You reflect on the adventure, pondering the challenges you faced and the lessons learned. The experience has changed you and your friends, and you feel a sense of accomplishment. The house remains a reminder of your incredible journey.',
+  animation: 'reflect',
+  image: 'reflect.png',
+  choices: [
+    Choice(text: 'End the game', nextNode: 'GameEnd'),
+    Choice(text: 'Share your story with others', nextNode: 'ShareStory'),
+  ],
+),
+
+// Game end
+'GameEnd': StoryNode(
+  text: 'The game comes to an end, and you look back on the journey with a sense of pride and achievement. The house is quiet now, a testament to the challenges you’ve overcome. Until the next adventure, you can rest easy knowing you faced the unknown and came out victorious.',
+  animation: 'game_end',
+  image: 'game_end.png',
+  choices: [
+    Choice(text: 'Play again', nextNode: 'StartNewGame'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Starting new game
+'StartNewGame': StoryNode(
+  text: 'You decide to play again, eager for another adventure. The house resets, and the game begins anew, full of fresh challenges and mysteries. What will the next adventure bring? Only time will tell.',
+  animation: 'new_game',
+  image: 'new_game.png',
+  choices: [
+    Choice(text: 'Start new adventure', nextNode: 'NewAdventure'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Exiting game
+'ExitGame': StoryNode(
+  text: 'You choose to exit the game, feeling satisfied with the journey you’ve had. The house fades away, leaving you with memories of the adventure and a sense of accomplishment. Until next time!',
+  animation: 'exit',
+  image: 'exit.png',
+  choices: [
+    Choice(text: 'Play again', nextNode: 'StartNewGame'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Starting new adventure
+'NewAdventure': StoryNode(
+  text: 'A new adventure awaits! The house transforms into a new setting, ready to offer fresh challenges and stories. You and your friends are prepared for whatever comes next. Let the new journey begin!',
+  animation: 'new_adventure',
+  image: 'new_adventure.png',
+  choices: [
+    Choice(text: 'Begin the new adventure', nextNode: 'NewAdventureStart'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Starting new adventure (beginning)
+'NewAdventureStart': StoryNode(
+  text: 'The adventure begins anew with new challenges, mysteries, and excitement. The house is full of possibilities, and you can’t wait to discover what lies ahead. The journey is just beginning.',
+  animation: 'adventure_start',
+  image: 'adventure_start.png',
+  choices: [
+    Choice(text: 'Explore the new adventure', nextNode: 'ExploreNewAdventure'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Exploring new adventure
+'ExploreNewAdventure': StoryNode(
+  text: 'You delve into the new adventure, discovering new secrets and challenges. The journey is filled with excitement and wonder as you and your friends navigate through the unknown. What new challenges will you face? Only time will tell.',
+  animation: 'explore_adventure',
+  image: 'explore_adventure.png',
+  choices: [
+    Choice(text: 'Continue exploring', nextNode: 'ContinueExploring'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Continuing exploring
+'ContinueExploring': StoryNode(
+  text: 'You continue exploring the new adventure, uncovering hidden secrets and encountering new challenges. Each choice you make shapes the outcome of your journey. What will you discover next?',
+  animation: 'continue_exploring',
+  image: 'continue_exploring.png',
+  choices: [
+    Choice(text: 'Face the next challenge', nextNode: 'NextChallenge'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Facing the next challenge
+'NextChallenge': StoryNode(
+  text: 'You prepare to face the next challenge, ready for whatever comes your way. The adventure continues with new twists and turns, and you and your friends are ready for the journey ahead.',
+  animation: 'face_challenge',
+  image: 'face_challenge.png',
+  choices: [
+    Choice(text: 'Begin the challenge', nextNode: 'ChallengeStart'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Challenge start
+'ChallengeStart': StoryNode(
+  text: 'The challenge begins, and you and your friends are thrust into a new set of trials and adventures. The house is full of surprises, and every decision you make impacts the outcome. Embrace the adventure and see where it leads!',
+  animation: 'challenge_start',
+  image: 'challenge_start.png',
+  choices: [
+    Choice(text: 'Continue the adventure', nextNode: 'ContinueAdventure'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Continue adventure
+'ContinueAdventure': StoryNode(
+  text: 'The adventure continues, full of excitement and unpredictability. Each choice and challenge shapes your journey, and you and your friends are ready to face whatever comes next. Enjoy the ride!',
+  animation: 'continue_adventure',
+  image: 'continue_adventure.png',
+  choices: [
+    Choice(text: 'Keep exploring', nextNode: 'ExploreFurther'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Explore further
+'ExploreFurther': StoryNode(
+  text: 'You decide to explore further, delving deeper into the mysteries and challenges that await. The adventure is far from over, and there’s still much to discover. What new twists and turns lie ahead?',
+  animation: 'explore_further',
+  image: 'explore_further.png',
+  choices: [
+    Choice(text: 'Face the next twist', nextNode: 'TwistNext'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Next twist
+'TwistNext': StoryNode(
+  text: 'A new twist in the adventure presents itself, adding more complexity to the challenges ahead. You and your friends must adapt and strategize to overcome this new obstacle. The journey continues with unexpected surprises.',
+  animation: 'next_twist',
+  image: 'next_twist.png',
+  choices: [
+    Choice(text: 'Tackle the twist', nextNode: 'TackleTwist'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Tackle twist
+'TackleTwist': StoryNode(
+  text: 'You tackle the new twist with determination, using your wits and resources to overcome the challenge. Each twist brings you closer to the end of the adventure, and your actions will determine the final outcome.',
+  animation: 'tackle_twist',
+  image: 'tackle_twist.png',
+  choices: [
+    Choice(text: 'Proceed to the next stage', nextNode: 'NextStage'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Next stage
+'NextStage': StoryNode(
+  text: 'The adventure moves to the next stage, and you and your friends are ready to face new challenges and uncover more mysteries. Each stage brings new opportunities and obstacles, shaping the final outcome of your journey.',
+  animation: 'next_stage',
+  image: 'next_stage.png',
+  choices: [
+    Choice(text: 'Advance in the adventure', nextNode: 'AdvanceAdventure'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Advance adventure
+'AdvanceAdventure': StoryNode(
+  text: 'You advance in the adventure, embracing new challenges and discoveries. The journey is dynamic, with each choice influencing the outcome. What new surprises await you in this evolving adventure?',
+  animation: 'advance_adventure',
+  image: 'advance_adventure.png',
+  choices: [
+    Choice(text: 'Explore further', nextNode: 'ExploreDeeper'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Explore deeper
+'ExploreDeeper': StoryNode(
+  text: 'You explore deeper into the adventure, uncovering hidden secrets and facing greater challenges. The journey continues to evolve, with each decision playing a crucial role in shaping the final outcome.',
+  animation: 'explore_deeper',
+  image: 'explore_deeper.png',
+  choices: [
+    Choice(text: 'Continue the journey', nextNode: 'ContinueJourney'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
+
+// Continue journey
+'ContinueJourney': StoryNode(
+  text: 'You continue the journey, navigating through new twists and turns. The adventure is far from over, and each choice you make leads to different outcomes. Enjoy the ongoing adventure and see where it leads!',
+  animation: 'continue_journey',
+  image: 'continue_journey.png',
+  choices: [
+    Choice(text: 'Face the next challenge', nextNode: 'NextChallenge'),
+    Choice(text: 'Exit', nextNode: 'ExitGame'),
+  ],
+),
