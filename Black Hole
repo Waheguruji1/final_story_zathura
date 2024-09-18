@@ -1,0 +1,499 @@
+'blackHoleThreat': StoryNode(
+  text: 'As the house gets closer to the black hole, you realize the situation is critical. The gravitational pull is so strong that the house begins to shake and tremble. With no way to escape outside, you and the others must rely solely on your wits and the house’s structure to survive the impending doom.',
+  animation: 'house_shaking',
+  image: 'house_shaking',
+  choices: [
+    Choice(text: 'Secure the furniture to stabilize the house', nextNode: 'secureFurniture'),
+    Choice(text: 'Try to reinforce the house with whatever you can find', nextNode: 'reinforceHouse'),
+  ],
+),
+
+'secureFurniture': StoryNode(
+  text: 'You and your friends scramble to secure the furniture, tying it down with ropes and any available materials. The house continues to shake violently, and every object in the house seems to be at risk of being thrown around. Securing the furniture might help keep things in place and reduce the chaos.',
+  animation: 'securing_furniture',
+  image: 'furniture_secured',
+  choices: [
+    Choice(text: 'Check for any additional materials to reinforce the house', nextNode: 'findMaterials'),
+    Choice(text: 'Focus on keeping everyone calm and collected', nextNode: 'keepCalm'),
+  ],
+),
+
+'reinforceHouse': StoryNode(
+  text: 'You search the house for anything that might help reinforce its structure. Finding extra ropes, sturdy furniture, and heavy objects, you and the others use these items to try to stabilize the house as much as possible. The goal is to brace the house against the intense gravitational forces pulling it toward the black hole.',
+  animation: 'reinforcing_house',
+  image: 'reinforcement_materials',
+  choices: [
+    Choice(text: 'Make sure all reinforcements are securely in place', nextNode: 'secureReinforcements'),
+    Choice(text: 'Prepare for potential damage and aftershocks', nextNode: 'prepareDamage'),
+  ],
+),
+
+'secureReinforcements': StoryNode(
+  text: 'With the reinforcements in place, you ensure everything is tightly secured. The house continues to shake, but you hope the added weight and support will help withstand the black hole’s pull. You and the others brace yourselves for the next phase of the ordeal.',
+  animation: 'securing_reinforcements',
+  image: 'reinforcements_in_place',
+  choices: [
+    Choice(text: 'Check for any immediate threats or damages', nextNode: 'checkDamage'),
+    Choice(text: 'Reassess the situation and adjust as needed', nextNode: 'reassessSituation'),
+  ],
+),
+
+'findMaterials': StoryNode(
+  text: 'You search frantically for additional materials that might help reinforce the house. Among the scattered items, you find some old ropes, heavy furniture, and a few sturdy boards. Using these, you create makeshift supports to brace against the black hole’s pull.',
+  animation: 'finding_materials',
+  image: 'searching_for_materials',
+  choices: [
+    Choice(text: 'Use the materials to create additional supports', nextNode: 'createSupports'),
+    Choice(text: 'Check if the current setup is holding', nextNode: 'checkSetup'),
+  ],
+),
+
+'createSupports': StoryNode(
+  text: 'You and the others work together to create additional supports with the materials you found. The house’s shaking makes the task challenging, but you manage to set up more reinforcements. The hope is that these extra supports will help prevent further damage and keep the house stable.',
+  animation: 'creating_supports',
+  image: 'supports_in_place',
+  choices: [
+    Choice(text: 'Ensure everyone is safely secured', nextNode: 'secureEveryone'),
+    Choice(text: 'Prepare for any possible fallout or damage', nextNode: 'prepareFallout'),
+  ],
+),
+
+'checkSetup': StoryNode(
+  text: 'You check the current setup to ensure that the reinforcements and supports are holding against the black hole’s gravitational pull. The house continues to shake, and while the reinforcements seem to be helping, the situation remains precarious.',
+  animation: 'checking_setup',
+  image: 'setup_check',
+  choices: [
+    Choice(text: 'Continue to monitor and adjust as needed', nextNode: 'monitorAdjust'),
+    Choice(text: 'Focus on keeping the house and everyone as stable as possible', nextNode: 'keepStable'),
+  ],
+),
+
+'monitorAdjust': StoryNode(
+  text: 'You continue to monitor the situation closely, making adjustments as needed to keep the house stable. The gravitational forces are relentless, but your efforts are helping to keep things under control. The house still shakes violently, but the reinforcements are making a difference.',
+  animation: 'monitoring_adjustments',
+  image: 'monitoring_situation',
+  choices: [
+    Choice(text: 'Prepare for a possible critical moment', nextNode: 'prepareCritical'),
+    Choice(text: 'Ensure everyone is ready for further challenges', nextNode: 'prepareChallenges'),
+  ],
+),
+
+'prepareCritical': StoryNode(
+  text: 'You prepare for a possible critical moment, knowing that the situation could change at any second. You ensure that everyone is securely positioned and ready for whatever might come next. The black hole’s pull remains strong, and you brace yourselves for the worst.',
+  animation: 'preparing_for_critical',
+  image: 'preparing_critical',
+  choices: [
+    Choice(text: 'Focus on keeping everyone calm and collected', nextNode: 'keepCalm'),
+    Choice(text: 'Review the house’s condition and readiness', nextNode: 'reviewCondition'),
+  ],
+),
+
+'keepCalm': StoryNode(
+  text: 'You work to keep everyone calm and collected amid the chaos. The house continues to shake, but maintaining a level head is crucial for making sound decisions. You remind everyone to stay focused and prepare for any eventuality.',
+  animation: 'keeping_calm',
+  image: 'calm_under_pressure',
+  choices: [
+    Choice(text: 'Prepare for the potential worst-case scenario', nextNode: 'worstCase'),
+    Choice(text: 'Focus on finding any remaining safety measures', nextNode: 'findSafety'),
+  ],
+),
+
+'prepareChallenges': StoryNode(
+  text: 'You make sure everyone is prepared for further challenges. The black hole’s pull is still strong, and you anticipate more difficulties ahead. You take a deep breath and prepare for the next phase of the ordeal, knowing that teamwork and quick thinking will be key to surviving.',
+  animation: 'preparing_for_challenges',
+  image: 'preparing_for_next_challenges',
+  choices: [
+    Choice(text: 'Plan your next steps and survival strategies', nextNode: 'planSurvival'),
+    Choice(text: 'Keep an eye out for any changes in the house’s condition', nextNode: 'monitorChanges'),
+  ],
+),
+
+'planSurvival': StoryNode(
+  text: 'You and the others plan your next steps and survival strategies. The house is under constant threat from the black hole, and you must be ready for any changes or surprises. You discuss potential tactics and prepare for any new challenges that might arise.',
+  animation: 'planning_survival',
+  image: 'survival_plan',
+  choices: [
+    Choice(text: 'Execute the survival plan and stay alert', nextNode: 'executePlan'),
+    Choice(text: 'Make final adjustments to the house’s stability', nextNode: 'finalAdjustments'),
+  ],
+),
+
+'executePlan': StoryNode(
+  text: 'You execute the survival plan, ensuring that everyone is in place and ready for whatever comes next. The house continues to shake, but your preparations are helping to keep things under control. You stay vigilant, knowing that the black hole’s pull is relentless and unpredictable.',
+  animation: 'executing_plan',
+  image: 'plan_execution',
+  choices: [
+    Choice(text: 'Monitor the house for any signs of failure', nextNode: 'monitorFailure'),
+    Choice(text: 'Focus on maintaining morale and calm', nextNode: 'maintainMorale'),
+  ],
+),
+
+'monitorFailure': StoryNode(
+  text: 'You monitor the house closely for any signs of failure. The shaking is relentless, but your reinforcements are holding so far. The black hole’s pull remains strong, but you’re managing to keep the house from falling apart. You prepare for any potential problems that might arise.',
+  animation: 'monitoring_failure',
+  image: 'monitoring_house',
+  choices: [
+    Choice(text: 'Prepare for any critical moments or damage', nextNode: 'prepareCritical'),
+    Choice(text: 'Stay vigilant and continue monitoring the situation', nextNode: 'stayVigilant'),
+  ],
+),
+
+'maintainMorale': StoryNode(
+  text: 'You focus on maintaining morale and calm among the group. The situation is tense, but keeping spirits high is essential for effective problem-solving. You encourage everyone to stay focused and work together to overcome the black hole’s relentless pull.',
+  animation: 'maintaining_morale',
+  image: 'group_morale',
+  choices: [
+    Choice(text: 'Revisit the survival plan and adjust if needed', nextNode: 'revisitPlan'),
+    Choice(text: 'Prepare for the potential impact of a critical failure', nextNode: 'prepareImpact'),
+  ],
+),
+
+'prepareImpact': StoryNode(
+  text: 'You prepare for the potential impact of a critical failure. With the house shaking and the black hole’s pull growing stronger, you anticipate that the situation could deteriorate quickly. You make sure everyone is ready for any possible outcomes and adjust your strategies accordingly.',
+  animation: 'preparing_impact',
+  image: 'impact_preparedness',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Review and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'stayVigilant': StoryNode(
+  text: 'You stay vigilant and continue monitoring the situation closely. The house’s condition is holding up for now, but the black hole’s pull is still a significant threat. You keep a close eye on any changes and remain ready to act if anything goes wrong.',
+  animation: 'staying_vigilant',
+  image: 'staying_alert',
+  choices: [
+    Choice(text: 'Make any necessary adjustments to the reinforcements', nextNode: 'adjustReinforcements'),
+    Choice(text: 'Prepare for the possibility of a worst-case scenario', nextNode: 'prepareWorstCase'),
+  ],
+),
+
+'adjustReinforcements': StoryNode(
+  text: 'You make any necessary adjustments to the reinforcements to ensure they remain effective. The black hole’s pull continues to challenge your efforts, but your adjustments help maintain stability. You stay focused and prepared for any new developments.',
+  animation: 'adjusting_reinforcements',
+  image: 'reinforcement_adjustments',
+  choices: [
+    Choice(text: 'Prepare for potential fallout or damage', nextNode: 'prepareDamage'),
+    Choice(text: 'Ensure everyone is secure and ready for the next challenge', nextNode: 'ensureReadiness'),
+  ],
+),
+
+'ensureReadiness': StoryNode(
+  text: 'You ensure that everyone is secure and ready for the next challenge. The black hole’s pull is still a significant threat, and you need to be prepared for any new difficulties. You take a final look around, making sure everything is in place before moving forward.',
+  animation: 'ensuring_readiness',
+  image: 'final_check',
+  choices: [
+    Choice(text: 'Revisit your strategy for handling the black hole', nextNode: 'revisitStrategy'),
+    Choice(text: 'Prepare for potential critical moments', nextNode: 'prepareCritical'),
+  ],
+),
+
+'revisitStrategy': StoryNode(
+  text: 'You revisit your strategy for handling the black hole, making sure that all aspects are covered. The house continues to shake, but your strategy is designed to withstand the threat. You remain focused and ready to adapt as needed.',
+  animation: 'revisiting_strategy',
+  image: 'strategy_review',
+  choices: [
+    Choice(text: 'Execute the strategy and monitor the results', nextNode: 'executeStrategy'),
+    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+  ],
+),
+
+'prepareUnforeseen': StoryNode(
+  text: 'You prepare for any unforeseen challenges that might arise. The black hole’s pull is unpredictable, and you want to be ready for anything. You make final adjustments and ensure everyone is prepared for any surprises.',
+  animation: 'preparing_unforeseen',
+  image: 'unexpected_challenges',
+  choices: [
+    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Monitor the house closely for any changes', nextNode: 'monitorChanges'),
+  ],
+),
+
+'executeFinalPlan': StoryNode(
+  text: 'You execute your final plan, ensuring that all measures are in place and everyone is ready. The house continues to shake under the black hole’s pull, but your preparations are holding strong. You stay vigilant and prepared for any new developments.',
+  animation: 'executing_final_plan',
+  image: 'final_plan_execution',
+  choices: [
+    Choice(text: 'Monitor the situation and adjust if necessary', nextNode: 'monitorAdjust'),
+    Choice(text: 'Focus on maintaining calm and readiness', nextNode: 'maintainReadiness'),
+  ],
+),
+
+'maintainReadiness': StoryNode(
+  text: 'You focus on maintaining calm and readiness among the group. The black hole’s pull is unrelenting, and you need to be prepared for any changes or new challenges. You ensure that everyone stays focused and ready to handle any situation that arises.',
+  animation: 'maintaining_readiness',
+  image: 'group_readiness',
+  choices: [
+    Choice(text: 'Prepare for the impact of the black hole’s pull', nextNode: 'prepareImpact'),
+    Choice(text: 'Stay alert and monitor for any critical issues', nextNode: 'stayAlert'),
+  ],
+),
+
+'stayAlert': StoryNode(
+  text: 'You stay alert and continue monitoring the situation closely. The black hole’s pull remains a constant threat, and you need to be ready for any critical issues that might arise. Your vigilance is key to surviving this challenge.',
+  animation: 'staying_alert',
+  image: 'alert_state',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Revisit and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'emergencyProcedures': StoryNode(
+  text: 'You execute emergency procedures, ensuring that all safety measures are in place. The black hole’s pull is intense, but your preparations are helping to keep things under control. You remain ready to act quickly if any new issues arise.',
+  animation: 'executing_emergency',
+  image: 'emergency_procedures',
+  choices: [
+    Choice(text: 'Review the situation and adjust plans if necessary', nextNode: 'reviewAdjust'),
+    Choice(text: 'Ensure that everyone is securely positioned and ready', nextNode: 'securePositioned'),
+  ],
+),
+
+'finalizePlans': StoryNode(
+  text: 'You finalize your plans for stabilization, ensuring that all measures are in place and ready for any situation. The black hole’s pull remains a significant threat, but your thorough preparations give you hope. You stay vigilant and ready to adapt as needed.',
+  animation: 'finalizing_plans',
+  image: 'final_plan',
+  choices: [
+    Choice(text: 'Monitor the house for any signs of trouble', nextNode: 'monitorTrouble'),
+    Choice(text: 'Prepare for the potential impact of the black hole', nextNode: 'prepareImpact'),
+  ],
+),
+
+'monitorTrouble': StoryNode(
+  text: 'You monitor the house closely for any signs of trouble. The black hole’s pull continues to challenge your efforts, but your preparations are holding up. You stay alert and ready to make any necessary adjustments to keep the house stable.',
+  animation: 'monitoring_trouble',
+  image: 'monitoring_house',
+  choices: [
+    Choice(text: 'Continue with the current strategy', nextNode: 'currentStrategy'),
+    Choice(text: 'Prepare for any possible critical issues', nextNode: 'prepareCritical'),
+  ],
+),
+
+'currentStrategy': StoryNode(
+  text: 'You continue with the current strategy, making sure all measures are still effective against the black hole’s pull. The situation remains tense, but your preparations are helping to keep the house stable. You stay vigilant and ready for any new developments.',
+  animation: 'continuing_strategy',
+  image: 'strategy_continued',
+  choices: [
+    Choice(text: 'Reassess the situation and adjust as needed', nextNode: 'reassessSituation'),
+    Choice(text: 'Prepare for potential fallout or damage', nextNode: 'prepareDamage'),
+  ],
+),
+
+'reassessSituation': StoryNode(
+  text: 'You reassess the situation, ensuring that all aspects are covered and all preparations are still effective. The black hole’s pull remains strong, and you adjust your strategies as needed to maintain stability and prepare for any potential issues.',
+  animation: 'reassessing_situation',
+  image: 'situation_assessment',
+  choices: [
+    Choice(text: 'Prepare for the potential impact of critical issues', nextNode: 'prepareCritical'),
+    Choice(text: 'Monitor the house for any signs of failure', nextNode: 'monitorFailure'),
+  ],
+),
+
+'prepareDamage': StoryNode(
+  text: 'You prepare for potential damage or fallout, ensuring that all safety measures are in place. The black hole’s pull is relentless, and you anticipate that the situation might worsen. You stay focused on minimizing damage and keeping everyone safe.',
+  animation: 'preparing_damage',
+  image: 'damage_preparedness',
+  choices: [
+    Choice(text: 'Check for any immediate threats or issues', nextNode: 'checkThreats'),
+    Choice(text: 'Ensure that the house remains stable and secure', nextNode: 'ensureStability'),
+  ],
+),
+
+'checkThreats': StoryNode(
+  text: 'You check for any immediate threats or issues that might arise due to the black hole’s pull. The house is shaking violently, but your preparations are holding up. You stay alert for any new developments and make adjustments as needed.',
+  animation: 'checking_threats',
+  image: 'threat_check',
+  choices: [
+    Choice(text: 'Prepare for the potential impact of critical moments', nextNode: 'prepareCritical'),
+    Choice(text: 'Monitor the situation and adjust as necessary', nextNode: 'monitorAdjust'),
+  ],
+),
+
+'ensureStability': StoryNode(
+  text: 'You ensure that the house remains as stable and secure as possible. The black hole’s pull continues to challenge your efforts, but your preparations are helping to maintain stability. You stay focused on keeping everything under control.',
+  animation: 'ensuring_stability',
+  image: 'stability_check',
+  choices: [
+    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+    Choice(text: 'Revisit and finalize your stabilization plans', nextNode: 'finalizePlans'),
+  ],
+),
+
+'prepareCritical': StoryNode(
+  text: 'You prepare for any critical issues that might arise due to the black hole’s pull. The situation remains tense, and you anticipate that new challenges may come up. You stay ready to act quickly and decisively if needed.',
+  animation: 'preparing_critical',
+  image: 'critical_preparedness',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Review and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'monitorAdjust': StoryNode(
+  text: 'You continue monitoring the situation and adjust your plans as necessary. The black hole’s pull is ongoing, and you remain prepared for any new challenges that might arise. Your vigilance is key to navigating this difficult situation.',
+  animation: 'monitoring_adjust',
+  image: 'situation_monitor',
+  choices: [
+    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+  ],
+),
+
+'prepareImpact': StoryNode(
+  text: 'You prepare for the impact of the black hole’s pull, ensuring that all measures are in place to handle any potential damage. The situation remains critical, and your preparations are crucial to surviving this challenge. You stay focused and ready for any new developments.',
+  animation: 'preparing_impact',
+  image: 'impact_preparedness',
+  choices: [
+    Choice(text: 'Monitor the house closely for any changes', nextNode: 'monitorChanges'),
+    Choice(text: 'Revisit and adjust your stabilization plans', nextNode: 'finalizePlans'),
+  ],
+),
+
+'monitorChanges': StoryNode(
+  text: 'You monitor the house closely for any changes, ensuring that your preparations are still effective against the black hole’s pull. The situation remains challenging, but your vigilance helps maintain stability. You stay ready for any new issues that might arise.',
+  animation: 'monitoring_changes',
+  image: 'house_changes',
+  choices: [
+    Choice(text: 'Prepare for the potential impact of critical moments', nextNode: 'prepareCritical'),
+    Choice(text: 'Review and adjust your plans as needed', nextNode: 'revisitStrategy'),
+  ],
+),
+
+'prepareUnforeseen': StoryNode(
+  text: 'You prepare for any unforeseen challenges that might arise due to the black hole’s pull. The situation remains unpredictable, and your preparations are crucial to handling any surprises. You stay vigilant and ready to act quickly if needed.',
+  animation: 'preparing_unforeseen',
+  image: 'unforeseen_challenges',
+  choices: [
+    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Monitor the situation closely for any changes', nextNode: 'monitorChanges'),
+  ],
+),
+
+'prepareCritical': StoryNode(
+  text: 'You prepare for the potential impact of any critical issues that might arise. The black hole’s pull remains intense, and you need to be ready for any major developments. Your preparations help you stay focused and ready to adapt as needed.',
+  animation: 'preparing_critical',
+  image: 'critical_preparedness',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Finalize and adjust your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'monitorFailure': StoryNode(
+  text: 'You monitor the house for any signs of failure due to the black hole’s pull. The situation is critical, and you need to be ready for any major issues. Your vigilance helps you stay on top of any potential problems.',
+  animation: 'monitoring_failure',
+  image: 'failure_check',
+  choices: [
+    Choice(text: 'Prepare for potential damage or fallout', nextNode: 'prepareDamage'),
+    Choice(text: 'Ensure that all measures are in place and effective', nextNode: 'ensureEffectiveness'),
+  ],
+),
+
+'ensureEffectiveness': StoryNode(
+  text: 'You ensure that all measures are in place and effective against the black hole’s pull. The situation remains challenging, but your preparations help to keep things under control. You stay focused and ready to make any necessary adjustments.',
+  animation: 'ensuring_effectiveness',
+  image: 'effectiveness_check',
+  choices: [
+    Choice(text: 'Revisit and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+  ],
+),
+
+'prepareCritical': StoryNode(
+  text: 'You prepare for any critical issues that might arise due to the electrical storm. The intensity of the storm is increasing, and you anticipate that new challenges may come up. You stay ready to act quickly and decisively if needed.',
+  animation: 'preparing_critical',
+  image: 'critical_preparedness',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Review and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'prepareUnforeseen': StoryNode(
+  text: 'You prepare for any unforeseen challenges that might arise due to the electrical storm. The situation remains unpredictable, and your preparations are crucial to handling any surprises. You stay vigilant and ready to act quickly if needed.',
+  animation: 'preparing_unforeseen',
+  image: 'unforeseen_challenges',
+  choices: [
+    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Monitor the situation closely for any changes', nextNode: 'monitorChanges'),
+  ],
+),
+
+'executeFinalPlan': StoryNode(
+  text: 'You execute your final plan, ensuring that all measures are in place and everyone is ready. The electrical storm’s intensity continues to challenge your efforts, but your preparations are holding strong. You stay vigilant and prepared for any new developments.',
+  animation: 'executing_final_plan',
+  image: 'final_plan_execution',
+  choices: [
+    Choice(text: 'Monitor the situation and adjust if necessary', nextNode: 'monitorAdjust'),
+    Choice(text: 'Focus on maintaining calm and readiness', nextNode: 'maintainReadiness'),
+  ],
+),
+
+'maintainReadiness': StoryNode(
+  text: 'You focus on maintaining calm and readiness among the group. The electrical storm’s intensity is unrelenting, and you need to be prepared for any changes or new challenges. You ensure that everyone stays focused and ready to handle any situation that arises.',
+  animation: 'maintaining_readiness',
+  image: 'group_readiness',
+  choices: [
+    Choice(text: 'Prepare for the impact of the electrical storm', nextNode: 'prepareImpact'),
+    Choice(text: 'Stay alert and monitor for any critical issues', nextNode: 'stayAlert'),
+  ],
+),
+
+'prepareImpact': StoryNode(
+  text: 'You prepare for the impact of the electrical storm, ensuring that all measures are in place to handle any potential damage. The storm remains intense, and your preparations are crucial to surviving this challenge. You stay focused and ready for any new developments.',
+  animation: 'preparing_impact',
+  image: 'impact_preparedness',
+  choices: [
+    Choice(text: 'Monitor the house closely for any changes', nextNode: 'monitorChanges'),
+    Choice(text: 'Revisit and adjust your stabilization plans', nextNode: 'finalizePlans'),
+  ],
+),
+
+'monitorChanges': StoryNode(
+  text: 'You monitor the house closely for any changes, ensuring that your preparations are still effective against the electrical storm. The situation remains challenging, but your vigilance helps maintain stability. You stay ready for any new issues that might arise.',
+  animation: 'monitoring_changes',
+  image: 'house_changes',
+  choices: [
+    Choice(text: 'Prepare for the potential impact of critical moments', nextNode: 'prepareCritical'),
+    Choice(text: 'Review and adjust your plans as needed', nextNode: 'revisitStrategy'),
+  ],
+),
+
+'prepareUnforeseen': StoryNode(
+  text: 'You prepare for any unforeseen challenges that might arise due to the electrical storm. The situation remains unpredictable, and your preparations are crucial to handling any surprises. You stay vigilant and ready to act quickly if needed.',
+  animation: 'preparing_unforeseen',
+  image: 'unforeseen_challenges',
+  choices: [
+    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Monitor the situation closely for any changes', nextNode: 'monitorChanges'),
+  ],
+),
+
+'prepareCritical': StoryNode(
+  text: 'You prepare for the potential impact of any critical issues that might arise. The electrical storm remains intense, and you need to be ready for any major developments. Your preparations help you stay focused and ready to adapt as needed.',
+  animation: 'preparing_critical',
+  image: 'critical_preparedness',
+  choices: [
+    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Finalize and adjust your plans for stabilization', nextNode: 'finalizePlans'),
+  ],
+),
+
+'monitorFailure': StoryNode(
+  text: 'You monitor the house for any signs of failure due to the electrical storm. The situation is critical, and you need to be ready for any major issues. Your vigilance helps you stay on top of any potential problems.',
+  animation: 'monitoring_failure',
+  image: 'failure_check',
+  choices: [
+    Choice(text: 'Prepare for potential damage or fallout', nextNode: 'prepareDamage'),
+    Choice(text: 'Ensure that all measures are in place and effective', nextNode: 'ensureEffectiveness'),
+  ],
+),
+
+'ensureEffectiveness': StoryNode(
+  text: 'You ensure that all measures are in place and effective against the electrical storm’s intensity. The situation remains challenging, but your preparations help to keep things under control. You stay focused and ready to make any necessary adjustments.',
+  animation: 'ensuring_effectiveness',
+  image: 'effectiveness_check',
+  choices: [
+    Choice(text: 'Revisit and finalize your plans for stabilization', nextNode: 'finalizePlans'),
+    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+  ],
+),
