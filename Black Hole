@@ -439,61 +439,61 @@
 ),
 
 'prepareImpact': StoryNode(
-  text: 'You prepare for the impact of the electrical storm, ensuring that all measures are in place to handle any potential damage. The storm remains intense, and your preparations are crucial to surviving this challenge. You stay focused and ready for any new developments.',
+  text: 'The black hole’s pull begins to intensify, and you brace yourself for the immense force. You ensure that all precautions are in place, preparing the house for the extreme gravitational forces. Every second counts, and your survival depends on how well you’ve prepared for this cosmic challenge.',
   animation: 'preparing_impact',
-  image: 'impact_preparedness',
+  image: 'blackhole_preparedness',
   choices: [
-    Choice(text: 'Monitor the house closely for any changes', nextNode: 'monitorChanges'),
+    Choice(text: 'Monitor the house closely for sudden gravitational shifts', nextNode: 'monitorChanges'),
     Choice(text: 'Revisit and adjust your stabilization plans', nextNode: 'finalizePlans'),
   ],
 ),
 
 'monitorChanges': StoryNode(
-  text: 'You monitor the house closely for any changes, ensuring that your preparations are still effective against the electrical storm. The situation remains challenging, but your vigilance helps maintain stability. You stay ready for any new issues that might arise.',
+  text: 'You focus on monitoring the house for any immediate effects of the black hole’s pull. Minor gravitational shifts begin to affect the structure, but your preparations are holding up for now. You need to stay alert to any sudden changes, as things could spiral out of control at any moment.',
   animation: 'monitoring_changes',
-  image: 'house_changes',
+  image: 'house_gravitational_shifts',
   choices: [
-    Choice(text: 'Prepare for the potential impact of critical moments', nextNode: 'prepareCritical'),
-    Choice(text: 'Review and adjust your plans as needed', nextNode: 'revisitStrategy'),
+    Choice(text: 'Prepare for the potential impact of critical gravitational surges', nextNode: 'prepareCritical'),
+    Choice(text: 'Review and adjust your strategy as needed', nextNode: 'revisitStrategy'),
   ],
 ),
 
 'prepareUnforeseen': StoryNode(
-  text: 'You prepare for any unforeseen challenges that might arise due to the electrical storm. The situation remains unpredictable, and your preparations are crucial to handling any surprises. You stay vigilant and ready to act quickly if needed.',
+  text: 'You brace for any unforeseen gravitational spikes from the black hole. The situation is highly unpredictable, and your readiness to handle surprise events is critical to keeping the house intact. You stay alert, knowing that any misstep could be catastrophic.',
   animation: 'preparing_unforeseen',
-  image: 'unforeseen_challenges',
+  image: 'unforeseen_gravitational_challenges',
   choices: [
-    Choice(text: 'Execute your final plan and stay vigilant', nextNode: 'executeFinalPlan'),
-    Choice(text: 'Monitor the situation closely for any changes', nextNode: 'monitorChanges'),
+    Choice(text: 'Execute your final stabilization plan and remain vigilant', nextNode: 'executeFinalPlan'),
+    Choice(text: 'Monitor the situation closely for any drastic gravitational changes', nextNode: 'monitorChanges'),
   ],
 ),
 
 'prepareCritical': StoryNode(
-  text: 'You prepare for the potential impact of any critical issues that might arise. The electrical storm remains intense, and you need to be ready for any major developments. Your preparations help you stay focused and ready to adapt as needed.',
+  text: 'You prepare for any critical surges in gravitational force. The black hole’s pull grows more intense, and you must be ready for any major fluctuations. Your preparations are vital to adapt quickly to any sudden changes.',
   animation: 'preparing_critical',
-  image: 'critical_preparedness',
+  image: 'critical_gravity_preparedness',
   choices: [
-    Choice(text: 'Execute emergency procedures if needed', nextNode: 'emergencyProcedures'),
-    Choice(text: 'Finalize and adjust your plans for stabilization', nextNode: 'finalizePlans'),
+    Choice(text: 'Execute emergency stabilization procedures if needed', nextNode: 'emergencyProcedures'),
+    Choice(text: 'Finalize and adjust your plans to counter the black hole’s pull', nextNode: 'finalizePlans'),
   ],
 ),
 
 'monitorFailure': StoryNode(
-  text: 'You monitor the house for any signs of failure due to the electrical storm. The situation is critical, and you need to be ready for any major issues. Your vigilance helps you stay on top of any potential problems.',
+  text: 'You monitor the house for any signs of failure in the stabilization measures as the black hole’s gravitational force threatens to tear the house apart. The situation is critical, and you need to be prepared for any major structural issues. Your constant vigilance is key to preventing disaster.',
   animation: 'monitoring_failure',
-  image: 'failure_check',
+  image: 'failure_check_gravity',
   choices: [
-    Choice(text: 'Prepare for potential damage or fallout', nextNode: 'prepareDamage'),
-    Choice(text: 'Ensure that all measures are in place and effective', nextNode: 'ensureEffectiveness'),
+    Choice(text: 'Prepare for potential structural damage or gravitational collapse', nextNode: 'prepareDamage'),
+    Choice(text: 'Ensure that all stabilization measures are in place and effective', nextNode: 'ensureEffectiveness'),
   ],
 ),
 
 'ensureEffectiveness': StoryNode(
-  text: 'You ensure that all measures are in place and effective against the electrical storm’s intensity. The situation remains challenging, but your preparations help to keep things under control. You stay focused and ready to make any necessary adjustments.',
+  text: 'You ensure that all stabilization measures are holding against the black hole’s gravitational force. The pull remains strong, but your preparations help keep the house from being dragged in. You stay focused, ready to make any last-minute adjustments.',
   animation: 'ensuring_effectiveness',
-  image: 'effectiveness_check',
+  image: 'effectiveness_check_gravity',
   choices: [
-    Choice(text: 'Revisit and finalize your plans for stabilization', nextNode: 'finalizePlans'),
-    Choice(text: 'Prepare for any unforeseen challenges', nextNode: 'prepareUnforeseen'),
+    Choice(text: 'Revisit and finalize your stabilization plans to maintain control', nextNode: 'finalizePlans'),
+    Choice(text: 'Prepare for any unforeseen gravitational surges', nextNode: 'prepareUnforeseen'),
   ],
 ),
