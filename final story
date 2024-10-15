@@ -568,19 +568,19 @@ Text : 'robot_malfunction': StoryNode(
 
 
 'NebulaFogCard': StoryNode(
-  text: 'Max rolls the dice. A 5. The game reacts instantly, and a card floats up. Max grabs it, eyes narrowing. He reads it aloud, "Nebula Fog." The room dims, shadows lengthen. The card’s warning chills your spine: "Beware the Nebula Fog... it reveals what’s hidden and conceals what’s true. Find the light before the darkness finds you."',
+  text: 'Shaun pushes the Button . the no. rolls down to 5 . The game reacts instantly, and a card floats up. Max grabs it, eyes narrowing. He reads it aloud, "Nebula Fog." The room dims, shadows lengthen. The card’s warning chills your spine: "Beware the Nebula Fog... it reveals what’s hidden and conceals what’s true. Find the light before the darkness finds you."',
   animation: 'CardAppearance',
   image: 'nebula_fog_card.jpg',
   choices: [
     Choice(text: 'Get ready for the challenge', nextNode: 'NebulaFogChallenge'),
-    Choice(text: 'Ask Max about the message', nextNode: 'DiscussCardWithMax'),
+    Choice(text: 'Ask Shaun about the message', nextNode: 'DiscussCardWithShaun'),
   ],
 ),
 
-'DiscussCardWithMax': StoryNode(
-  text: 'You turn to Max, questioning him about the cryptic message. Max looks worried, "It seems we need to find a light source before the fog overtakes us. We should be cautious and stay together." The fog starts creeping in as Max finishes speaking.',
+'DiscussCardWithShaun': StoryNode(
+  text: 'You turn to Shaun, questioning him about the cryptic message. Shaun looks worried, "It seems we need to find a light source before the fog overtakes us. We should be cautious and stay together." The fog starts creeping in as Max finishes speaking.',
   animation: 'DiscussCard',
-  image: 'max_worried.jpg',
+  image: 'Shaun_worried.jpg',
   choices: [
     Choice(text: 'Get ready for the challenge', nextNode: 'NebulaFogChallenge'),
     Choice(text: 'Search for light immediately', nextNode: 'SearchLightNode'),
