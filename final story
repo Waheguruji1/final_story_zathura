@@ -2917,6 +2917,514 @@ chapter 9
 
 
 
+'FrozenSpace': StoryNode(
+  text: ' it's now Your turn to press the button . You now require to score no.7 to end the Game. But the Game has it,s own plans . You pushed the button , the dial quickly swing to no.5 , and yet another card , another challenge reappears infront of the group . Are You ready to face another Challenge and conquer the Space ? "',
+  animation: 'CardAppearance',
+  image: 'anti_gravity_maze_card.jpg',
+  choices: [
+    Choice(text: 'Frozen Space Drift ', nextNode: 'FrozenSpaceDrift'),
+
+  ],
+),
+
+
+
+// Frozen Space Drift challenge
+'FrozenSpaceDrift': StoryNode(
+  text: 'The house drifts silently through the cold void of space. An eerie blue light emanates from outside as the house encounters a mysterious cosmic phenomenon—a frozen space drift. The temperature inside plummets, and the walls begin to frost over.\n\nMax, Alex, and Shaun shiver as they struggle to stay warm. “We need to find a way to stabilize the temperature and figure out what’s causing this,” Max says, his voice trembling. The house creaks ominously as if it’s trying to resist the icy grip of space.',
+  animation: 'frozen_space_drift',
+  image: 'frozen_space_drift.png',
+  choices: [
+    Choice(text: 'Inspect the house for damage', nextNode: 'FrozenSpaceDrift_InspectDamage'),
+    Choice(text: 'Search for a heat source', nextNode: 'FrozenSpaceDrift_SearchHeatSource'),
+    Choice(text: 'Analyze the cosmic phenomenon', nextNode: 'FrozenSpaceDrift_AnalyzePhenomenon'),
+  ],
+),
+
+// Inspecting the house for damage
+'FrozenSpaceDrift_InspectDamage': StoryNode(
+  text: 'You examine the house’s interior, noticing that the frost is causing visible damage. The pipes are freezing, and some of the electronics are malfunctioning. “The cold is affecting everything,” Shaun observes.\n\nYou find a panel that’s been damaged by the cold. It seems to be connected to the house’s temperature control system. Repairing this could help stabilize the environment, but you need to be quick before the damage worsens.',
+  animation: 'inspect_damage',
+  image: 'inspect_damage.png',
+  choices: [
+    Choice(text: 'Attempt to repair the temperature control system', nextNode: 'FrozenSpaceDrift_RepairSystem'),
+    Choice(text: 'Search for additional tools to aid in repair', nextNode: 'FrozenSpaceDrift_FindTools'),
+  ],
+),
+
+// Repairing the temperature control system
+'FrozenSpaceDrift_RepairSystem': StoryNode(
+  text: 'You work on the damaged panel, using your skills to repair the temperature control system. As you work, the temperature inside begins to stabilize, but the house’s systems are still unstable. The cold has caused a series of cascading failures that are difficult to fix.\n\nSuddenly, an alert flashes on the panel—an external temperature fluctuation is affecting the house. You need to address this before it becomes a bigger problem.',
+  animation: 'repair_system',
+  image: 'repair_system.png',
+  choices: [
+    Choice(text: 'Stabilize the external temperature', nextNode: 'FrozenSpaceDrift_StabilizeTemperature'),
+    Choice(text: 'Investigate the source of the fluctuation', nextNode: 'FrozenSpaceDrift_InvestigateFluctuation'),
+  ],
+),
+
+// Searching for additional tools
+'FrozenSpaceDrift_FindTools': StoryNode(
+  text: 'You search the house for tools that might help with the repair. In the storage room, you find an old toolbox with some useful equipment, but the cold has made it hard to handle.\n\nAs you gather the tools, you notice that the temperature is dropping further, and the house is becoming more unstable. You need to act quickly to prevent further damage.',
+  animation: 'find_tools',
+  image: 'find_tools.png',
+  choices: [
+    Choice(text: 'Use the tools to repair the temperature control system', nextNode: 'FrozenSpaceDrift_RepairSystem'),
+    Choice(text: 'Try to find a temporary heat source', nextNode: 'FrozenSpaceDrift_FindHeatSource'),
+  ],
+),
+
+// Searching for a heat source
+'FrozenSpaceDrift_FindHeatSource': StoryNode(
+  text: 'You search the house for a temporary heat source. In the utility room, you find an old space heater that seems to be functioning. You set it up, but it’s not powerful enough to counteract the extreme cold.\n\nWhile it helps a bit, you realize that you need a more permanent solution to stabilize the temperature.',
+  animation: 'find_heat_source',
+  image: 'find_heat_source.png',
+  choices: [
+    Choice(text: 'Use the heater while repairing the temperature control system', nextNode: 'FrozenSpaceDrift_RepairSystem'),
+    Choice(text: 'Investigate the cosmic phenomenon for a more permanent solution', nextNode: 'FrozenSpaceDrift_AnalyzePhenomenon'),
+  ],
+),
+
+// Analyzing the cosmic phenomenon
+'FrozenSpaceDrift_AnalyzePhenomenon': StoryNode(
+  text: 'You study the cosmic phenomenon outside the house. Through the viewport, you see a swirling blue vortex emitting intense cold. It appears to be a natural space phenomenon affecting the house.\n\nThe analysis reveals that the vortex is causing severe temperature drops. You need to find a way to shield the house from this phenomenon.',
+  animation: 'analyze_phenomenon',
+  image: 'analyze_phenomenon.png',
+  choices: [
+    Choice(text: 'Create a makeshift shield for the house', nextNode: 'FrozenSpaceDrift_CreateShield'),
+    Choice(text: 'Attempt to adjust the house’s external insulation', nextNode: 'FrozenSpaceDrift_AdjustInsulation'),
+  ],
+),
+
+// Creating a makeshift shield
+'FrozenSpaceDrift_CreateShield': StoryNode(
+  text: 'You work together to create a makeshift shield using materials from around the house. The shield is designed to deflect the cold from the vortex. It’s a temporary measure but might buy you some time.\n\nThe temperature inside begins to stabilize a bit, but the shield won’t hold forever. You need to find a permanent solution soon.',
+  animation: 'create_shield',
+  image: 'create_shield.png',
+  choices: [
+    Choice(text: 'Continue with the repair and analysis', nextNode: 'FrozenSpaceDrift_RepairSystem'),
+    Choice(text: 'Investigate other potential solutions', nextNode: 'FrozenSpaceDrift_InvestigateSolutions'),
+  ],
+),
+
+// Adjusting the house’s external insulation
+'FrozenSpaceDrift_AdjustInsulation': StoryNode(
+  text: 'You attempt to adjust the house’s external insulation using whatever materials you can find. It’s a complex task, and the cold makes it even harder. The insulation improves slightly, but it’s still not enough to fully counteract the vortex’s effects.\n\nYou need to keep working to find a better solution.',
+  animation: 'adjust_insulation',
+  image: 'adjust_insulation.png',
+  choices: [
+    Choice(text: 'Continue with the repair and analysis', nextNode: 'FrozenSpaceDrift_RepairSystem'),
+    Choice(text: 'Search for additional help or solutions', nextNode: 'FrozenSpaceDrift_InvestigateSolutions'),
+  ],
+),
+
+// Investigating other potential solutions
+'FrozenSpaceDrift_InvestigateSolutions': StoryNode(
+  text: 'You and your friends brainstorm other potential solutions. After some searching, you find a set of old manuals and instructions on space phenomenon management. They provide some clues about advanced techniques to handle extreme cold.',
+  animation: 'investigate_solutions',
+  image: 'investigate_solutions.png',
+  choices: [
+    Choice(text: 'Apply advanced techniques from the manuals', nextNode: 'FrozenSpaceDrift_ApplyTechniques'),
+    Choice(text: 'Search for more tools and resources', nextNode: 'FrozenSpaceDrift_FindMoreTools'),
+  ],
+),
+
+// Applying advanced techniques
+'FrozenSpaceDrift_ApplyTechniques': StoryNode(
+  text: 'You apply the advanced techniques from the manuals. The house’s temperature begins to stabilize as you implement these methods. The vortex outside seems to lose some of its intensity, and the cold becomes more manageable.\n\nIt’s not completely resolved, but it’s a significant improvement. You need to monitor the situation closely and be ready for any sudden changes.',
+  animation: 'apply_techniques',
+  image: 'apply_techniques.png',
+  choices: [
+    Choice(text: 'Prepare for potential further challenges', nextNode: 'FrozenSpaceDrift_PrepareForChallenges'),
+    Choice(text: 'Check for any additional anomalies', nextNode: 'FrozenSpaceDrift_CheckAnomalies'),
+  ],
+),
+
+// Finding more tools
+'FrozenSpaceDrift_FindMoreTools': StoryNode(
+  text: 'You search for additional tools that might help manage the cold. After an extensive search, you find some useful items, including a thermal blanket and a portable heat generator. These could provide some relief, but they’re only temporary solutions.',
+  animation: 'find_more_tools',
+  image: 'find_more_tools.png',
+  choices: [
+    Choice(text: 'Use the tools to improve the house’s condition', nextNode: 'FrozenSpaceDrift_ImproveCondition'),
+    Choice(text: 'Continue to focus on the advanced techniques', nextNode: 'FrozenSpaceDrift_ApplyTechniques'),
+  ],
+),
+
+'FrozenSpaceDrift_ImproveCondition': StoryNode(
+  text: 'You use the thermal blanket and portable heat generator to improve the house’s condition. The temperature stabilizes further, and the immediate threat from the cold is reduced. However, the house remains vulnerable to the external vortex.\n\nYou need to stay vigilant and prepare for any upcoming challenges.',
+  animation: 'improve_condition',
+  image: 'improve_condition.png',
+  choices: [
+    Choice(text: 'Prepare for potential further challenges', nextNode: 'FrozenSpaceDrift_PrepareForChallenges'),
+    Choice(text: 'Conduct a thorough inspection for any new issues', nextNode: 'FrozenSpaceDrift_CheckAnomalies'),
+  ],
+),
+
+
+// Preparing for potential further challenges
+'FrozenSpaceDrift_PrepareForChallenges': StoryNode(
+  text: 'With the immediate cold issue under control, you and your friends prepare for potential further challenges. You set up monitoring equipment to keep an eye on the house’s temperature and the external vortex.\n\nAs you finalize the preparations, you feel a sense of relief but remain on high alert, knowing that the situation could change at any moment.',
+  animation: 'prepare_for_challenges',
+  image: 'prepare_for_challenges.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue exploring for additional threats', nextNode: 'FrozenSpaceDrift_ExploreThreats'),
+  ],
+),
+
+// Checking for additional anomalies
+'FrozenSpaceDrift_CheckAnomalies': StoryNode(
+  text: 'You conduct a thorough check for any additional anomalies in the house. After inspecting various systems, you discover a minor leak in the insulation that could worsen if not addressed. The leak could cause further temperature fluctuations.',
+  animation: 'check_anomalies',
+  image: 'check_anomalies.png',
+  choices: [
+    Choice(text: 'Seal the insulation leak', nextNode: 'FrozenSpaceDrift_SealLeak'),
+    Choice(text: 'Monitor the leak and address it later', nextNode: 'FrozenSpaceDrift_MonitorLeak'),
+  ],
+),
+
+// Sealing the insulation leak
+'FrozenSpaceDrift_SealLeak': StoryNode(
+  text: 'You work quickly to seal the insulation leak. With the leak patched up, the house’s internal temperature becomes more stable, and the immediate risk of further cold damage is reduced. However, the external vortex remains a concern.',
+  animation: 'seal_leak',
+  image: 'seal_leak.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue exploring for additional threats', nextNode: 'FrozenSpaceDrift_ExploreThreats'),
+  ],
+),
+
+// Monitoring the leak and addressing it later
+'FrozenSpaceDrift_MonitorLeak': StoryNode(
+  text: 'You decide to monitor the leak for now while keeping an eye on the house’s other systems. The temperature remains stable, but you know you’ll need to address the leak more thoroughly later. The external vortex continues to pose a threat.',
+  animation: 'monitor_leak',
+  image: 'monitor_leak.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue exploring for additional threats', nextNode: 'FrozenSpaceDrift_ExploreThreats'),
+  ],
+),
+
+// Resting and regaining strength
+'FrozenSpaceDrift_Rest': StoryNode(
+  text: 'You and your friends take some time to rest and regain your strength. The house is still cold, but the immediate crisis is under control. Resting gives you a chance to recuperate and prepare for any future challenges.',
+  animation: 'rest',
+  image: 'rest.png',
+  choices: [
+    Choice(text: 'Resume your investigation into the vortex', nextNode: 'FrozenSpaceDrift_InvestigateVortex'),
+    Choice(text: 'Look for other areas of the house that need attention', nextNode: 'FrozenSpaceDrift_CheckHouse'),
+  ],
+),
+
+// Exploring additional threats
+'FrozenSpaceDrift_ExploreThreats': StoryNode(
+  text: 'You decide to explore the house for any additional threats. As you investigate, you discover a small crack in one of the walls that could potentially lead to more severe issues. The cold might worsen if not addressed.',
+  animation: 'explore_threats',
+  image: 'explore_threats.png',
+  choices: [
+    Choice(text: 'Repair the crack in the wall', nextNode: 'FrozenSpaceDrift_RepairCrack'),
+    Choice(text: 'Monitor the crack for now', nextNode: 'FrozenSpaceDrift_MonitorCrack'),
+  ],
+),
+
+// Investigating the vortex
+'FrozenSpaceDrift_InvestigateVortex': StoryNode(
+  text: 'You return to the viewport to investigate the vortex more closely. The phenomenon seems to be gradually shifting, indicating that it might be changing in intensity or direction. You need to adapt your strategies accordingly.',
+  animation: 'investigate_vortex',
+  image: 'investigate_vortex.png',
+  choices: [
+    Choice(text: 'Adjust the house’s shields based on the new information', nextNode: 'FrozenSpaceDrift_AdjustShields'),
+    Choice(text: 'Consult the manuals for additional guidance', nextNode: 'FrozenSpaceDrift_ConsultManuals'),
+  ],
+),
+
+// Adjusting the shields
+'FrozenSpaceDrift_AdjustShields': StoryNode(
+  text: 'Based on your observations, you adjust the house’s shields to better protect against the shifting vortex. The shields provide improved protection, but the situation remains dynamic. Continuous monitoring is essential.',
+  animation: 'adjust_shields',
+  image: 'adjust_shields.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Search for any additional vulnerabilities', nextNode: 'FrozenSpaceDrift_SearchVulnerabilities'),
+  ],
+),
+
+// Consulting the manuals
+'FrozenSpaceDrift_ConsultManuals': StoryNode(
+  text: 'You consult the manuals for further guidance on dealing with shifting cosmic phenomena. The manuals suggest a series of adjustments and enhancements that could help stabilize the house’s environment more effectively.',
+  animation: 'consult_manuals',
+  image: 'consult_manuals.png',
+  choices: [
+    Choice(text: 'Implement the suggested adjustments', nextNode: 'FrozenSpaceDrift_ImplementAdjustments'),
+    Choice(text: 'Prepare for potential worst-case scenarios', nextNode: 'FrozenSpaceDrift_PrepareWorstCase'),
+  ],
+),
+
+// Implementing the suggested adjustments
+'FrozenSpaceDrift_ImplementAdjustments': StoryNode(
+  text: 'You implement the adjustments suggested by the manuals. These changes help stabilize the house’s environment and reduce the impact of the vortex. The situation improves, but you remain cautious of any sudden changes.',
+  animation: 'implement_adjustments',
+  image: 'implement_adjustments.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue monitoring and adjusting as needed', nextNode: 'FrozenSpaceDrift_MonitorAdjust'),
+  ],
+),
+
+// Searching for vulnerabilities
+'FrozenSpaceDrift_SearchVulnerabilities': StoryNode(
+  text: 'You search the house for any additional vulnerabilities that could be exploited by the cold. After a thorough inspection, you identify a few weak spots that need reinforcement to prevent future issues.',
+  animation: 'search_vulnerabilities',
+  image: 'search_vulnerabilities.png',
+  choices: [
+    Choice(text: 'Reinforce the weak spots', nextNode: 'FrozenSpaceDrift_ReinforceSpots'),
+    Choice(text: 'Continue monitoring the current situation', nextNode: 'FrozenSpaceDrift_MonitorCurrent'),
+  ],
+),
+
+// Reinforcing the weak spots
+'FrozenSpaceDrift_ReinforceSpots': StoryNode(
+  text: 'You reinforce the weak spots to strengthen the house’s defenses against the cold. The improvements provide better stability, but the external vortex still poses a threat. You need to stay vigilant.',
+  animation: 'reinforce_spots',
+  image: 'reinforce_spots.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for any further challenges', nextNode: 'FrozenSpaceDrift_PrepareForChallenges'),
+  ],
+),
+
+// Monitoring current situation
+'FrozenSpaceDrift_MonitorCurrent': StoryNode(
+  text: 'You continue monitoring the house’s condition and the external vortex. The immediate danger from the cold is under control, but you remain on high alert for any changes in the situation.',
+  animation: 'monitor_current',
+  image: 'monitor_current.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Look for any additional problems', nextNode: 'FrozenSpaceDrift_LookProblems'),
+  ],
+),
+
+// Looking for additional problems
+'FrozenSpaceDrift_LookProblems': StoryNode(
+  text: 'You search for any additional problems that might have arisen. After a thorough check, you find that the house is in relatively stable condition, though there are still areas that require monitoring and maintenance.',
+  animation: 'look_problems',
+  image: 'look_problems.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for possible changes in the vortex', nextNode: 'FrozenSpaceDrift_PrepareVortexChanges'),
+  ],
+),
+
+// Preparing for possible changes in the vortex
+'FrozenSpaceDrift_PrepareVortexChanges': StoryNode(
+  text: 'You prepare for possible changes in the vortex’s behavior. You set up additional monitoring equipment and adjust the house’s systems to be ready for any sudden fluctuations. The house remains stable for now, but vigilance is key.',
+  animation: 'prepare_vortex_changes',
+  image: 'prepare_vortex_changes.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue exploring for any hidden threats', nextNode: 'FrozenSpaceDrift_ExploreHiddenThreats'),
+  ],
+),
+
+// Exploring hidden threats
+'FrozenSpaceDrift_ExploreHiddenThreats': StoryNode(
+  text: 'You conduct a final exploration for any hidden threats. During your search, you find a small, unexplored compartment in the house. It’s filled with old supplies and a few surprises that could be useful for future challenges.',
+  animation: 'explore_hidden_threats',
+  image: 'explore_hidden_threats.png',
+  choices: [
+    Choice(text: 'Investigate the supplies further', nextNode: 'FrozenSpaceDrift_InvestigateSupplies'),
+    Choice(text: 'Secure the compartment and focus on current problems', nextNode: 'FrozenSpaceDrift_SecureCompartment'),
+  ],
+),
+
+// Investigating the supplies
+'FrozenSpaceDrift_InvestigateSupplies': StoryNode(
+  text: 'You investigate the supplies found in the compartment. Among them, you discover some advanced tools and materials that could be helpful for ongoing repairs and future challenges. The discovery is a relief, providing a much-needed boost.',
+  animation: 'investigate_supplies',
+  image: 'investigate_supplies.png',
+  choices: [
+    Choice(text: 'Integrate the new tools into the current system', nextNode: 'FrozenSpaceDrift_IntegrateTools'),
+    Choice(text: 'Store the tools for future use', nextNode: 'FrozenSpaceDrift_StoreTools'),
+  ],
+),
+
+// Securing the compartment
+'FrozenSpaceDrift_SecureCompartment': StoryNode(
+  text: 'You secure the compartment and focus on addressing the current problems. The house’s condition remains stable, and you’re prepared for any future issues that may arise.',
+  animation: 'secure_compartment',
+  image: 'secure_compartment.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Review the house’s status one last time', nextNode: 'FrozenSpaceDrift_ReviewStatus'),
+  ],
+),
+
+// Integrating the new tools
+'FrozenSpaceDrift_IntegrateTools': StoryNode(
+  text: 'You integrate the new tools into the house’s systems. The improvements enhance the stability and functionality of the house, making it better equipped to handle the ongoing challenges from the vortex.',
+  animation: 'integrate_tools',
+  image: 'integrate_tools.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for any unexpected changes', nextNode: 'FrozenSpaceDrift_PrepareUnexpectedChanges'),
+  ],
+),
+
+// Storing the tools
+'FrozenSpaceDrift_StoreTools': StoryNode(
+  text: 'You store the tools for future use. The house remains in a stable condition, and you’re ready for any upcoming challenges that may arise from the cosmic phenomenon.',
+  animation: 'store_tools',
+  image: 'store_tools.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for any unexpected changes', nextNode: 'FrozenSpaceDrift_PrepareUnexpectedChanges'),
+  ],
+),
+
+// Reviewing the house’s status
+'FrozenSpaceDrift_ReviewStatus': StoryNode(
+  text: 'You conduct a final review of the house’s status. The immediate issues from the cold have been addressed, and the house is in a stable condition. However, the external vortex remains a potential threat that requires ongoing vigilance.',
+  animation: 'review_status',
+  image: 'review_status.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Look for any final adjustments needed', nextNode: 'FrozenSpaceDrift_FinalAdjustments'),
+  ],
+),
+
+// Preparing for unexpected changes
+'FrozenSpaceDrift_PrepareUnexpectedChanges': StoryNode(
+  text: 'You prepare for any unexpected changes in the vortex. The house’s systems are as robust as they can be, and you’re ready to adapt to any fluctuations. The situation remains under control for now, but constant vigilance is essential.',
+  animation: 'prepare_unexpected_changes',
+  image: 'prepare_unexpected_changes.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Monitor the house and the vortex continuously', nextNode: 'FrozenSpaceDrift_MonitorContinuously'),
+  ],
+),
+
+// Monitoring continuously
+'FrozenSpaceDrift_MonitorContinuously': StoryNode(
+  text: 'You set up continuous monitoring for the house and the vortex. The situation remains stable, but you know that conditions in space can change rapidly. Being prepared and alert will help you manage any future challenges effectively.',
+  animation: 'monitor_continuously',
+  image: 'monitor_continuously.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Plan for future challenges', nextNode: 'FrozenSpaceDrift_PlanFutureChallenges'),
+  ],
+),
+
+// Planning for future challenges
+'FrozenSpaceDrift_PlanFutureChallenges': StoryNode(
+  text: 'With the house’s immediate issues managed and monitoring in place, you and your friends begin planning for future challenges. Your preparations have made the house more resilient, and you feel more confident in facing any further adversities.',
+  animation: 'plan_future_challenges',
+  image: 'plan_future_challenges.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare detailed strategies for potential emergencies', nextNode: 'FrozenSpaceDrift_PrepareStrategies'),
+  ],
+),
+
+// Preparing detailed strategies
+'FrozenSpaceDrift_PrepareStrategies': StoryNode(
+  text: 'You prepare detailed strategies for potential emergencies. These strategies will help you respond quickly and effectively to any future issues that might arise. The house’s condition is stable, and you feel ready for whatever comes next.',
+  animation: 'prepare_strategies',
+  image: 'prepare_strategies.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Review and finalize your emergency plans', nextNode: 'FrozenSpaceDrift_FinalizePlans'),
+  ],
+),
+
+// Finalizing emergency plans
+'FrozenSpaceDrift_FinalizePlans': StoryNode(
+  text: 'You review and finalize your emergency plans. The house is well-prepared for future challenges, and you and your friends feel more confident in handling any unexpected situations. The immediate danger has been averted, but vigilance will continue to be key.',
+  animation: 'finalize_plans',
+  image: 'finalize_plans.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue to monitor and adapt as needed', nextNode: 'FrozenSpaceDrift_MonitorAdapt'),
+  ],
+),
+
+// Monitoring and adapting
+'FrozenSpaceDrift_MonitorAdapt': StoryNode(
+  text: 'You continue to monitor and adapt as needed. The house is in a stable condition, and you’re well-prepared for any future challenges. The frozen space drift has been managed effectively, but staying alert and adaptable remains crucial.',
+  animation: 'monitor_adapt',
+  image: 'monitor_adapt.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for any remaining threats', nextNode: 'FrozenSpaceDrift_PrepareRemainingThreats'),
+  ],
+),
+
+// Preparing for remaining threats
+'FrozenSpaceDrift_PrepareRemainingThreats': StoryNode(
+  text: 'You prepare for any remaining threats, ensuring that all systems are in place to handle unexpected issues. The house’s environment is stable, and your preparations have made you ready for any further challenges that may arise.',
+  animation: 'prepare_remaining_threats',
+  image: 'prepare_remaining_threats.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Review your strategies one last time', nextNode: 'FrozenSpaceDrift_ReviewStrategies'),
+  ],
+),
+
+// Reviewing strategies
+'FrozenSpaceDrift_ReviewStrategies': StoryNode(
+  text: 'You review your strategies one last time, ensuring that everything is in place for any potential emergencies. With the house’s condition stabilized and your plans solidified, you and your friends are prepared to face any future challenges in the cold expanse of space.',
+  animation: 'review_strategies',
+  image: 'review_strategies.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue to stay vigilant', nextNode: 'FrozenSpaceDrift_StayVigilant'),
+  ],
+),
+
+// Staying vigilant
+'FrozenSpaceDrift_StayVigilant': StoryNode(
+  text: 'You and your friends stay vigilant, monitoring the house and the external vortex. The immediate threat from the frozen space drift has been managed, and you’re well-prepared for any new challenges. Your continued vigilance ensures that you’re ready for anything that comes your way.',
+  animation: 'stay_vigilant',
+  image: 'stay_vigilant.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Look for any new threats or challenges', nextNode: 'FrozenSpaceDrift_LookNewThreats'),
+  ],
+),
+
+// Looking for new threats
+'FrozenSpaceDrift_LookNewThreats': StoryNode(
+  text: 'You take a final look for any new threats or challenges that might have emerged. The house’s condition remains stable, and no new immediate threats are detected. You feel confident in your ability to handle any future issues that may arise.',
+  animation: 'look_new_threats',
+  image: 'look_new_threats.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Prepare for potential future challenges', nextNode: 'FrozenSpaceDrift_PrepareFutureChallenges'),
+  ],
+),
+
+// Preparing for future challenges
+'FrozenSpaceDrift_PrepareFutureChallenges': StoryNode(
+  text: 'You and your friends prepare for any future challenges that may arise. With the house’s systems stabilized and your strategies in place, you feel ready to face whatever comes next in the cold expanse of space ? ',
+  animation: 'prepare_future_challenges',
+  image: 'prepare_future_challenges.png',
+  choices: [
+    Choice(text: 'Rest and regain your strength', nextNode: 'FrozenSpaceDrift_Rest'),
+    Choice(text: 'Continue monitoring and adapting as needed', nextNode: 'FrozenSpaceDrift_MonitorAdapt'),
+  ],
+),
+
+// The story continues with a more immersive and challenging structure, providing multiple paths and decision points for the players to explore and navigate through.
+
+
+
+
+
+
+Chapter 10 Ending
+
+
+
 
 
 
