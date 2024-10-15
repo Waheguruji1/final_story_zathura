@@ -884,7 +884,12 @@ Text : 'robot_malfunction': StoryNode(
 
 'NextChallengeNode': StoryNode(
   text: 'You and your team brace yourselves for the next challenge. The journey ahead is unknown, but with your recent success, you feel ready to tackle whatever comes next.',
-  animation: 'New
+  animation: 'CardAppearance',
+  image: 'Cursed-gem.jpg',
+  choices: [
+    Choice(text: '', nextNode: ''),
+  ],
+),
 
 
 
