@@ -1643,3 +1643,342 @@ Chapter 5
 
 Chapter 6
 
+
+
+
+// Anti-Gravity Maze Challenge
+
+'AntiGravityMazeCard': StoryNode(
+  text: 'now it's your turn to roll the dice and decide your fate , "',
+  animation: 'CardAppearance',
+  image: 'anti_gravity_maze_card.jpg',
+  choices: [
+    Choice(text: 'Push the Button to conquer your fear', nextNode: 'AntiGravityMazecontinue'),
+
+  ],
+),
+
+
+'AntiGravityMazecontinue': StoryNode(
+  text: 'Yet Again , tension hanging in the air. The number 7 appears. As before, a card materializes, hovering before you. You Grabbed it quickly . Your face is darkening as you,re reading the card aloud, "Anti-Gravity Maze." A low hum fills the room, and you feel your stomach lurch as the floor beneath you shimmers and fades. The card’s message rings in your mind: "In the maze where gravity bends, up is down, and down is up. Find the center, or lose your way forever."',
+  animation: 'CardAppearance',
+  image: 'anti_gravity_maze_card.jpg',
+  choices: [
+    Choice(text: 'Brace yourself for the challenge', nextNode: 'AntiGravityMazeStart'),
+    Choice(text: 'Ask Max what he thinks', nextNode: 'DiscussMazeWithMax'),
+  ],
+),
+
+'AntiGravityMazeStart': StoryNode(
+  text: 'The room twists and spins, walls melting into strange shapes. The floor flips upside down, and suddenly, you’re falling—but not downwards. You and Max land softly on what was the ceiling. "This is... disorienting," Max mutters, trying to steady himself. "We need to find the center of this maze before we get completely lost."',
+  animation: 'GravityShift',
+  image: 'disorienting_maze.jpg',
+  choices: [
+    Choice(text: 'Start moving cautiously', nextNode: 'CautiousMoveNode'),
+    Choice(text: 'Jump to test gravity', nextNode: 'TestGravityNode'),
+    Choice(text: 'Ask Max for a plan', nextNode: 'PlanWithMaxNode'),
+  ],
+),
+
+'CautiousMoveNode': StoryNode(
+  text: 'You step forward carefully, each movement testing the strange gravity. The walls around you pulse with an otherworldly light. The path ahead splits into three: a narrow tunnel on the left, a steep incline straight ahead, and a swirling vortex to the right. Max glances at you, "Which way do we go?"',
+  animation: 'MazePathsSplit',
+  image: 'maze_split.jpg',
+  choices: [
+    Choice(text: 'Take the narrow tunnel', nextNode: 'NarrowTunnelNode'),
+    Choice(text: 'Climb the incline', nextNode: 'ClimbInclineNode'),
+    Choice(text: 'Enter the vortex', nextNode: 'EnterVortexNode'),
+  ],
+),
+
+'TestGravityNode': StoryNode(
+  text: 'You give a small jump, and your body floats upwards, slowly spinning. Max watches with wide eyes as you hover above him. "So, we can control our movement here... but it’s tricky," you say, landing gently. "We’ll need to be careful."',
+  animation: 'FloatingInAir',
+  image: 'anti_gravity_jump.jpg',
+  choices: [
+    Choice(text: 'Try jumping higher', nextNode: 'JumpHigherNode'),
+    Choice(text: 'Suggest moving cautiously', nextNode: 'SuggestCautiousMoveNode'),
+    Choice(text: 'Ask Max what he thinks', nextNode: 'AskMaxOpinionNode'),
+  ],
+),
+
+'PlanWithMaxNode': StoryNode(
+  text: 'Max looks around, his brow furrowed. "This place is a trap designed to mess with our sense of direction. If we can figure out the pattern of how gravity shifts, maybe we can find the center more easily."',
+  animation: 'MaxThinking',
+  image: 'max_thinking.jpg',
+  choices: [
+    Choice(text: 'Agree to observe the pattern', nextNode: 'ObservePatternNode'),
+    Choice(text: 'Suggest moving forward cautiously', nextNode: 'CautiousMoveNode'),
+    Choice(text: 'Propose splitting up to cover more ground', nextNode: 'SplitUpNode'),
+  ],
+),
+
+'JumpHigherNode': StoryNode(
+  text: 'You push off harder, floating higher and faster. The higher you go, the more the world around you seems to twist. You spot something in the distance—a bright light, possibly the center of the maze. "Max, I see something!" you shout.',
+  animation: 'JumpHigher',
+  image: 'light_in_maze.jpg',
+  choices: [
+    Choice(text: 'Head towards the light', nextNode: 'HeadToLightNode'),
+    Choice(text: 'Descend back to Max', nextNode: 'DescendToMaxNode'),
+    Choice(text: 'Signal Max to join you', nextNode: 'SignalMaxNode'),
+  ],
+),
+
+'SuggestCautiousMoveNode': StoryNode(
+  text: 'You suggest moving forward cautiously, watching every step. Max nods in agreement. The path splits into three: a narrow tunnel, a steep incline, and a swirling vortex. "It’s a maze alright," Max says, trying to make sense of it all.',
+  animation: 'MazePathsSplit',
+  image: 'maze_split.jpg',
+  choices: [
+    Choice(text: 'Take the narrow tunnel', nextNode: 'NarrowTunnelNode'),
+    Choice(text: 'Climb the incline', nextNode: 'ClimbInclineNode'),
+    Choice(text: 'Enter the vortex', nextNode: 'EnterVortexNode'),
+  ],
+),
+
+'HeadToLightNode': StoryNode(
+  text: 'You decide to float towards the light, but the closer you get, the stronger the gravitational pull becomes, pulling you off course. You need to navigate carefully, or risk getting thrown off.',
+  animation: 'NavigatingGravity',
+  image: 'gravity_pull.jpg',
+  choices: [
+    Choice(text: 'Fight against the pull', nextNode: 'FightPullNode'),
+    Choice(text: 'Try to use the pull to your advantage', nextNode: 'UsePullNode'),
+    Choice(text: 'Signal Max for help', nextNode: 'SignalMaxForHelpNode'),
+  ],
+),
+
+'NarrowTunnelNode': StoryNode(
+  text: 'You squeeze into the narrow tunnel. The walls seem to close in, and gravity feels heavier here. You struggle to keep moving forward, each step more difficult than the last. Max is right behind you, breathing heavily.',
+  animation: 'TunnelCrawl',
+  image: 'narrow_tunnel.jpg',
+  choices: [
+    Choice(text: 'Push through the tunnel', nextNode: 'PushThroughTunnelNode'),
+    Choice(text: 'Backtrack and try another path', nextNode: 'BacktrackNode'),
+    Choice(text: 'Ask Max to go first', nextNode: 'MaxFirstNode'),
+  ],
+),
+
+'ClimbInclineNode': StoryNode(
+  text: 'You and Max begin to climb the steep incline. The gravity shifts again, making the climb harder. The higher you go, the heavier you feel. "This isn’t normal," Max grunts, struggling to keep up.',
+  animation: 'ClimbingIncline',
+  image: 'steep_incline.jpg',
+  choices: [
+    Choice(text: 'Keep climbing despite the difficulty', nextNode: 'KeepClimbingNode'),
+    Choice(text: 'Suggest taking a break', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Slide back down and try another path', nextNode: 'SlideDownNode'),
+  ],
+),
+
+'EnterVortexNode': StoryNode(
+  text: 'You decide to enter the swirling vortex. As soon as you step in, the world spins faster around you. It feels like you’re being pulled in every direction at once. "Stay close!" you shout to Max, but the vortex is making it hard to hear anything.',
+  animation: 'EnteringVortex',
+  image: 'vortex_maze.jpg',
+  choices: [
+    Choice(text: 'Move deeper into the vortex', nextNode: 'DeeperIntoVortexNode'),
+    Choice(text: 'Try to back out quickly', nextNode: 'BackOutVortexNode'),
+    Choice(text: 'Reach for Max’s hand', nextNode: 'ReachForMaxNode'),
+  ],
+),
+
+'FightPullNode': StoryNode(
+  text: 'You struggle against the gravitational pull, each movement becoming harder. The light seems further away now, almost mocking you. But giving up isn’t an option. "Come on!" you urge yourself, pushing forward with all your strength.',
+  animation: 'StrugglingAgainstGravity',
+  image: 'gravity_fight.jpg',
+  choices: [
+    Choice(text: 'Continue fighting', nextNode: 'KeepFightingNode'),
+    Choice(text: 'Look for another way around', nextNode: 'FindAlternateRouteNode'),
+    Choice(text: 'Call out to Max', nextNode: 'CallToMaxNode'),
+  ],
+),
+
+'DeeperIntoVortexNode': StoryNode(
+  text: 'You push deeper into the vortex, the pull becoming stronger. The world around you blurs, and you feel like you’re spinning out of control. Suddenly, the pull stops, and you find yourself in a new part of the maze—right at its center. "Max! I made it!"',
+  animation: 'ReachingMazeCenter',
+  image: 'maze_center.jpg',
+  choices: [
+    Choice(text: 'Look for a way to bring Max here', nextNode: 'HelpMaxToCenterNode'),
+    Choice(text: 'Wait for Max to catch up', nextNode: 'WaitForMaxNode'),
+    Choice(text: 'Explore the maze center alone', nextNode: 'ExploreMazeCenterNode'),
+  ],
+),
+
+'PushThroughTunnelNode': StoryNode(
+  text: 'You push through the narrow tunnel, ignoring the increasing pressure. Finally, you emerge into a wider space, feeling a sense of relief. Max follows closely, his face sweaty but determined. "We’re getting closer," he says, glancing around.',
+  animation: 'TunnelExit',
+  image: 'tunnel_exit.jpg',
+  choices: [
+    Choice(text: 'Continue exploring the new area', nextNode: 'ExploreNewAreaNode'),
+    Choice(text: 'Rest and regroup', nextNode: 'RestAndRegroupNode'),
+    Choice(text: 'Look for another exit', nextNode: 'LookForExitNode'),
+  ],
+),
+
+'ClimbInclineNode': StoryNode(
+  text: 'You and Max begin to climb the steep incline. The gravity shifts again, making the climb harder. The higher you go, the heavier you feel. "This isn’t normal," Max grunts, struggling to keep up.',
+  animation: 'ClimbingIncline',
+  image: 'steep_incline.jpg',
+  choices: [
+    Choice(text: 'Keep climbing despite the difficulty', nextNode: 'KeepClimbingNode'),
+    Choice(text: 'Suggest taking a break', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Slide back down and try another path', nextNode: 'SlideDownNode'),
+  ],
+),
+
+'ExploreMazeCenterNode': StoryNode(
+  text: 'You explore the maze center, discovering a glowing orb. It pulses with energy, and you sense it might be the key to exiting the maze. "This might be it," you think, approaching it cautiously.',
+  animation: 'OrbDiscovery',
+  image: 'glowing_orb.jpg',
+  choices: [
+    Choice(text: 'Examine the orb closely', nextNode: 'ExamineOrbNode'),
+    Choice(text: 'Try to activate the orb', nextNode: 'ActivateOrbNode'),
+    Choice(text: 'Wait for Max to join you', nextNode: 'WaitForMaxNode'),
+  ],
+),
+
+'HelpMaxToCenterNode': StoryNode(
+  text: 'You find a way to bring Max to the center by guiding him through the maze’s shifting gravity. Together, you stand before the glowing orb. "We did it," Max says with a relieved smile. "Now let’s figure out how to get out of here."',
+  animation: 'MaxJoining',
+  image: 'max_joining.jpg',
+  choices: [
+    Choice(text: 'Examine the orb together', nextNode: 'ExamineOrbTogetherNode'),
+    Choice(text: 'Try to activate the orb', nextNode: 'ActivateOrbNode'),
+    Choice(text: 'Look for an exit from the maze', nextNode: 'LookForExitNode'),
+  ],
+),
+
+'WaitForMaxNode': StoryNode(
+  text: 'You wait for Max to catch up, taking in the surroundings of the maze center. The orb continues to pulse, and you feel a strange energy in the air. Max finally arrives, looking relieved.',
+  animation: 'WaitingForMax',
+  image: 'waiting_for_max.jpg',
+  choices: [
+    Choice(text: 'Examine the orb', nextNode: 'ExamineOrbNode'),
+    Choice(text: 'Try to activate the orb', nextNode: 'ActivateOrbNode'),
+    Choice(text: 'Explore the maze center further', nextNode: 'ExploreMazeCenterNode'),
+  ],
+),
+
+'ExploreNewAreaNode': StoryNode(
+  text: 'You and Max explore the new area, discovering strange symbols on the walls. They seem to hint at a solution to the maze’s gravity puzzle. "These might be clues," Max says, studying the symbols.',
+  animation: 'ExploringSymbols',
+  image: 'symbols_on_walls.jpg',
+  choices: [
+    Choice(text: 'Try to decode the symbols', nextNode: 'DecodeSymbolsNode'),
+    Choice(text: 'Look for an exit from this area', nextNode: 'LookForExitNode'),
+    Choice(text: 'Continue exploring', nextNode: 'ContinueExploringNode'),
+  ],
+),
+
+'DecodeSymbolsNode': StoryNode(
+  text: 'You and Max work together to decode the symbols. After some effort, you realize they form a map of the maze. "We have a way out now," Max says, holding up the map.',
+  animation: 'DecodingSymbols',
+  image: 'decoded_map.jpg',
+  choices: [
+    Choice(text: 'Follow the map to the exit', nextNode: 'FollowMapToExitNode'),
+    Choice(text: 'Double-check the map', nextNode: 'DoubleCheckMapNode'),
+    Choice(text: 'Explore further for additional clues', nextNode: 'ExploreFurtherNode'),
+  ],
+),
+
+'ActivateOrbNode': StoryNode(
+  text: 'You attempt to activate the orb. It emits a blinding light, and suddenly, the maze’s gravity shifts back to normal. The walls return to their original positions, and you find yourself back in the familiar room. "We did it!" Max cheers.',
+  animation: 'OrbActivation',
+  image: 'orb_activation.jpg',
+  choices: [
+    Choice(text: 'Celebrate the success', nextNode: 'CelebrateSuccessNode'),
+    Choice(text: 'Review what happened', nextNode: 'ReviewMazeNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+  ],
+),
+
+'PrepareNextChallengeNode': StoryNode(
+  text: 'With the maze behind you, you and Max prepare for the next challenge. The orb’s light fades, and you brace yourselves for whatever comes next. "Let’s stay focused," Max advises, as you move on.',
+  animation: 'PreparingForNextChallenge',
+  image: 'preparing_for_next_challenge.jpg',
+  choices: [
+    Choice(text: 'Move on to the next challenge', nextNode: 'NextChallengeNode'),
+    Choice(text: 'Take a moment to rest', nextNode: 'RestNode'),
+    Choice(text: 'Review what you’ve learned', nextNode: 'ReviewLearningsNode'),
+  ],
+),
+
+'CelebrateSuccessNode': StoryNode(
+  text: 'You and Max celebrate your success in overcoming the maze. The challenge has been a tough one, but you’re relieved to be done. "Great job," Max says, shaking your hand. "What’s next?"',
+  animation: 'Celebration',
+  image: 'celebration.jpg',
+  choices: [
+    Choice(text: 'Review the challenge', nextNode: 'ReviewChallengeNode'),
+    Choice(text: 'Prepare for the next challenge', nextNode: 'PrepareNextChallengeNode'),
+    Choice(text: 'Take a moment to relax', nextNode: 'RelaxNode'),
+  ],
+),
+
+'ReviewChallengeNode': StoryNode(
+  text: 'You review the maze challenge, analyzing what went well and what could be improved. Max offers his insights as well, and together, you gain a better understanding of the maze’s complexities.',
+  animation: 'ReviewingChallenge',
+  image: 'review_challenge.jpg',
+  choices: [
+    Choice(text: 'Discuss the maze’s difficulties', nextNode: 'DiscussDifficultiesNode'),
+    Choice(text: 'Plan for future challenges', nextNode: 'PlanFutureChallengesNode'),
+    Choice(text: 'Move on to the next task', nextNode: 'NextTaskNode'),
+  ],
+),
+
+'RelaxNode': StoryNode(
+  text: 'You take a moment to relax, reflecting on the maze challenge. Max joins you, and you both take a deep breath, readying yourselves for whatever comes next.',
+  animation: 'Relaxing',
+  image: 'relaxation.jpg',
+  choices: [
+    Choice(text: 'Plan your next move', nextNode: 'PlanNextMoveNode'),
+    Choice(text: 'Discuss the recent challenge', nextNode: 'DiscussChallengeNode'),
+    Choice(text: 'Move on to the next challenge', nextNode: 'NextChallengeNode'),
+  ],
+),
+
+'PlanNextMoveNode': StoryNode(
+  text: 'You and Max sit down to plan your next move. With the maze challenge behind you, you discuss strategies for tackling future obstacles.',
+  animation: 'PlanningNextMove',
+  image: 'planning_next_move.jpg',
+  choices: [
+    Choice(text: 'Review the upcoming challenges', nextNode: 'ReviewUpcomingChallengesNode'),
+    Choice(text: 'Take a break before proceeding', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Proceed to the next task', nextNode: 'NextTaskNode'),
+  ],
+),
+
+'NextChallengeNode': StoryNode(
+  text: 'You and Max move on to the next challenge, ready to tackle whatever comes next. The journey continues, with new obstacles and adventures awaiting you.',
+  animation: 'NextChallenge',
+  image: 'next_challenge.jpg',
+  choices: [
+    Choice(text: 'Dive into the next challenge', nextNode: 'StartNextChallengeNode'),
+    Choice(text: 'Take a moment to strategize', nextNode: 'StrategizeNode'),
+    Choice(text: 'Review your progress so far', nextNode: 'ReviewProgressNode'),
+  ],
+),
+
+'StrategizeNode': StoryNode(
+  text: 'You take a moment to strategize, planning how to approach the upcoming challenges. Max offers his insights, and you both feel more prepared.',
+  animation: 'Strategizing',
+  image: 'strategizing.jpg',
+  choices: [
+    Choice(text: 'Start the next challenge', nextNode: 'StartNextChallengeNode'),
+    Choice(text: 'Take a break first', nextNode: 'TakeBreakNode'),
+    Choice(text: 'Review your strategies', nextNode: 'ReviewStrategiesNode'),
+  ],
+),
+
+'ReviewProgressNode': StoryNode(
+  text: 'You review your progress, considering the challenges you’ve faced and how you’ve overcome them. Max joins in the reflection, and you both feel a sense of accomplishment.',
+  animation: 'ReviewingProgress',
+  image: 'review_progress.jpg',
+  choices: [
+    Choice(text: 'Move on to the next challenge', nextNode: 'NextChallengeNode'),
+    Choice(text: 'Take a break to relax', nextNode: 'RelaxNode'),
+    Choice(text: 'Plan for future challenges', nextNode: 'PlanFutureChallengesNode'),
+  ],
+),
+
+
+
+chaper 7
+
+
