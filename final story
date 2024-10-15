@@ -1983,7 +1983,7 @@ chaper 7
 
 
 
-'AntiGravityMazeCard': StoryNode(
+'Blackhole': StoryNode(
   text: ' it's now  Shaun's turn to press the button . will Shaun be the next Space Hero . "',
   animation: 'CardAppearance',
   image: 'anti_gravity_maze_card.jpg',
@@ -2506,6 +2506,413 @@ chaper 7
 
 
 chapter 8
+
+
+'ElectricStorm': StoryNode(
+  text: ' it's now again max turn to press the button . Max now only require to score no.5 to complete the Game. But the Game has it,s own plans . Max pushed the button , the dial quickly swing to no.3 , and yet another card , another challenge reappears infront of the group . "',
+  animation: 'CardAppearance',
+  image: 'anti_gravity_maze_card.jpg',
+  choices: [
+    Choice(text: 'Electric Storm ', nextNode: 'ElectricStormStart'),
+
+  ],
+),
+
+
+
+'ElectricStormStart': StoryNode(
+  text: 'The card reads "Electrical Storm." The room dims, and the sound of crackling electricity fills the air. Panic begins to set in as the lights flicker wildly. You, Max, and Shaun exchange nervous glances. The house trembles as arcs of electricity surge across the walls. You’ve never faced anything like this, and you feel the pressure to make the next move.',
+  animation: 'storm_build_up',
+  image: 'dimly_lit_room_with_flickering_lights.jpg',
+  choices: [
+    Choice(text: 'Stay inside and look for something to shield yourself from the electricity.', nextNode: 'SearchForShield'),
+    Choice(text: 'Rush outside and try to find a safe spot away from the house.', nextNode: 'RushOutside'),
+  ],
+),
+
+'SearchForShield': StoryNode(
+  text: 'You frantically scan the room, your mind racing to find something that could protect you. You spot a heavy wooden table, but it’s risky. You call Max and Shaun to take cover with you under the table, hoping it will block the electricity.',
+  animation: 'search_room',
+  image: 'protagonists_hiding_under_table.jpg',
+  choices: [
+    Choice(text: 'Stay under the table and wait for the storm to pass.', nextNode: 'WaitUnderTable'),
+    Choice(text: 'Look for something sturdier that might offer more protection.', nextNode: 'LookForSolidShield'),
+  ],
+),
+
+'RushOutside': StoryNode(
+  text: 'With no time to think, you dash towards the door. As you fling it open, a bright flash of lightning blinds you. The storm outside is even fiercer than you imagined. The air hums with static, and you can feel the electricity crackling around you.',
+  animation: 'rush_outside',
+  image: 'protagonists_rushing_outside_into_storm.jpg',
+  choices: [
+    Choice(text: 'Run back inside where it’s safer.', nextNode: 'ReturnInside'),
+    Choice(text: 'Keep running through the storm to find shelter.', nextNode: 'KeepRunning'),
+    Choice(text: 'Search the yard for something that can shield you.', nextNode: 'SearchYard'),
+  ],
+),
+
+'WaitUnderTable': StoryNode(
+  text: 'You and your friends huddle under the table. The crackling of electricity is all around you, but for now, the table seems to be holding up. The tension is unbearable as you wait for the storm to pass.',
+  animation: 'waiting_tense',
+  image: 'huddling_under_table.jpg',
+  choices: [
+    Choice(text: 'Wait longer and hope the storm dies down soon.', nextNode: 'WaitLonger'),
+    Choice(text: 'Peek out from under the table to assess the situation.', nextNode: 'PeekOutFromTable'),
+  ],
+),
+
+'LookForSolidShield': StoryNode(
+  text: 'You spot an old wardrobe in the corner. It looks sturdier than the table, and it might offer more protection. You motion for Max and Shaun to follow you as you rush towards the wardrobe, hoping it will be enough to shield you from the electrical storm.',
+  animation: 'scanning_room',
+  image: 'spotting_wardrobe.jpg',
+  choices: [
+    Choice(text: 'Hide behind the wardrobe for safety.', nextNode: 'HideBehindWardrobe'),
+    Choice(text: 'Abandon the idea and stay under the table.', nextNode: 'StickWithTable'),
+  ],
+),
+
+'ReturnInside': StoryNode(
+  text: 'You rush back inside, gasping for breath. The storm outside is too dangerous, and you realize the house, despite its cracks, is still a better option. Max and Shaun look at you, expecting a new plan.',
+  animation: 'rushing_back_inside',
+  image: 'rushing_back_into_house.jpg',
+  choices: [
+    Choice(text: 'Search for another place to hide inside.', nextNode: 'SearchInsideForShield'),
+    Choice(text: 'Tell Max and Shaun to stay close as you look for other solutions.', nextNode: 'StayTogetherInside'),
+  ],
+),
+
+'KeepRunning': StoryNode(
+  text: 'Despite the storm intensifying around you, you decide to push forward. Your heart races as bolts of electricity strike the ground near you. The air smells of ozone, and each step feels like it could be your last.',
+  animation: 'running_in_storm',
+  image: 'protagonist_running_through_storm.jpg',
+  choices: [
+    Choice(text: 'Find cover behind a nearby shed.', nextNode: 'HideBehindShed'),
+    Choice(text: 'Keep running further away from the house.', nextNode: 'RunFurtherAway'),
+  ],
+),
+
+'SearchYard': StoryNode(
+  text: 'Frantically, you search the yard for anything that might help. You spot a metal tool shed in the corner, but it’s risky—metal can attract electricity. You weigh your options quickly.',
+  animation: 'yard_search',
+  image: 'yard_with_tool_shed.jpg',
+  choices: [
+    Choice(text: 'Take the risk and hide in the shed.', nextNode: 'HideInShed'),
+    Choice(text: 'Look for something else to shield yourself.', nextNode: 'FindDifferentShield'),
+  ],
+),
+
+'WaitLonger': StoryNode(
+  text: 'You continue to wait under the table. The storm outside shows no sign of letting up. The flashes of light and the sounds of crackling electricity seem endless, but you’re unsure if it’s safer to move yet.',
+  animation: 'waiting_longer',
+  image: 'protagonists_under_table_waiting.jpg',
+  choices: [
+    Choice(text: 'Continue waiting and hope the storm passes.', nextNode: 'StormStartsToPass'),
+    Choice(text: 'Peek out to see if it’s safe to move.', nextNode: 'PeekOutFromTable'),
+  ],
+),
+
+'PeekOutFromTable': StoryNode(
+  text: 'Carefully, you peek out from under the table. The storm is still raging, but you notice that some of the lightning arcs are starting to shift away from the house. You signal to Max and Shaun that it might be safer to move soon.',
+  animation: 'peeking_out',
+  image: 'peeking_out_from_under_table.jpg',
+  choices: [
+    Choice(text: 'Stay put and wait a little longer.', nextNode: 'WaitLonger'),
+    Choice(text: 'Make a run for another part of the house.', nextNode: 'MakeRunForIt'),
+  ],
+),
+
+'StormStartsToPass': StoryNode(
+  text: 'After what feels like hours, the storm begins to subside. The crackling sounds fade, and the blinding flashes become less frequent. You let out a sigh of relief, knowing that the worst is almost over.',
+  animation: 'storm_subsiding',
+  image: 'storm_fading_away.jpg',
+  choices: [
+    Choice(text: 'Assess the damage and check on Max and Shaun.', nextNode: 'AssessDamage'),
+    Choice(text: 'Step out and prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+'HideBehindWardrobe': StoryNode(
+  text: 'You and your friends quickly duck behind the wardrobe. It provides more protection than the table, but the storm is still fierce. The air is thick with static electricity, and you feel the tension in the room.',
+  animation: 'hiding_behind_wardrobe',
+  image: 'hiding_behind_wardrobe.jpg',
+  choices: [
+    Choice(text: 'Stay hidden until the storm passes.', nextNode: 'StayHiddenUntilStormPasses'),
+    Choice(text: 'Look for a more secure place in the house.', nextNode: 'LookForMoreSecurePlace'),
+  ],
+),
+
+'MakeRunForIt': StoryNode(
+  text: 'Deciding it’s too risky to stay under the table any longer, you signal Max and Shaun to follow. You dash across the room, lightning flickering around you as you make a break for a safer spot.',
+  animation: 'making_a_run',
+  image: 'rushing_to_safety.jpg',
+  choices: [
+    Choice(text: 'Hide behind the wardrobe for safety.', nextNode: 'HideBehindWardrobe'),
+    Choice(text: 'Find another room to take shelter in.', nextNode: 'SearchAnotherRoom'),
+  ],
+),
+
+'AssessDamage': StoryNode(
+  text: 'As the storm dies down, you step out and examine the damage. The walls are scorched with black marks, and the air smells of burnt ozone, but you and your friends are safe. Max and Shaun give you relieved smiles.',
+  animation: 'surveying_damage',
+  image: 'damaged_room.jpg',
+  choices: [
+    Choice(text: 'Celebrate surviving the storm.', nextNode: 'CelebrateSurvival'),
+    Choice(text: 'Prepare for what’s next.', nextNode: 'NextChallengeBegins'),
+  ],
+),
+
+'CelebrateSurvival': StoryNode(
+  text: 'You let out a breath you didn’t realize you were holding. "We made it," Max says, still catching his breath. Shaun gives you a shaky smile, and you all share a brief moment of victory. But you know the game isn’t over yet.',
+  animation: 'celebration',
+  image: 'relieved_group.jpg',
+  choices: [
+    Choice(text: 'Get ready for the next challenge.', nextNode: 'NextChallengeBegins'),
+  ],
+),
+
+'StayHiddenUntilStormPasses': StoryNode(
+  text: 'You decide to stay hidden behind the wardrobe. The storm rages on, but the wardrobe provides a strong barrier. You can hear the storm’s intensity begin to wane, though the air remains charged with static electricity.',
+  animation: 'staying_hidden',
+  image: 'hidden_behind_wardrobe.jpg',
+  choices: [
+    Choice(text: 'Wait until the storm completely subsides before moving.', nextNode: 'StormEnds'),
+    Choice(text: 'Check to see if the storm has lessened and move cautiously.', nextNode: 'PeekOutFromWardrobe'),
+  ],
+),
+
+'LookForMoreSecurePlace': StoryNode(
+  text: 'You search the house for a more secure place to hide. After a quick scan, you find a small storage room with reinforced walls. It’s a bit cramped but could offer better protection from the storm.',
+  animation: 'searching_house',
+  image: 'reinforced_storage_room.jpg',
+  choices: [
+    Choice(text: 'Move into the storage room for better safety.', nextNode: 'HideInStorageRoom'),
+    Choice(text: 'Return to the wardrobe and stay hidden there.', nextNode: 'HideBehindWardrobe'),
+  ],
+),
+
+'SearchAnotherRoom': StoryNode(
+  text: 'You and your friends rush to another room. You find a small, windowless room with thick walls, offering some protection from the storm. It’s not ideal, but it’s safer than staying exposed.',
+  animation: 'searching_room',
+  image: 'small_windowless_room.jpg',
+  choices: [
+    Choice(text: 'Take shelter in the small room.', nextNode: 'HideInSmallRoom'),
+    Choice(text: 'Return to the previous room and wait there.', nextNode: 'ReturnToPreviousRoom'),
+  ],
+),
+
+'HideInShed': StoryNode(
+  text: 'You take the risk and hide in the metal shed. The metal walls hum with static electricity, but you manage to find a corner away from the most intense arcs. It’s a tense wait, hoping the metal won’t attract more lightning.',
+  animation: 'hiding_in_shed',
+  image: 'inside_metal_shed.jpg',
+  choices: [
+    Choice(text: 'Wait inside the shed until the storm passes.', nextNode: 'StormEnds'),
+    Choice(text: 'Attempt to find a safer location outside.', nextNode: 'SearchForSaferLocation'),
+  ],
+),
+
+'FindDifferentShield': StoryNode(
+  text: 'You continue searching the yard for a better shield. After a frantic search, you find a large tarp that might provide some cover. It’s not perfect, but it could offer some temporary protection.',
+  animation: 'finding_tarp',
+  image: 'finding_large_tarp.jpg',
+  choices: [
+    Choice(text: 'Use the tarp for cover and wait out the storm.', nextNode: 'TarpCover'),
+    Choice(text: 'Look for something sturdier.', nextNode: 'SearchForSturdierShield'),
+  ],
+),
+
+'HideInStorageRoom': StoryNode(
+  text: 'You and your friends squeeze into the storage room. The reinforced walls provide better protection, and you feel a bit safer. The storm outside continues to rage, but you’re more shielded from the worst of it.',
+  animation: 'in_storage_room',
+  image: 'inside_storage_room.jpg',
+  choices: [
+    Choice(text: 'Stay in the storage room until the storm subsides.', nextNode: 'StormEnds'),
+    Choice(text: 'Check if it’s safe to return to the main area.', nextNode: 'CheckMainArea'),
+  ],
+),
+
+'HideInSmallRoom': StoryNode(
+  text: 'The small, windowless room provides a bit of respite from the storm. The thick walls muffle the sounds of the raging storm outside, making it somewhat more bearable. You and your friends huddle together, waiting for the storm to pass.',
+  animation: 'in_small_room',
+  image: 'inside_small_room.jpg',
+  choices: [
+    Choice(text: 'Wait in the room until the storm is over.', nextNode: 'StormEnds'),
+    Choice(text: 'Check if the storm has lessened and move cautiously.', nextNode: 'PeekOutFromSmallRoom'),
+  ],
+),
+
+'StormEnds': StoryNode(
+  text: 'The storm finally subsides. The once blinding flashes of lightning and the deafening crackling of electricity fade away. You and your friends are exhausted but relieved that the worst is over. The house shows signs of damage, but everyone is safe.',
+  animation: 'storm_ends',
+  image: 'storm_ends.jpg',
+  choices: [
+    Choice(text: 'Assess the damage and check on Max and Shaun.', nextNode: 'AssessDamage'),
+    Choice(text: 'Step out and prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+'PeekOutFromWardrobe': StoryNode(
+  text: 'Carefully, you peek out from behind the wardrobe. The storm has lessened significantly, and the air is no longer crackling with electricity. It seems like a good time to move to a more secure place.',
+  animation: 'peeking_out',
+  image: 'peeking_out_from_wardrobe.jpg',
+  choices: [
+    Choice(text: 'Move to the storage room for better safety.', nextNode: 'HideInStorageRoom'),
+    Choice(text: 'Return to the main area to check for other options.', nextNode: 'ReturnToMainArea'),
+  ],
+),
+
+'PeekOutFromSmallRoom': StoryNode(
+  text: 'You cautiously peek out from the small room. The storm has abated, and the worst seems to be over. You can see the damage to the house but feel it’s safe to move out and assess the situation.',
+  animation: 'peeking_out_from_small_room',
+  image: 'peeking_out_from_small_room.jpg',
+  choices: [
+    Choice(text: 'Exit the small room and assess the damage.', nextNode: 'AssessDamage'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+'PrepareForNextChallenge': StoryNode(
+  text: 'With the storm behind you, it’s time to brace yourselves for the next challenge. The house may have been battered, but your journey is far from over. You gather your strength and prepare to face whatever comes next.',
+  animation: 'preparing_for_next_challenge',
+  image: 'preparing_for_next_challenge.jpg',
+  choices: [
+    Choice(text: 'Proceed to the next challenge.', nextNode: 'NextChallenge'),
+  ],
+),
+
+'SearchInsideForShield': StoryNode(
+  text: 'You and your friends search the house for a better place to hide. You find a reinforced closet with thick wooden walls, offering some protection from the storm. It’s cramped but safer than most places.',
+  animation: 'searching_closet',
+  image: 'reinforced_closet.jpg',
+  choices: [
+    Choice(text: 'Hide in the reinforced closet.', nextNode: 'HideInCloset'),
+    Choice(text: 'Continue searching for a more secure location.', nextNode: 'SearchForMoreSecureLocation'),
+  ],
+),
+
+'StayTogetherInside': StoryNode(
+  text: 'You instruct Max and Shaun to stay close as you search for other solutions. You find a small, secure room in the house with minimal damage, offering some protection from the storm’s residual effects.',
+  animation: 'staying_together',
+  image: 'secure_room.jpg',
+  choices: [
+    Choice(text: 'Take shelter in the secure room.', nextNode: 'HideInSecureRoom'),
+    Choice(text: 'Continue exploring for a safer spot.', nextNode: 'ContinueExploring'),
+  ],
+),
+
+'HideInShed': StoryNode(
+  text: 'You hide in the metal shed. The static electricity in the metal is unsettling, but you manage to stay safe. The storm outside gradually fades, leaving you relieved but still on edge.',
+  animation: 'safety_in_shed',
+  image: 'inside_metal_shed.jpg',
+  choices: [
+    Choice(text: 'Exit the shed and assess the damage.', nextNode: 'AssessDamage'),
+    Choice(text: 'Stay in the shed a little longer to ensure safety.', nextNode: 'StayInShed'),
+  ],
+),
+
+'SearchForSaferLocation': StoryNode(
+  text: 'You continue to search the yard, hoping to find a safer location. The storm is fierce, and finding cover is challenging. You realize that the best option might be to return to the house and regroup.',
+  animation: 'searching_yard',
+  image: 'yard_in_storm.jpg',
+  choices: [
+    Choice(text: 'Return to the house for safety.', nextNode: 'ReturnToHouse'),
+    Choice(text: 'Look for shelter in a nearby structure.', nextNode: 'FindNearbyShelter'),
+  ],
+),
+
+'FindDifferentShield': StoryNode(
+  text: 'You continue searching for better protection. Finally, you find an old, metal cabinet that could provide some cover. It’s not ideal, but it might offer some temporary relief from the storm.',
+  animation: 'finding_metal_cabinet',
+  image: 'metal_cabinet.jpg',
+  choices: [
+    Choice(text: 'Use the metal cabinet for cover.', nextNode: 'UseMetalCabinet'),
+    Choice(text: 'Search for something more effective.', nextNode: 'SearchForEffectiveShield'),
+  ],
+),
+
+'UseMetalCabinet': StoryNode(
+  text: 'You take cover behind the metal cabinet. The storm’s intensity gradually decreases, and the cabinet provides some shield against the remaining electrical activity. You and your friends wait it out, hoping the worst is over.',
+  animation: 'hiding_behind_metal_cabinet',
+  image: 'behind_metal_cabinet.jpg',
+  choices: [
+    Choice(text: 'Wait until the storm is fully over.', nextNode: 'StormEnds'),
+    Choice(text: 'Assess the situation and decide on the next step.', nextNode: 'AssessSituation'),
+  ],
+),
+
+'ContinueExploring': StoryNode(
+  text: 'You decide to continue exploring the house for a safer place. After some time, you find a sturdy, reinforced basement that seems to offer good protection from the storm.',
+  animation: 'exploring_basement',
+  image: 'reinforced_basement.jpg',
+  choices: [
+    Choice(text: 'Take shelter in the basement.', nextNode: 'HideInBasement'),
+    Choice(text: 'Continue looking for another safe spot.', nextNode: 'LookForOtherSafeSpots'),
+  ],
+),
+
+'HideInSecureRoom': StoryNode(
+  text: 'You and your friends take shelter in the secure room. It offers some protection from the storm’s residual effects. The storm outside continues to rage, but you’re relatively safe inside.',
+  animation: 'inside_secure_room',
+  image: 'inside_secure_room.jpg',
+  choices: [
+    Choice(text: 'Wait until the storm is over.', nextNode: 'StormEnds'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+'NextChallengeBegins': StoryNode(
+  text: 'With the storm behind you, you turn your attention to the next challenge. The house may be damaged, but your journey continues. You and your friends prepare yourselves for whatever comes next.',
+  animation: 'preparing_for_next_challenge',
+  image: 'next_challenge_awaits.jpg',
+  choices: [
+    Choice(text: 'Proceed to the next challenge.', nextNode: 'NextChallenge'),
+  ],
+),
+
+'AssessSituation': StoryNode(
+  text: 'You assess the situation and find that the storm’s intensity has diminished. It seems safe to move on, but you need to be cautious. The storm has caused damage, and you need to decide on your next move carefully.',
+  animation: 'assessing_situation',
+  image: 'damage_assessment.jpg',
+  choices: [
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+    Choice(text: 'Search for any remaining safe spots in the house.', nextNode: 'SearchForSafeSpots'),
+  ],
+),
+
+'HideInBasement': StoryNode(
+  text: 'You and your friends find refuge in the basement. The reinforced structure offers strong protection, and the storm’s intensity gradually fades. You are safe for now, but the journey isn’t over yet.',
+  animation: 'inside_basement',
+  image: 'inside_reinforced_basement.jpg',
+  choices: [
+    Choice(text: 'Wait until the storm is completely over.', nextNode: 'StormEnds'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+'LookForOtherSafeSpots': StoryNode(
+  text: 'You continue searching the house for a better spot. After a thorough search, you find a small storage area that’s relatively safe from the storm. It’s not perfect, but it’s better than being exposed.',
+  animation: 'searching_storage_area',
+  image: 'small_storage_area.jpg',
+  choices: [
+    Choice(text: 'Hide in the storage area.', nextNode: 'HideInStorageArea'),
+    Choice(text: 'Return to a previously explored location.', nextNode: 'ReturnToPreviousLocation'),
+  ],
+),
+
+'HideInStorageArea': StoryNode(
+  text: 'You and your friends take shelter in the small storage area. It offers some protection from the storm’s residual effects. You remain on alert as you wait for the storm to fully pass.',
+  animation: 'inside_storage_area',
+  image: 'inside_storage_area.jpg',
+  choices: [
+    Choice(text: 'Wait until the storm is over.', nextNode: 'StormEnds'),
+    Choice(text: 'Prepare for the next challenge.', nextNode: 'PrepareForNextChallenge'),
+  ],
+),
+
+
+
+
+
+chapter 9
 
 
 
