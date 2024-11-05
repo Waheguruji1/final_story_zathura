@@ -10,7 +10,7 @@ Choice(text: 'No', nextNode: 'curiosity'),
 curiosity: StoryNode(
 text: 'When you gaze at the stars, do you imagine the vast expanse beyond our reach?',
 animation: 'zoom_to_stars',
-image: 'distant_galaxy',
+image: 'Space.jpg',
 choices: [
 Choice(text: 'Yes, it's mesmerizing!', nextNode: 'story_start'),
 Choice(text: 'Not really, it's just space.', nextNode: 'story_start'),
@@ -590,7 +590,7 @@ Text : 'robot_malfunction': StoryNode(
 'NebulaFogChallenge': StoryNode(
   text: 'As soon as Shaun finishes reading the card, the house shudders. A thick, cold fog seeps in, surrounding you. Vision blurs, and the outside world vanishes. The fog pulses, almost alive, wrapping tighter around the three of you. You hear Shaun’s nervous whisper, "What now?" The card’s voice lingers in your mind: "Find the light before the darkness finds you."',
   animation: 'NebulaFogRising',
-  image: 'nebula_fog_mist.jpg',
+  image: 'nebula_fog.jpg',
   choices: [
     Choice(text: 'Search for light', nextNode: 'SearchLightNode'),
     Choice(text: 'Stay still and watch', nextNode: 'ObserveFogNode'),
@@ -612,7 +612,7 @@ Text : 'robot_malfunction': StoryNode(
 'TouchOrbNode': StoryNode(
   text: 'You leap forward, hand outstretched. The moment your fingers brush the orb, a jolt of warmth spreads through you. The fog recoils, but the light is dimming fast. "What did you do?" Max shouts, panic in his voice.',
   animation: 'OrbTouch',
-  image: 'orb_touch.jpg',
+  image: 'glowing_orb.jpg',
   choices: [
     Choice(text: 'Hold the orb tighter', nextNode: 'HoldOrbNode'),
     Choice(text: 'Let go immediately', nextNode: 'LetGoOrbNode'),
@@ -623,7 +623,7 @@ Text : 'robot_malfunction': StoryNode(
 'StepBackNode': StoryNode(
   text: 'You take a step back, the fog swirling around you. The orb’s light dims further, and the mist seems to thicken. Shaun looks at you with concern, "We need to do something fast!"',
   animation: 'FogThickens',
-  image: 'fog_thickens.jpg',
+  image: 'nebula_fog.jpg',
   choices: [
     Choice(text: 'Move closer to the orb again', nextNode: 'SearchLightNode'),
     Choice(text: 'Look for another light source', nextNode: 'SearchLightNode'),
@@ -675,7 +675,7 @@ Text : 'robot_malfunction': StoryNode(
 'InspectLampNode': StoryNode(
   text: 'You examine the lamp Shaun found. It’s an old, dusty piece, but it emits a steady, bright light. The fog seems to shrink away from it. You decide to use it as a guide.',
   animation: 'LampInspection',
-  image: 'lamp_inspection.jpg',
+  image: 'hand_lamp.jpg',
   choices: [
     Choice(text: 'Head towards the door', nextNode: 'DoorExitNode'),
     Choice(text: 'Investigate the room further', nextNode: 'InvestigateRoomNode'),
@@ -755,7 +755,7 @@ Text : 'robot_malfunction': StoryNode(
 'SearchItemsNode': StoryNode(
   text: 'You search through the room, finding old books and relics. Among them, you discover a small chest. Opening it reveals old maps and notes that might be useful later. The door remains your primary goal.',
   animation: 'ChestOpen',
-  image: 'chest_contents.jpg',
+  image: 'chest.jpg',
   choices: [
     Choice(text: 'Open the door', nextNode: 'DoorExitNode'),
     Choice(text: 'Study the maps and notes', nextNode: 'StudyMapsNode'),
@@ -795,7 +795,7 @@ Text : 'robot_malfunction': StoryNode(
 'LookForCluesNode': StoryNode(
   text: 'You search the new room for any clues or hints. It’s a well-organized space with several pieces of old furniture and artifacts. There’s nothing immediately alarming, but you do find a journal with notes about previous adventurers.',
   animation: 'JournalFind',
-  image: 'journal_find.jpg',
+  image: 'journal.jpg',
   choices: [
     Choice(text: 'Read the journal', nextNode: 'ReadJournalNode'),
     Choice(text: 'Move on and explore further', nextNode: 'ExploreFurtherNode'),
@@ -805,7 +805,7 @@ Text : 'robot_malfunction': StoryNode(
 'ReadJournalNode': StoryNode(
   text: 'You open the journal and begin reading. It contains accounts of past adventurers who faced similar challenges. The entries provide insights into overcoming trials and navigating through mysterious situations. The journal may come in handy later.',
   animation: 'JournalReading',
-  image: 'journal_reading.jpg',
+  image: 'journal.jpg',
   choices: [
     Choice(text: 'Take the journal with you', nextNode: 'TakeJournalNode'),
     Choice(text: 'Leave it and move on', nextNode: 'ExploreFurtherNode'),
@@ -912,7 +912,7 @@ Chapter 5
 'CursedSpaceGemStart': StoryNode(
   text: 'The card reads "Cursed Space Gem." Suddenly, a strange, glowing gem materializes in the center of the room, emitting a pulsating light. You, Max, and Shaun feel an immediate sense of unease as the gem begins to hum with energy. Without warning, the floor tilts slightly, and you realize the gravity in the house is shifting. Panic rises as you and your friends struggle to keep your footing, aware that the gem is the source of this terrifying phenomenon.',
   animation: 'gem_appearance_with_gravity_shift',
-  image: 'gem_glowing_brightly_in_room_with_tilted_floor',
+  image: 'cracked_gem.jpg',
   choices: [
     Choice(text: 'Try to grab onto something sturdy.', nextNode: 'GrabOntoSomething'),
     Choice(text: 'Stay still and hope the gravity stabilizes.', nextNode: 'WaitForStability'),
@@ -923,7 +923,7 @@ Chapter 5
 'GrabOntoSomething': StoryNode(
   text: 'You quickly reach out and grab the edge of a nearby table as the floor tilts even more. The gravity inside the house continues to fluctuate, making it feel as though the entire room could flip at any moment. Max and Shaun are also trying to steady themselves, their faces reflecting the same fear you feel. The gem pulses with a malevolent energy, and you can sense that it’s responsible for this dangerous situation.',
   animation: 'grabbing_table',
-  image: 'protagonists_holding_onto_furniture',
+  image: 'gravity-reversal.jpg',
   choices: [
     Choice(text: 'Hold on tightly and wait for the gravity to stabilize.', nextNode: 'HoldOnTightly'),
     Choice(text: 'Attempt to move closer to the gem.', nextNode: 'MoveCloserToGem'),
@@ -934,8 +934,8 @@ Chapter 5
 
 'WaitForStability': StoryNode(
   text: 'You freeze in place, hoping the gravity will stabilize on its own. The gem’s light pulses rhythmically, and for a brief moment, it seems like the floor is leveling out. But then, without warning, the gravity reverses, sending you and your friends crashing toward the ceiling. The sudden shift is disorienting, and you’re left scrambling to find a way to stay safe in this topsy-turvy situation.',
-  animation: 'gravity_reversal',
-  image: 'protagonists_impacting_ceiling',
+  animation: 'gravity',
+  image: 'gravity-reversal.jpg',
   choices: [
     Choice(text: 'Try to grab onto something on the ceiling.', nextNode: 'GrabOnCeiling'),
     Choice(text: 'Look for a way to reach the gem.', nextNode: 'ReachForGem'),
